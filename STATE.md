@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 7 COMPLETE (Stage 7 in progress). 9 Filament admin resources live with translatable plugin. Ready for Phase 8.
-**Last updated:** 2026-05-06 (Phase 7 admin resources done)
+**Current stage:** Phase 8 COMPLETE (Stage 7 in progress). Dashboard widgets + audit log live. Ready for Phase 9.
+**Last updated:** 2026-05-06 (Phase 8 dashboard + audit log done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -31,7 +31,7 @@
 
 
 
-  - [ ] Phase 9 - Chatbot
+
   - [ ] Phase 10-12 - i18n, search, edge cases
   - [ ] Phase 13 - Verification
   - [ ] Phase 14 - Hostinger deploy
@@ -280,7 +280,20 @@ All 9 admin URLs return 302 to login when unauthenticated. verify-admin.php conf
 
 Helper scripts: scripts/patch-filament-pages.ps1 + scripts/fix-bom.ps1.
 
-## Phase 8 - Resume Plan
+## Phase 8 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| StatsOverview widget | 8 stat cards: Halaman/Perkhidmatan/Berita/Tender Terbuka/Borang Muat Turun/KB/Pengguna/Lawatan 24j |
+| LlmCostMeter widget | RM mtd vs cap with color flip at alert threshold (success/warning/danger), driver+model, API success rate |
+| VisitorChart widget | 7-day line chart from visit_logs (Chart.js via Filament ChartWidget), navy primary fill |
+| RecentActivity widget | TableWidget over Spatie Activity, last 10 entries with event badge |
+| ActivityResource | Read-only audit log /admin/log-audit, filters by today/week/event, ViewAction with KeyValue properties |
+| SampleActivitySeeder | 528 visit_logs (7 days, peaked today ~126) + 5 explicit + ~54 auto-logged activities |
+
+verify-widgets.php confirms via reflection: all 8 stats, 7-day visitor chart 528 total, LlmCostMeter RM 0.00 / 200.00 (0%) green.
+
+## Phase 9 - Resume Plan
 
 Phase 4.5 - Interaction state matrix:
 - Loading / empty / error / success states for every Livewire component
