@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="agency" content="JKPTG">
+  <title>Portal Rasmi JKPTG | Jabatan Ketua Pengarah Tanah dan Galian Persekutuan</title>
+  <meta name="description" content="Laman web rasmi Jabatan Ketua Pengarah Tanah dan Galian Persekutuan. Mengurus tanah Persekutuan dengan amanah dan telus.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#243D57', light: '#4C75A0', pale: '#DBEAFE', mute: '#264F73' },
+            footer: '#0F1E33',
+            jata: { yellow: '#FBBF24', red: '#B91C1C' },
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Poppins', system-ui, sans-serif; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 1rem; top: 1rem; z-index: 100; padding: .5rem 1rem; background: #243D57; color: white; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+<a href="#content" class="skip-link">Langkau ke kandungan utama</a>
+
+<!-- Accessibility panel pinned left edge -->
+<aside aria-label="Aksesibiliti" class="fixed left-0 top-1/3 z-40 hidden md:flex flex-col bg-primary text-white rounded-r shadow-lg">
+  <button class="p-3 hover:bg-primary-mute" title="Saiz teks +" aria-label="Saiz teks besar"><i data-lucide="zoom-in" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute" title="Saiz teks -" aria-label="Saiz teks kecil"><i data-lucide="zoom-out" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute" title="Kontras tinggi" aria-label="Kontras tinggi"><i data-lucide="contrast" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute" title="Bacaan skrin" aria-label="Bacaan skrin"><i data-lucide="volume-2" class="w-5 h-5"></i></button>
+</aside>
+
+<!-- Top utility bar -->
+<div class="bg-primary text-white text-xs">
+  <div class="container mx-auto px-4 flex flex-wrap items-center justify-between py-2 gap-2">
+    <div class="hidden sm:block">Laman Web Rasmi Jabatan Ketua Pengarah Tanah dan Galian Persekutuan</div>
+    <nav aria-label="Pautan utama PPPA" class="flex flex-wrap gap-3 ml-auto items-center">
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i>Soalan Lazim</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="phone" class="w-3.5 h-3.5"></i>Hubungi Kami</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="megaphone" class="w-3.5 h-3.5"></i>Aduan</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="map" class="w-3.5 h-3.5"></i>Peta Laman</a>
+      <span class="border-l border-white/30 pl-3">
+        <button class="font-semibold underline">BM</button>
+        <span class="mx-1">|</span>
+        <button class="opacity-70 hover:opacity-100">EN</button>
+      </span>
+    </nav>
+  </div>
+</div>
+
+<!-- Main header -->
+<header class="border-b bg-white sticky top-0 z-30 shadow-sm">
+  <div class="container mx-auto px-4 flex items-center justify-between py-3">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Laman Utama JKPTG">
+      <div class="w-12 h-12 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs">JATA</div>
+      <div>
+        <div class="font-display font-bold text-primary leading-tight">JKPTG</div>
+        <div class="text-xs text-gray-600 leading-tight max-w-[16rem] hidden sm:block">Jabatan Ketua Pengarah Tanah dan Galian Persekutuan</div>
+      </div>
+    </a>
+    <nav aria-label="Navigasi utama" class="hidden lg:flex items-center gap-1 text-sm font-medium">
+      <a href="index.html" class="px-3 py-2 rounded hover:bg-primary-pale">UTAMA</a>
+      <button id="megamenuTrigger" aria-haspopup="true" aria-expanded="false" class="px-3 py-2 rounded hover:bg-primary-pale flex items-center gap-1">
+        PERKHIDMATAN <i data-lucide="chevron-down" class="w-4 h-4"></i>
+      </button>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">PANDUAN &amp; BORANG</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">KORPORAT</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">SUMBER</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">HUBUNGI KAMI</a>
+      <a href="#" class="ml-2 px-4 py-2 bg-primary text-white rounded hover:bg-primary-mute">Log Masuk</a>
+    </nav>
+    <button class="lg:hidden p-2" aria-label="Buka menu mudah alih"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+
+  <!-- Megamenu (Stage 5 pick C: hero-style with featured cards) -->
+  <div id="megamenuPanel" hidden class="absolute left-0 right-0 bg-white border-t border-b shadow-xl z-40">
+    <div class="container mx-auto px-4 py-8">
+      <div class="flex items-start justify-between mb-6">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-primary">Perkhidmatan JKPTG</h2>
+          <p class="text-gray-600 text-sm mt-1">Urusan tanah Persekutuan dalam talian</p>
+        </div>
+        <button id="megamenuClose" class="p-1 hover:bg-gray-100 rounded" aria-label="Tutup menu"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="text-sm uppercase font-semibold text-gray-500 tracking-wider mb-3">Paling popular</div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <a href="perkhidmatan/pengambilan.html" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
+          <div class="h-32 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white"><i data-lucide="land-plot" class="w-12 h-12"></i></div>
+          <div class="p-4">
+            <div class="font-semibold text-primary group-hover:underline">Pengambilan Tanah</div>
+            <p class="text-xs text-gray-600 mt-1">Akta Pengambilan Tanah 1960 untuk projek Persekutuan</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
+          <div class="h-32 bg-gradient-to-br from-primary-mute to-primary-light flex items-center justify-center text-white"><i data-lucide="scroll-text" class="w-12 h-12"></i></div>
+          <div class="p-4">
+            <div class="font-semibold text-primary group-hover:underline">Pusaka Bukan Islam</div>
+            <p class="text-xs text-gray-600 mt-1">Pembahagian harta pusaka kecil di bawah Akta 98</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
+          <div class="h-32 bg-gradient-to-br from-primary-light to-primary flex items-center justify-center text-white"><i data-lucide="key-square" class="w-12 h-12"></i></div>
+          <div class="p-4">
+            <div class="font-semibold text-primary group-hover:underline">Pajakan Tanah Persekutuan</div>
+            <p class="text-xs text-gray-600 mt-1">Permohonan pajakan tanah milik Kerajaan Persekutuan</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm border-t pt-4">
+        <span class="text-gray-500">Kategori:</span>
+        <a href="#" class="text-primary hover:underline">Tanah</a>
+        <a href="#" class="text-primary hover:underline">Pajakan</a>
+        <a href="#" class="text-primary hover:underline">Lesen</a>
+        <a href="#" class="text-primary hover:underline">Strata</a>
+        <a href="#" class="text-primary hover:underline">Pusat Khidmat</a>
+        <a href="#" class="ml-auto font-semibold text-primary hover:underline flex items-center gap-1">Lihat semua perkhidmatan <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+
+<!-- HERO (Stage 5 pick A: overlay - full-bleed photo + persona doors floating) -->
+<section class="relative min-h-[640px] md:min-h-[720px] flex flex-col justify-between text-white overflow-hidden">
+  <!-- Photo + scrim -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(180deg, rgba(15,30,51,0.55) 0%, rgba(15,30,51,0.85) 100%), url('https://images.unsplash.com/photo-1571867424488-4565932edb41?auto=format&fit=crop&w=1920&q=70');" aria-hidden="true"></div>
+  <!-- Mission text -->
+  <div class="relative container mx-auto px-4 pt-16 md:pt-24 max-w-4xl">
+    <p class="font-display uppercase tracking-wider text-jata-yellow text-sm mb-3">Portal Rasmi JKPTG</p>
+    <h1 class="font-display font-bold text-4xl md:text-6xl leading-tight mb-4">Mengurus tanah Persekutuan dengan amanah dan telus</h1>
+    <p class="text-base md:text-lg text-white/90 max-w-2xl">Kami merekodkan, melindungi dan menguruskan harta tanah negara untuk manfaat rakyat Malaysia.</p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a href="#" class="bg-white text-primary font-semibold px-5 py-2.5 rounded hover:bg-primary-pale">Pengumuman Terkini</a>
+      <a href="#" class="border border-white/60 text-white px-5 py-2.5 rounded hover:bg-white/10">Iklan Perolehan</a>
+    </div>
+  </div>
+  <!-- 3 persona doors floating -->
+  <div class="relative container mx-auto px-4 pb-12 md:pb-20 mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <a href="persona/orang-awam.html" class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition">
+        <i data-lucide="users" class="w-10 h-10 text-jata-yellow mb-3"></i>
+        <h2 class="font-display font-bold text-xl mb-1">Orang Awam</h2>
+        <p class="text-sm text-white/85">Mohon, semak status, bayar dan muat turun resit perkhidmatan tanah anda.</p>
+        <div class="mt-3 text-jata-yellow group-hover:translate-x-1 transition flex items-center gap-1 text-sm font-semibold">Mula <i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </a>
+      <a href="#" class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition">
+        <i data-lucide="building-2" class="w-10 h-10 text-jata-yellow mb-3"></i>
+        <h2 class="font-display font-bold text-xl mb-1">Kementerian / Jabatan</h2>
+        <p class="text-sm text-white/85">Akses rujukan akta, data tanah Persekutuan, dan API integrasi.</p>
+        <div class="mt-3 text-jata-yellow group-hover:translate-x-1 transition flex items-center gap-1 text-sm font-semibold">Mula <i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </a>
+      <a href="#" class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition">
+        <i data-lucide="user-cog" class="w-10 h-10 text-jata-yellow mb-3"></i>
+        <h2 class="font-display font-bold text-xl mb-1">Warga JKPTG</h2>
+        <p class="text-sm text-white/85">Log masuk staf untuk akses sistem dalaman dan e-Cuti.</p>
+        <div class="mt-3 text-jata-yellow group-hover:translate-x-1 transition flex items-center gap-1 text-sm font-semibold">Log Masuk <i data-lucide="arrow-right" class="w-4 h-4"></i></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 6 SERVICE TILES STRIP -->
+<section class="bg-gray-50 py-12">
+  <div class="container mx-auto px-4">
+    <h2 class="font-display text-2xl font-bold text-primary mb-2">Perkhidmatan Utama</h2>
+    <p class="text-gray-600 mb-6">Akses pantas kepada 6 urusan tanah paling kerap.</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      <a href="perkhidmatan/pengambilan.html" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="land-plot" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Pengambilan Tanah</div>
+      </a>
+      <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="scroll-text" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Pusaka Bukan Islam</div>
+      </a>
+      <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="key-square" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Pajakan</div>
+      </a>
+      <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="home" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Penyewaan</div>
+      </a>
+      <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="layers" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Lesen Pasir</div>
+      </a>
+      <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group">
+        <i data-lucide="building" class="w-8 h-8 mx-auto text-primary mb-2"></i>
+        <div class="font-semibold text-sm group-hover:text-primary">Strata</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BERITA & PENGUMUMAN 3-tab -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="font-display text-2xl font-bold text-primary">Berita &amp; Pengumuman</h2>
+      <a href="#" class="text-sm text-primary hover:underline">Semua &rarr;</a>
+    </div>
+    <div role="tablist" class="border-b flex gap-1 mb-6">
+      <button role="tab" aria-selected="true" class="px-4 py-2 border-b-2 border-primary text-primary font-semibold">Berita</button>
+      <button role="tab" aria-selected="false" class="px-4 py-2 border-b-2 border-transparent text-gray-600 hover:text-primary">Tender</button>
+      <button role="tab" aria-selected="false" class="px-4 py-2 border-b-2 border-transparent text-gray-600 hover:text-primary">Pengumuman</button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="rounded-lg overflow-hidden border hover:shadow transition">
+        <div class="h-40 bg-gradient-to-br from-primary-pale to-primary-light"></div>
+        <div class="p-4">
+          <div class="text-xs text-gray-500 mb-1">12 Mei 2026</div>
+          <h3 class="font-semibold text-primary mb-2">JKPTG Lancar Sistem MyLAND v2.0</h3>
+          <p class="text-sm text-gray-700">Sistem baru untuk pengurusan rekod tanah Persekutuan kini lebih pantas dan selamat.</p>
+        </div>
+      </article>
+      <article class="rounded-lg overflow-hidden border hover:shadow transition">
+        <div class="h-40 bg-gradient-to-br from-primary-light to-primary"></div>
+        <div class="p-4">
+          <div class="text-xs text-gray-500 mb-1">8 Mei 2026</div>
+          <h3 class="font-semibold text-primary mb-2">Webinar Pusaka Bukan Islam 15 Jun</h3>
+          <p class="text-sm text-gray-700">Sesi taklimat percuma untuk waris berhadapan urusan harta pusaka kecil.</p>
+        </div>
+      </article>
+      <article class="rounded-lg overflow-hidden border hover:shadow transition">
+        <div class="h-40 bg-gradient-to-br from-primary to-primary-mute"></div>
+        <div class="p-4">
+          <div class="text-xs text-gray-500 mb-1">2 Mei 2026</div>
+          <h3 class="font-semibold text-primary mb-2">SOP Pajakan v3.2 Berkuat Kuasa 1 Jun</h3>
+          <p class="text-sm text-gray-700">Pengemaskinian SOP melibatkan dokumen sokongan dan tempoh pemprosesan.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PAUTAN AGENSI carousel placeholder -->
+<section class="bg-primary-pale py-10">
+  <div class="container mx-auto px-4">
+    <h2 class="font-display text-lg font-semibold text-primary mb-4">Pautan Agensi Berkaitan</h2>
+    <div class="flex flex-wrap items-center gap-6 opacity-80">
+      <div class="bg-white rounded p-4 px-6 text-sm font-medium text-gray-700 border">Kementerian Sumber Asli</div>
+      <div class="bg-white rounded p-4 px-6 text-sm font-medium text-gray-700 border">Jabatan Ukur dan Pemetaan</div>
+      <div class="bg-white rounded p-4 px-6 text-sm font-medium text-gray-700 border">Jabatan Penilaian</div>
+      <div class="bg-white rounded p-4 px-6 text-sm font-medium text-gray-700 border">e-Tanah Negeri</div>
+      <div class="bg-white rounded p-4 px-6 text-sm font-medium text-gray-700 border">SISPAA</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-footer text-white pt-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-10 h-10 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs">JATA</div>
+          <span class="font-display font-bold">JKPTG</span>
+        </div>
+        <address class="not-italic text-sm text-white/80 leading-relaxed">
+          Jabatan Ketua Pengarah Tanah dan Galian Persekutuan<br>
+          Aras 6-7, Wisma Sumber Asli<br>
+          Presint 4, 62574 Putrajaya
+        </address>
+        <div class="mt-3 text-sm text-white/80">
+          <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> 03-8000 8000</div>
+          <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> webmaster@jkptg.gov.my</div>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-jata-yellow">Pautan Pantas</h3>
+        <ul class="text-sm space-y-2 text-white/80">
+          <li><a href="#" class="hover:text-white">Soalan Lazim</a></li>
+          <li><a href="#" class="hover:text-white">Status Permohonan</a></li>
+          <li><a href="#" class="hover:text-white">Borang Muat Turun</a></li>
+          <li><a href="#" class="hover:text-white">Akta &amp; Peraturan</a></li>
+          <li><a href="#" class="hover:text-white">Aduan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-jata-yellow">Korporat</h3>
+        <ul class="text-sm space-y-2 text-white/80">
+          <li><a href="#" class="hover:text-white">Mengenai JKPTG</a></li>
+          <li><a href="#" class="hover:text-white">Piagam Pelanggan</a></li>
+          <li><a href="#" class="hover:text-white">Penerbitan</a></li>
+          <li><a href="#" class="hover:text-white">Kerjaya</a></li>
+          <li><a href="#" class="hover:text-white">Hubungi Kami</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-semibold mb-3 text-jata-yellow">Sosial Media</h3>
+        <div class="flex gap-3 mb-4">
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="X / Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="YouTube"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        </div>
+        <h3 class="font-semibold mb-2 text-jata-yellow text-sm">Kata Kunci Popular</h3>
+        <div class="flex flex-wrap gap-1.5 text-xs">
+          <a href="#" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pengambilan tanah</a>
+          <a href="#" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pusaka</a>
+          <a href="#" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pajakan</a>
+          <a href="#" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">borang</a>
+        </div>
+        <div class="mt-4 bg-white p-2 inline-block rounded">
+          <div class="w-20 h-20 bg-gray-200 flex items-center justify-center text-gray-600 text-xs">QR Kod</div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-white/70">
+      <div class="flex flex-wrap gap-x-4 gap-y-1">
+        <a href="#" class="hover:text-white">Disclaimer</a>
+        <a href="#" class="hover:text-white">Polisi Privasi</a>
+        <a href="#" class="hover:text-white">Polisi Keselamatan</a>
+        <a href="#" class="hover:text-white">Peta Laman</a>
+      </div>
+      <div>Hak Cipta &copy; 2026 JKPTG. Pelawat: <strong>1,234,567</strong>. Kemaskini: 6 Mei 2026.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating chatbot bubble -->
+<button class="fixed bottom-6 right-6 z-30 bg-primary text-white rounded-full w-14 h-14 shadow-xl hover:bg-primary-mute flex items-center justify-center" aria-label="Buka chatbot JKPTG">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+</button>
+
+<script>
+  lucide.createIcons();
+  const trigger = document.getElementById('megamenuTrigger');
+  const panel = document.getElementById('megamenuPanel');
+  const closeBtn = document.getElementById('megamenuClose');
+  function setMega(open) {
+    panel.hidden = !open;
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  trigger.addEventListener('click', e => { e.stopPropagation(); setMega(panel.hidden); });
+  closeBtn.addEventListener('click', () => setMega(false));
+  document.addEventListener('click', e => { if (!panel.contains(e.target) && e.target !== trigger) setMega(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMega(false); });
+</script>
+</body>
+</html>

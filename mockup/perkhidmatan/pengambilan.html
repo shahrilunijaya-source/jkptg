@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="agency" content="JKPTG">
+  <title>Pengambilan Tanah | Perkhidmatan JKPTG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: '#243D57', light: '#4C75A0', pale: '#DBEAFE', mute: '#264F73' },
+            footer: '#0F1E33',
+            jata: { yellow: '#FBBF24', red: '#B91C1C' },
+          },
+          fontFamily: { sans: ['Inter', 'system-ui'], display: ['Poppins', 'system-ui'] },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .font-display { font-family: 'Poppins', system-ui, sans-serif; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 1rem; top: 1rem; z-index: 100; padding: .5rem 1rem; background: #243D57; color: white; }
+    .nav-link.active { color: #243D57; font-weight: 600; border-left-color: #243D57; }
+    .prose-section { scroll-margin-top: 7rem; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+<a href="#content" class="skip-link">Langkau ke kandungan utama</a>
+
+<aside aria-label="Aksesibiliti" class="fixed left-0 top-1/3 z-40 hidden xl:flex flex-col bg-primary text-white rounded-r shadow-lg">
+  <button class="p-3 hover:bg-primary-mute"><i data-lucide="zoom-in" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute"><i data-lucide="zoom-out" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute"><i data-lucide="contrast" class="w-5 h-5"></i></button>
+  <button class="p-3 hover:bg-primary-mute"><i data-lucide="volume-2" class="w-5 h-5"></i></button>
+</aside>
+
+<div class="bg-primary text-white text-xs">
+  <div class="container mx-auto px-4 flex flex-wrap items-center justify-between py-2 gap-2">
+    <div class="hidden sm:block">Laman Web Rasmi JKPTG</div>
+    <nav class="flex flex-wrap gap-3 ml-auto items-center">
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i>Soalan Lazim</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="phone" class="w-3.5 h-3.5"></i>Hubungi</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="megaphone" class="w-3.5 h-3.5"></i>Aduan</a>
+      <a href="#" class="hover:underline flex items-center gap-1"><i data-lucide="map" class="w-3.5 h-3.5"></i>Peta Laman</a>
+      <span class="border-l border-white/30 pl-3"><button class="font-semibold underline">BM</button> | <button class="opacity-70">EN</button></span>
+    </nav>
+  </div>
+</div>
+
+<header class="border-b bg-white sticky top-0 z-30 shadow-sm">
+  <div class="container mx-auto px-4 flex items-center justify-between py-3">
+    <a href="../index.html" class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs">JATA</div>
+      <div><div class="font-display font-bold text-primary">JKPTG</div><div class="text-xs text-gray-600 hidden sm:block">Jabatan Ketua Pengarah Tanah dan Galian Persekutuan</div></div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-1 text-sm font-medium">
+      <a href="../index.html" class="px-3 py-2 rounded hover:bg-primary-pale">UTAMA</a>
+      <a href="#" class="px-3 py-2 rounded bg-primary-pale text-primary">PERKHIDMATAN</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">PANDUAN &amp; BORANG</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">KORPORAT</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">SUMBER</a>
+      <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">HUBUNGI KAMI</a>
+      <a href="#" class="ml-2 px-4 py-2 bg-primary text-white rounded hover:bg-primary-mute">Log Masuk</a>
+    </nav>
+    <button class="lg:hidden p-2"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+</header>
+
+<main id="content">
+
+<nav aria-label="Breadcrumb" class="bg-gray-50 border-b">
+  <ol class="container mx-auto px-4 py-3 text-sm flex flex-wrap gap-x-2 text-gray-600">
+    <li><a href="../index.html" class="hover:text-primary">Utama</a></li>
+    <li>&rsaquo;</li>
+    <li><a href="#" class="hover:text-primary">Perkhidmatan</a></li>
+    <li>&rsaquo;</li>
+    <li><span class="text-primary font-medium">Pengambilan Tanah</span></li>
+  </ol>
+</nav>
+
+<section class="bg-primary text-white py-10">
+  <div class="container mx-auto px-4">
+    <div class="text-jata-yellow text-sm uppercase tracking-wider mb-2 flex items-center gap-2"><i data-lucide="land-plot" class="w-4 h-4"></i>Perkhidmatan</div>
+    <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">Pengambilan Tanah</h1>
+    <p class="text-white/85 max-w-3xl">Akta Pengambilan Tanah 1960 mengawal proses pengambilan tanah persendirian untuk kegunaan awam Persekutuan dengan pampasan adil.</p>
+  </div>
+</section>
+
+<!-- Mobile dropdown nav -->
+<details class="lg:hidden bg-white border-b">
+  <summary class="container mx-auto px-4 py-3 flex items-center justify-between cursor-pointer font-semibold text-primary">
+    <span>Pada halaman ini</span>
+    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+  </summary>
+  <ul class="container mx-auto px-4 pb-4 text-sm space-y-2">
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#kelayakan">Kelayakan</a></li>
+    <li><a href="#proses">Proses (5 langkah)</a></li>
+    <li><a href="#dokumen">Dokumen</a></li>
+    <li><a href="#borang">Borang</a></li>
+    <li><a href="#faq">Soalan Lazim</a></li>
+  </ul>
+</details>
+
+<!-- 2-col body: sticky left rail + content -->
+<section class="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10">
+
+  <nav aria-label="Pada halaman ini" class="hidden lg:block sticky top-24 self-start text-sm">
+    <div class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-3">Pada halaman ini</div>
+    <ul class="border-l border-gray-200 space-y-1">
+      <li><a href="#tentang" class="nav-link active block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Tentang</a></li>
+      <li><a href="#kelayakan" class="nav-link block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Kelayakan</a></li>
+      <li><a href="#proses" class="nav-link block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Proses (5 langkah)</a></li>
+      <li><a href="#dokumen" class="nav-link block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Dokumen</a></li>
+      <li><a href="#borang" class="nav-link block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Borang</a></li>
+      <li><a href="#faq" class="nav-link block px-3 py-1.5 border-l-2 -ml-px border-transparent text-gray-700 hover:text-primary">Soalan Lazim</a></li>
+    </ul>
+    <div class="mt-6 p-4 bg-primary-pale rounded">
+      <div class="text-xs text-primary font-semibold mb-1">Tempoh proses</div>
+      <div class="text-2xl font-display font-bold text-primary">90 hari</div>
+      <div class="text-xs text-gray-600">dari Notis Borang A</div>
+    </div>
+  </nav>
+
+  <article class="max-w-3xl space-y-12">
+
+    <section id="tentang" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Tentang</h2>
+      <p class="mb-3">Akta Pengambilan Tanah 1960 (Akta 486) memberi kuasa kepada Kerajaan Persekutuan untuk mengambil tanah persendirian bagi kegunaan awam, projek pembangunan kerajaan, atau kepentingan negara. JKPTG bertindak sebagai agensi pelaksana di bawah Kementerian Sumber Asli.</p>
+      <p class="mb-3">Setiap pengambilan dijalankan dengan prosedur formal, siasatan tapak, tawaran pampasan adil, dan hak rayuan kepada Mahkamah Tinggi.</p>
+      <div class="bg-amber-50 border-l-4 border-amber-400 p-4 my-4 rounded-r">
+        <div class="font-semibold text-amber-900 flex items-center gap-2"><i data-lucide="info" class="w-4 h-4"></i>Penting</div>
+        <p class="text-sm text-amber-900 mt-1">Hanya tanah persendirian yang tertakluk. Tanah Kerajaan Negeri di luar bidang akta ini.</p>
+      </div>
+      <a href="#" class="inline-flex items-center gap-2 text-primary hover:underline text-sm font-semibold"><i data-lucide="download" class="w-4 h-4"></i>Muat Turun Akta 486 (PDF, 1.2 MB)</a>
+    </section>
+
+    <section id="kelayakan" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Kelayakan</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Tanah dimiliki individu atau syarikat berdaftar.</li>
+        <li>Projek diluluskan oleh Kerajaan Persekutuan dengan tujuan kegunaan awam.</li>
+        <li>Tanah berada dalam Wilayah Persekutuan atau diisytihar untuk projek Persekutuan di negeri.</li>
+        <li>Tidak melibatkan tanah rizab Melayu kecuali dengan pertukaran setara.</li>
+      </ul>
+    </section>
+
+    <section id="proses" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Proses (5 langkah)</h2>
+      <ol class="space-y-4">
+        <li class="flex gap-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">1</div><div><h3 class="font-semibold">Notis Borang A</h3><p class="text-sm text-gray-700">Pemilik tanah menerima notis rasmi dengan butiran tujuan pengambilan.</p></div></li>
+        <li class="flex gap-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">2</div><div><h3 class="font-semibold">Siasatan Tapak</h3><p class="text-sm text-gray-700">Penilai bertauliah menjalankan ukuran dan penilaian harta.</p></div></li>
+        <li class="flex gap-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">3</div><div><h3 class="font-semibold">Tawaran Pampasan</h3><p class="text-sm text-gray-700">Tawaran adil berdasarkan nilai pasaran tanah dan kerugian sokongan.</p></div></li>
+        <li class="flex gap-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">4</div><div><h3 class="font-semibold">Persetujuan / Rayuan</h3><p class="text-sm text-gray-700">Pemilik boleh terima atau merayu ke Mahkamah Tinggi dalam tempoh 6 minggu.</p></div></li>
+        <li class="flex gap-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">5</div><div><h3 class="font-semibold">Pemilikan Kosong</h3><p class="text-sm text-gray-700">Tanah diserahkan kepada Kerajaan Persekutuan selepas pampasan dijelaskan.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="dokumen" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Dokumen yang diperlukan</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <li class="flex items-center gap-2 p-3 border rounded"><i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>Salinan kad pengenalan</li>
+        <li class="flex items-center gap-2 p-3 border rounded"><i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>Geran tanah asal</li>
+        <li class="flex items-center gap-2 p-3 border rounded"><i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>Surat kuasa wakil (jika ada)</li>
+        <li class="flex items-center gap-2 p-3 border rounded"><i data-lucide="check-circle" class="w-4 h-4 text-primary"></i>Bukti pemilikan tambahan</li>
+      </ul>
+    </section>
+
+    <section id="borang" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Borang</h2>
+      <div class="space-y-3">
+        <a href="#" class="flex items-center justify-between p-4 border rounded hover:border-primary hover:shadow">
+          <div class="flex items-center gap-3"><i data-lucide="file-text" class="w-5 h-5 text-primary"></i><div><div class="font-semibold">Borang A &mdash; Notis Pengambilan</div><div class="text-xs text-gray-500">PDF, 480 KB</div></div></div>
+          <span class="text-primary text-sm font-semibold flex items-center gap-1">Muat Turun <i data-lucide="download" class="w-4 h-4"></i></span>
+        </a>
+        <a href="#" class="flex items-center justify-between p-4 border rounded hover:border-primary hover:shadow">
+          <div class="flex items-center gap-3"><i data-lucide="file-text" class="w-5 h-5 text-primary"></i><div><div class="font-semibold">Borang K &mdash; Tawaran Pampasan</div><div class="text-xs text-gray-500">PDF, 320 KB</div></div></div>
+          <span class="text-primary text-sm font-semibold flex items-center gap-1">Muat Turun <i data-lucide="download" class="w-4 h-4"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="prose-section">
+      <h2 class="font-display text-2xl font-bold text-primary mb-3">Soalan Lazim</h2>
+      <div class="space-y-2">
+        <details class="border rounded">
+          <summary class="p-4 cursor-pointer font-semibold flex items-center justify-between">Berapa lama proses pengambilan tanah?<i data-lucide="chevron-down" class="w-4 h-4"></i></summary>
+          <div class="p-4 pt-0 text-sm text-gray-700">Lazimnya 90 hari dari tarikh Notis Borang A diserahkan, tertakluk kepada kerumitan kes dan rayuan.</div>
+        </details>
+        <details class="border rounded">
+          <summary class="p-4 cursor-pointer font-semibold flex items-center justify-between">Bolehkah saya merayu jumlah pampasan?<i data-lucide="chevron-down" class="w-4 h-4"></i></summary>
+          <div class="p-4 pt-0 text-sm text-gray-700">Ya. Rayuan dikemukakan ke Mahkamah Tinggi dalam tempoh 6 minggu dari tarikh tawaran.</div>
+        </details>
+        <details class="border rounded">
+          <summary class="p-4 cursor-pointer font-semibold flex items-center justify-between">Adakah pampasan dikenakan cukai?<i data-lucide="chevron-down" class="w-4 h-4"></i></summary>
+          <div class="p-4 pt-0 text-sm text-gray-700">Pampasan pengambilan tanah biasanya tidak dikenakan cukai keuntungan harta tanah (CKHT). Sila rujuk LHDN untuk pengesahan kes spesifik.</div>
+        </details>
+      </div>
+    </section>
+
+  </article>
+</section>
+
+</main>
+
+<!-- Sticky bottom-right Apply CTA -->
+<div class="fixed bottom-6 right-6 z-30 flex flex-col gap-3 items-end">
+  <button class="bg-primary text-white rounded-full w-14 h-14 shadow-xl hover:bg-primary-mute flex items-center justify-center" aria-label="Buka chatbot"><i data-lucide="message-circle" class="w-6 h-6"></i></button>
+  <a href="#" class="bg-primary hover:bg-primary-mute text-white font-semibold px-5 py-3 rounded-full shadow-xl flex items-center gap-2"><i data-lucide="file-plus" class="w-4 h-4"></i>Mohon Sekarang &rarr;</a>
+</div>
+
+<footer class="bg-footer text-white pt-12 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="flex items-center gap-2 mb-3"><div class="w-10 h-10 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs">JATA</div><span class="font-display font-bold">JKPTG</span></div>
+        <address class="not-italic text-sm text-white/80 leading-relaxed">Aras 6-7, Wisma Sumber Asli<br>Presint 4, 62574 Putrajaya</address>
+      </div>
+      <div><h3 class="font-semibold mb-3 text-jata-yellow">Pautan Pantas</h3><ul class="text-sm space-y-2 text-white/80"><li><a href="#">Soalan Lazim</a></li><li><a href="#">Status Permohonan</a></li><li><a href="#">Borang</a></li></ul></div>
+      <div><h3 class="font-semibold mb-3 text-jata-yellow">Korporat</h3><ul class="text-sm space-y-2 text-white/80"><li><a href="#">Mengenai JKPTG</a></li><li><a href="#">Piagam Pelanggan</a></li></ul></div>
+      <div>
+        <h3 class="font-semibold mb-3 text-jata-yellow">Sosial</h3>
+        <div class="flex gap-3"><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i data-lucide="facebook" class="w-4 h-4"></i></a><a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i data-lucide="twitter" class="w-4 h-4"></i></a></div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-white/70">
+      <div class="flex flex-wrap gap-x-4"><a href="#">Disclaimer</a><a href="#">Polisi Privasi</a><a href="#">Polisi Keselamatan</a><a href="#">Peta Laman</a></div>
+      <div>Hak Cipta &copy; 2026 JKPTG. Pelawat: <strong>1,234,567</strong>.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+  // Intersection observer for nav-link active state
+  const sections = document.querySelectorAll('.prose-section');
+  const links = document.querySelectorAll('.nav-link');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>

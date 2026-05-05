@@ -1,0 +1,49 @@
+# Stage planning + ephemera
+.superpowers/
+.playwright-mcp/
+.DS_Store
+Thumbs.db
+*.log
+verify-auth.php
+
+# Laravel app (portal-jkptg/)
+portal-jkptg/vendor/
+portal-jkptg/node_modules/
+portal-jkptg/public/build/
+portal-jkptg/public/hot
+portal-jkptg/public/storage
+portal-jkptg/storage/*.key
+portal-jkptg/storage/app/public/
+portal-jkptg/storage/app/livewire-tmp/
+portal-jkptg/storage/framework/cache/data/
+portal-jkptg/storage/framework/sessions/
+portal-jkptg/storage/framework/testing/
+portal-jkptg/storage/framework/views/
+portal-jkptg/storage/logs/
+portal-jkptg/storage/debugbar/
+portal-jkptg/storage/pail/
+portal-jkptg/.phpunit.result.cache
+portal-jkptg/.phpunit.cache/
+portal-jkptg/Homestead.json
+portal-jkptg/Homestead.yaml
+portal-jkptg/auth.json
+portal-jkptg/.env
+portal-jkptg/.env.backup
+portal-jkptg/.env.production
+portal-jkptg/database/database.sqlite
+portal-jkptg/.idea/
+portal-jkptg/.vscode/
+portal-jkptg/.fleet/
+portal-jkptg/.nova/
+portal-jkptg/.zed/
+
+# Borang uploads (PDF kept in DB-referenced storage, content not committed)
+portal-jkptg/storage/app/borang/
+
+# Reference scrape (optional - large)
+reference/scrape/04-pdfs/
+reference/scrape/05-assets/
+reference/scrape/03-screenshots/
+
+# Patch scripts (transient - kept for paper trail)
+# scripts/  # uncomment to exclude

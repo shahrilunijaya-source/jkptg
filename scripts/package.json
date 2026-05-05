@@ -1,0 +1,10 @@
+{
+  "name": "portal-jkptg-scrape",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "undici": "^7.0.0"
+  }
+}
