@@ -69,6 +69,48 @@ return [
         'switch_to_en' => 'Switch to English',
     ],
 
+    'home' => [
+        'services_title' => 'Main Services',
+        'services_subtitle' => 'Quick access to the 6 most-used land services.',
+        'news_title' => 'News & Announcements',
+        'view_all' => 'All',
+        'tab_berita' => 'News',
+        'tab_tender' => 'Tenders',
+        'tab_pengumuman' => 'Announcements',
+        'agencies_title' => 'Related Agencies',
+    ],
+
+    'persona' => [
+        'welcome' => 'Welcome. Choose your service.',
+        'cta_start' => 'Start',
+        'cta_login' => 'Log In',
+        'search_label' => 'Service search',
+        'search_placeholder' => 'Search a service, e.g. land acquisition',
+        'search_button' => 'Search',
+        'services_for_you' => 'Services For You',
+        'services_help' => 'Click for process details, documents and application forms.',
+        'news_title' => 'Latest News & Announcements',
+        'news_help' => 'Latest information on land services.',
+        'sidebar_label' => 'Additional information',
+        'quick_contact' => 'Quick Contact',
+        'office_hours' => 'Customer service 8am - 5pm office hours.',
+        'status_apply' => 'Application Status',
+        'scam_warning_title' => 'Beware of Scams',
+        'scam_warning' => 'JKPTG never requests payment to personal accounts. Report via SISPAA.',
+        'orang_awam' => [
+            'title' => 'Public',
+            'summary' => 'Apply, check status, pay and download receipts for your land services.',
+        ],
+        'kementerian_jabatan' => [
+            'title' => 'Ministries / Departments',
+            'summary' => 'Access acts, federal land data, and integration APIs.',
+        ],
+        'warga_jkptg' => [
+            'title' => 'JKPTG Staff',
+            'summary' => 'Staff login for internal systems and e-Leave.',
+        ],
+    ],
+
     'states' => [
         'loading' => 'Loading...',
         'empty' => [
