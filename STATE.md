@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 4.5 COMPLETE (Stage 7 in progress). State catalog + 16-feature contract live. Ready for Phase 5.
-**Last updated:** 2026-05-06 (Phase 4.5 state matrix done)
+**Current stage:** Phase 5 COMPLETE (Stage 7 in progress). Homepage + 3 persona landings live with Stage 5 variants. Ready for Phase 6.
+**Last updated:** 2026-05-06 (Phase 5 homepage + personas done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -28,7 +28,7 @@
  <- NEXT
 
 
-  - [ ] Phase 6 - Service/Korporat/Sumber/Hubungi pages
+
   - [ ] Phase 7 - Filament admin resources
   - [ ] Phase 8 - Filament dashboard + audit log
   - [ ] Phase 9 - Chatbot
@@ -219,7 +219,19 @@ States covered: loading skeletons, empty (3 tones), error (with retry + support 
 
 All components use `role="status"`, `aria-live`, `aria-pressed`, `aria-invalid` per WCAG 2.1 AA.
 
-## Phase 5 - Resume Plan
+## Phase 5 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| `resources/views/home.blade.php` | Hero overlay (variant A) + 3 persona doors + 6 service tiles + 3-tab news + agency strip |
+| `resources/views/persona/show.blade.php` | Classic landing (variant A) - breadcrumb + hero with search + 3-col grid + sticky sidebar |
+| `App\Http\Controllers\PersonaController` | show() - 3 personas (orang-awam, kementerian-jabatan, warga-jkptg), category-filtered services, 404 on invalid slug |
+| `routes/web.php` | /untuk/{persona} regex-constrained route -> persona.show |
+| `lang/{ms,en}/messages.php` | added home.* (8 keys) + persona.* (20 keys) |
+
+Smoke test: 4 routes verified (200) + invalid persona returns 404. Hero scrim CSS gradient applied. News tabs with Alpine x-data. State components (x-state.empty) fallback.
+
+## Phase 6 - Resume Plan
 
 Phase 4.5 - Interaction state matrix:
 - Loading / empty / error / success states for every Livewire component
@@ -284,6 +296,9 @@ Sequence per `PLAN.md` Phase Dependency Graph.
 | `portal-jkptg/resources/views/components/state/*.blade.php` | 6 reusable state components | Phase 4.5 |
 | `portal-jkptg/resources/views/states.blade.php` | 16-example demo catalog | Phase 4.5 |
 | `STATE-MATRIX.md` | full 16-feature contract | Phase 4.5 |
+| `portal-jkptg/resources/views/home.blade.php` | Stage 5 hero variant A | Phase 5 |
+| `portal-jkptg/resources/views/persona/show.blade.php` | Stage 5 persona variant A | Phase 5 |
+| `portal-jkptg/app/Http/Controllers/PersonaController.php` | 3 personas, category-filtered | Phase 5 |
 | `reference/design-extract/EXTRACT-SUMMARY.md` | locked 2026-05-06 | 2 |
 | `reference/scrape/` | 80 pages, 14 PDFs, 93 imgs, 95 forms | 0.5 |
 | `scripts/scrape-runner.mjs` | done | 0.5 |
