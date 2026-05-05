@@ -111,6 +111,69 @@ return [
         ],
     ],
 
+    'service' => [
+        'tentang' => 'About',
+        'kelayakan' => 'Eligibility',
+        'proses' => 'Process',
+        'dokumen' => 'Required Documents',
+        'borang' => 'Forms',
+        'faq' => 'FAQ',
+        'processing_time' => 'Processing time',
+        'mohon_sekarang' => 'Apply Now',
+        'muat_turun' => 'Download',
+        'download_sop' => 'Download SOP (PDF)',
+        'docs_help' => 'Supporting document list will be updated. Contact the division for details.',
+    ],
+
+    'borang' => [
+        'title' => 'Form Library',
+        'heading' => 'JKPTG Form Library',
+        'help' => 'Search and download official forms by service category.',
+        'search_label' => 'Search forms',
+        'search_placeholder' => 'e.g. Form A',
+        'category' => 'Category',
+        'all_categories' => 'All Categories',
+        'apply_filter' => 'Filter',
+        'clear' => 'Reset',
+        'help_title' => 'Help',
+        'help_body' => 'Forms are in PDF format. Requires a PDF reader (Adobe Reader, Foxit, or modern browser).',
+        'results' => '{0} No forms found|{1} 1 form found|[2,*] :count forms found',
+        'searching_for' => 'Searching for: ":q"',
+        'downloads' => 'downloads',
+    ],
+
+    'korporat' => [
+        'heading' => 'Corporate Information',
+        'help' => 'Background, structure, customer charter and careers.',
+    ],
+
+    'sumber' => [
+        'heading' => 'Resources & Publications',
+        'help' => 'Gallery, open data, strategic plans, infographics and archives.',
+        'galeri' => 'Gallery',
+        'galeri_desc' => 'Photos, audio and video of JKPTG activities.',
+        'data_terbuka' => 'Open Data',
+        'data_desc' => 'Federal land datasets for public use.',
+        'pelan_strategik' => 'Strategic Plan',
+        'pelan_desc' => 'JKPTG 5-year strategic plans.',
+        'penerbitan' => 'Publications',
+        'penerbitan_desc' => 'Annual reports, bulletins and policy studies.',
+        'infografik' => 'Infographics',
+        'infografik_desc' => 'Visual summaries of land services.',
+        'arkib' => 'Archive',
+        'arkib_desc' => 'Older publications and announcements.',
+    ],
+
+    'hubungi' => [
+        'heading' => 'Contact Us',
+        'help' => 'Headquarters location, state branches, and official channels.',
+        'hq' => 'Headquarters',
+        'branches' => 'State Branches',
+        'branch_count' => '{0} No branches|{1} 1 branch|[2,*] :count branches',
+        'map_label' => 'Office location map',
+        'no_map' => 'Location not yet marked.',
+    ],
+
     'states' => [
         'loading' => 'Loading...',
         'empty' => [

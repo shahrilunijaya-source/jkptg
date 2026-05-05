@@ -111,6 +111,69 @@ return [
         ],
     ],
 
+    'service' => [
+        'tentang' => 'Tentang',
+        'kelayakan' => 'Kelayakan',
+        'proses' => 'Proses',
+        'dokumen' => 'Dokumen Diperlukan',
+        'borang' => 'Borang',
+        'faq' => 'Soalan Lazim',
+        'processing_time' => 'Tempoh proses',
+        'mohon_sekarang' => 'Mohon Sekarang',
+        'muat_turun' => 'Muat Turun',
+        'download_sop' => 'Muat Turun SOP (PDF)',
+        'docs_help' => 'Senarai dokumen sokongan akan dikemaskini. Hubungi bahagian untuk maklumat lanjut.',
+    ],
+
+    'borang' => [
+        'title' => 'Borang Muat Turun',
+        'heading' => 'Perpustakaan Borang JKPTG',
+        'help' => 'Cari dan muat turun borang rasmi mengikut kategori perkhidmatan.',
+        'search_label' => 'Cari borang',
+        'search_placeholder' => 'Contoh: Borang A',
+        'category' => 'Kategori',
+        'all_categories' => 'Semua Kategori',
+        'apply_filter' => 'Tapis',
+        'clear' => 'Set semula',
+        'help_title' => 'Bantuan',
+        'help_body' => 'Borang dalam format PDF. Memerlukan pembaca PDF (Adobe Reader, Foxit, atau pelayar moden).',
+        'results' => '{0} Tiada borang|{1} 1 borang ditemui|[2,*] :count borang ditemui',
+        'searching_for' => 'Carian: ":q"',
+        'downloads' => 'muat turun',
+    ],
+
+    'korporat' => [
+        'heading' => 'Maklumat Korporat JKPTG',
+        'help' => 'Latar belakang, struktur, piagam pelanggan dan kerjaya.',
+    ],
+
+    'sumber' => [
+        'heading' => 'Sumber & Penerbitan',
+        'help' => 'Galeri, data terbuka, pelan strategik, infografik dan arkib.',
+        'galeri' => 'Galeri',
+        'galeri_desc' => 'Gambar, audio dan video aktiviti JKPTG.',
+        'data_terbuka' => 'Data Terbuka',
+        'data_desc' => 'Set data tanah Persekutuan untuk kegunaan awam.',
+        'pelan_strategik' => 'Pelan Strategik',
+        'pelan_desc' => 'Pelan strategik 5-tahun JKPTG.',
+        'penerbitan' => 'Penerbitan',
+        'penerbitan_desc' => 'Laporan tahunan, buletin dan kajian dasar.',
+        'infografik' => 'Infografik',
+        'infografik_desc' => 'Visual ringkas perkhidmatan tanah.',
+        'arkib' => 'Arkib',
+        'arkib_desc' => 'Penerbitan dan pengumuman lama.',
+    ],
+
+    'hubungi' => [
+        'heading' => 'Hubungi Kami',
+        'help' => 'Lokasi ibu pejabat, cawangan negeri, dan saluran rasmi.',
+        'hq' => 'Ibu Pejabat',
+        'branches' => 'Cawangan Negeri',
+        'branch_count' => '{0} Tiada cawangan|{1} 1 cawangan|[2,*] :count cawangan',
+        'map_label' => 'Peta lokasi pejabat',
+        'no_map' => 'Lokasi belum ditandakan.',
+    ],
+
     'states' => [
         'loading' => 'Sedang memuat...',
         'empty' => [
