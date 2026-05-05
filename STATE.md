@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Stage 6 COMPLETE. HTML mockup built. Awaiting approval before Stage 6.5 Laravel scaffold.
-**Last updated:** 2026-05-06 (Stage 6 mockup built)
+**Current stage:** Phase 4.5 COMPLETE (Stage 7 in progress). State catalog + 16-feature contract live. Ready for Phase 5.
+**Last updated:** 2026-05-06 (Phase 4.5 state matrix done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -21,8 +21,21 @@
   - [x] /plan-eng-review (15 questions resolved across 2 batches)
 - [x] Stage 5 - Visual Variants  `VARIANTS.md` (4 winners locked: Hero=A overlay, Persona=A classic, Service=B sticky, Megamenu=C hero-cards)
 - [x] Stage 6 - HTML Mockup  `mockup/` (3 pages + README, Tailwind CDN, Stage 5 variants applied)
-- [ ] Stage 6.5 - Auth + Filament admin scaffold <- NEXT
-- [ ] Stage 7 - Build (Laravel app, prototype deliverable)
+- [x] Stage 6.5 - Auth + Filament admin scaffold  `portal-jkptg/` (4 sample users, /admin works)
+- [~] Stage 7 - Build IN PROGRESS
+  - [x] Phase 3 - DB schema + content seeders (13 migrations, 15 models, 64 seeded rows)
+  - [x] Phase 4 - Public layouts (Tailwind+Vite, master layout, 6 partials, SetLocale middleware, BM/EN toggle verified)
+ <- NEXT
+
+
+  - [ ] Phase 6 - Service/Korporat/Sumber/Hubungi pages
+  - [ ] Phase 7 - Filament admin resources
+  - [ ] Phase 8 - Filament dashboard + audit log
+  - [ ] Phase 9 - Chatbot
+  - [ ] Phase 10-12 - i18n, search, edge cases
+  - [ ] Phase 13 - Verification
+  - [ ] Phase 14 - Hostinger deploy
+  - [ ] Phase 14.5 - Walkthrough video
 - [ ] Stage 8 - QA + PPPA compliance + security
 - [ ] Stage 9 - Performance
 - [ ] Stage 10 - Ship (Hostinger via GitHub auto-pull)
@@ -123,17 +136,120 @@ Full pattern docs: `VARIANTS.md`
 
 Tech: Tailwind via CDN, Lucide icons, Inter + Poppins from Google Fonts. No build step.
 
-## Stage 6.5 - Resume Plan
+## Stage 6.5 - Scaffold deliverables (LOCKED 2026-05-06)
 
-After user approves mockup:
+| Component | Status |
+|-----------|--------|
+| `portal-jkptg/` Laravel 11.x app | scaffolded |
+| Filament v3.3.50 + Livewire 3.8.0 | installed |
+| spatie/laravel-permission 6.25 | installed + migrated |
+| spatie/laravel-translatable 6.14 + filament plugin | installed |
+| spatie/laravel-activitylog 4.12 | installed + migrated |
+| laravel/scout 11.1 | installed (driver=database) |
+| barryvdh/laravel-dompdf 3.1 | installed |
+| MySQL `portal_jkptg` database | created (Laragon mysql 8.4.3) |
+| `.env` configured | APP_LOCALE=ms, queue=database, scout=database |
+| `User` implements `FilamentUser` + `HasRoles` + `LogsActivity` | done |
+| `canAccessPanel(Panel $panel): bool` | implemented (super-admin/editor/viewer allowed) |
+| 4 sample users seeded | admin/editor/viewer/citizen @jkptg.demo, pwd `password` |
+| `/admin/login` returns 200 | verified |
+| Auth + role gates verified via verify-auth.php | all 4 users pass |
+| git init at root + .gitignore + initial commit | done (commit dca86e9) |
 
-1. Run Phase 0.5 Hostinger plan tier verification (PHP 8.3 + MySQL 8 + Composer SSH + api.anthropic.com)
-2. `composer create-project laravel/laravel:^11 portal-jkptg`
-3. git init, .gitignore, GitHub repo
-4. Install: livewire 3, filament v3.3, spatie permission, spatie translatable, spatie activitylog, scout, dompdf
-5. User model implements `FilamentUser` (LESSONS rule 3)
-6. Seed 4 sample users (super-admin/editor/viewer/citizen @jkptg.demo)
-7. Verify `/admin/login` works
+Local dev:
+- `cd portal-jkptg && php artisan serve` -> http://127.0.0.1:8000
+- `/admin/login` -> log in with admin@jkptg.demo / password
+
+## Phase 3 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| 13 migrations | pages, services, news, tenders, forms, faqs, cawangan, chatbot_knowledge, chatbot_quick_replies, chat_sessions+messages, chatbot_settings, settings, visit_logs, llm_api_logs |
+| 15 models | HasTranslations on 9, Searchable on 4 (Scout DB), LogsActivity on auditable, encrypted cast on ChatMessage |
+| ContentSeeder | 12 pages + 6 services + 5 news + 3 tenders + 5 forms + 8 FAQs + 4 cawangan + 6 KB + 4 quick replies + 1 chatbot_settings + 10 settings = 64 rows |
+| All BM+EN parallel | verified via verify-content.php locale switch |
+| chatbot_settings singleton | driver=canned, cap=RM200, alert=80%, model=claude-sonnet-4-6, cap_reset_at=next month start |
+| Sample data | matches Stage 5 mockup (6 services Pengambilan/Pusaka/Pajakan/Penyewaan/Lesen/Strata, 4 cawangan HQ+Selangor+Penang+Johor) |
+
+Commit: see git log
+
+## Phase 4 - Resume Plan
+
+Build public layouts:
+
+1. `resources/views/layouts/public.blade.php` - master layout (header + megamenu + footer + accessibility panel + chatbot bubble)
+2. Livewire components: `Header`, `Megamenu`, `Footer`, `AccessibilityPanel`, `LangSwitcher`, `BreadcrumbBar`
+3. BM/EN toggle middleware (cookie-driven, default=ms per .env APP_LOCALE)
+4. Skip-to-content link, lang attribute, focus rings (WCAG 2.1 AA)
+5. Tailwind config matching DESIGN.md tokens (#243D57 primary, Inter+Poppins via Vite)
+
+Use mockup/index.html as visual reference.
+
+## Phase 4 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| `tailwind.config.js` | DESIGN.md tokens (primary #243D57, Inter+Poppins, focus-ring shadow, jata accents) |
+| `postcss.config.js` | tailwindcss + autoprefixer |
+| `resources/css/app.css` | Google Fonts import + base layer + component utilities + print stylesheet |
+| `layouts/public.blade.php` | Master layout, lang attr, skip-link, Alpine a11y state, @vite + @livewire* |
+| 6 partials | utility-bar, header, megamenu, accessibility-panel, footer, chatbot-bubble |
+| `SetLocale` middleware | cookie + Accept-Language fallback, registered web middleware |
+| `LocaleController` | /locale/{ms\|en} sets cookie, redirects back |
+| `lang/ms` + `lang/en` | 50+ translation keys |
+| `home.blade.php` | placeholder hero + 6 service tiles (Phase 5 will expand) |
+| Vite build | manifest.json + 114 KB CSS + 42 KB JS shipped to public/build |
+
+Smoke test verified:
+- / -> 200 with JATA, megamenu, footer, skip-link, services from DB rendered
+- /locale/en -> 302 with jkptg_locale cookie
+- subsequent / with cookie -> HOME/SERVICES nav, EN tagline, lang="en"
+- BM (default) -> UTAMA/PERKHIDMATAN nav, BM tagline, lang="ms"
+
+## Phase 4.5 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| 6 reusable Blade components | skeleton-row, skeleton-card, empty, error, loading, toast |
+| 28 BM+EN translation keys | under `messages.states.*` namespace |
+| `/states` demo route | 16 visual examples, all WCAG roles applied |
+| `STATE-MATRIX.md` at project root | full 16-feature contract for Phases 5-12 |
+
+States covered: loading skeletons, empty (3 tones), error (with retry + support email), inline spinner (3 sizes), toast (4 tones, auto-close), chatbot greeting + typing dots + simple-mode badge, login inline error, search empty with popular suggestions, /akaun first-visit, dashboard skeleton bars.
+
+All components use `role="status"`, `aria-live`, `aria-pressed`, `aria-invalid` per WCAG 2.1 AA.
+
+## Phase 5 - Resume Plan
+
+Phase 4.5 - Interaction state matrix:
+- Loading / empty / error / success states for every Livewire component
+- 16 features documented in PLAN.md Phase 4.5
+
+Phase 5 - Homepage + persona landings:
+- Replace home.blade.php placeholder with Stage 5 variant A (overlay hero + 3 floating persona doors)
+- Build persona-landing template (variant A: classic hero + 3-col grid + sidebar)
+- Reuse partials, expand featured news + agency carousel sections
+
+## Stage 7 - Resume Plan
+
+Run Phase 3+ build phases per `PLAN.md`:
+
+1. Phase 3 - DB schema + content seeders (pages, services, news, forms, KB, settings)
+2. Phase 4 - Public layouts (header, megamenu, footer, accessibility, BM/EN toggle)
+3. Phase 4.5 - Interaction state matrix
+4. Phase 5 - Homepage + persona landings (Stage 5 variants applied)
+5. Phase 6 - Service + Korporat + Sumber + Hubungi pages
+6. Phase 7 - Filament admin resources
+7. Phase 8 - Filament dashboard + audit log
+8. Phase 9 - Chatbot (Anthropic Sonnet 4.6 + Canned fallback)
+9. Phase 10 - i18n polish (BM/EN parallel)
+10. Phase 11 - Search (Scout DB driver)
+11. Phase 12 - Edge cases (legacy redirects, SPLaSK, print, accessibility)
+12. Phase 13 - Verification + acceptance testing
+13. Phase 14 - Hostinger deploy + Phase 0.5 verification first
+14. Phase 14.5 - Walkthrough video
+
+Sequence per `PLAN.md` Phase Dependency Graph.
 
 ---
 
@@ -155,6 +271,19 @@ After user approves mockup:
 | `mockup/persona/orang-awam.html` | done 2026-05-06 | 6 |
 | `mockup/perkhidmatan/pengambilan.html` | done 2026-05-06 | 6 |
 | `mockup/README.md` | done 2026-05-06 | 6 |
+| `portal-jkptg/` | scaffolded 2026-05-06 (commit dca86e9) | 6.5 |
+| `.gitignore` | done 2026-05-06 | 6.5 |
+| `portal-jkptg/database/migrations/2026_05_06_18*` | 13 content migrations | Phase 3 |
+| `portal-jkptg/app/Models/*.php` | 15 Eloquent models | Phase 3 |
+| `portal-jkptg/database/seeders/ContentSeeder.php` | 64 rows seeded | Phase 3 |
+| `portal-jkptg/tailwind.config.js` + `postcss.config.js` | done | Phase 4 |
+| `portal-jkptg/resources/views/layouts/public.blade.php` | master layout | Phase 4 |
+| `portal-jkptg/resources/views/partials/*.blade.php` | 6 partials | Phase 4 |
+| `portal-jkptg/app/Http/Middleware/SetLocale.php` + `LocaleController.php` | locale wiring | Phase 4 |
+| `portal-jkptg/lang/{ms,en}/messages.php` | 50+ keys | Phase 4 |
+| `portal-jkptg/resources/views/components/state/*.blade.php` | 6 reusable state components | Phase 4.5 |
+| `portal-jkptg/resources/views/states.blade.php` | 16-example demo catalog | Phase 4.5 |
+| `STATE-MATRIX.md` | full 16-feature contract | Phase 4.5 |
 | `reference/design-extract/EXTRACT-SUMMARY.md` | locked 2026-05-06 | 2 |
 | `reference/scrape/` | 80 pages, 14 PDFs, 93 imgs, 95 forms | 0.5 |
 | `scripts/scrape-runner.mjs` | done | 0.5 |
