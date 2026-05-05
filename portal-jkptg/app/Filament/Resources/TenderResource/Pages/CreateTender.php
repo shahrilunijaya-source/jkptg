@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Filament\Resources\TenderResource\Pages;
+
+use App\Filament\Resources\TenderResource;
+use Filament\Actions;
+use Filament\Resources\Pages\CreateRecord;
+use Filament\Resources\Pages\CreateRecord\Concerns\Translatable;
+
+class CreateTender extends CreateRecord
+{
+    use Translatable;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            \Filament\Actions\LocaleSwitcher::make(),
+        ];
+    }
+    protected static string $resource = TenderResource::class;
+}
