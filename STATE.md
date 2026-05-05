@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 6 COMPLETE (Stage 7 in progress). Service/Borang/Hubungi/Korporat/Sumber pages live. Ready for Phase 7.
-**Last updated:** 2026-05-06 (Phase 6 internal pages done)
+**Current stage:** Phase 7 COMPLETE (Stage 7 in progress). 9 Filament admin resources live with translatable plugin. Ready for Phase 8.
+**Last updated:** 2026-05-06 (Phase 7 admin resources done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -30,7 +30,7 @@
 
 
 
-  - [ ] Phase 8 - Filament dashboard + audit log
+
   - [ ] Phase 9 - Chatbot
   - [ ] Phase 10-12 - i18n, search, edge cases
   - [ ] Phase 13 - Verification
@@ -256,7 +256,31 @@ Lang keys added: 60 (service.*, borang.*, korporat.*, sumber.*, hubungi.*).
 
 Smoke test: 10 routes verified 200 + Leaflet CSS/JS + OpenStreetMap tiles loaded + service detail FAQs render.
 
-## Phase 7 - Resume Plan
+## Phase 7 - Deliverables (LOCKED 2026-05-06)
+
+| Resource | Nav group | Translatable | Records |
+|----------|-----------|--------------|---------|
+| PageResource | Kandungan | Y | 12 |
+| ServiceResource | Perkhidmatan | Y | 6 |
+| NewsResource | Kandungan | Y | 5 |
+| TenderResource | Kandungan | Y | 3 |
+| FormResource | Perkhidmatan | Y | 5 |
+| FaqResource | Kandungan | Y | 8 |
+| CawanganResource | Hubungi | Y | 4 |
+| ChatbotKnowledgeResource | Chatbot | Y | 6 |
+| UserResource | Pentadbiran | N | 4 |
+
+Panel: navy primary #243D57, brand "Portal JKPTG Admin", path=/admin.
+Plugin: SpatieLaravelTranslatablePlugin (locales=ms+en) on 8 resources.
+LocaleSwitcher in List/Create/Edit page header actions.
+Form features: Section grouping, RichEditor for body, TagsInput for arrays, FileUpload for PDFs (FormResource), money column for RM values, badge columns for enums.
+User resource: hashed password (dehydrated when filled), roles multi-select via Spatie relationship.
+
+All 9 admin URLs return 302 to login when unauthenticated. verify-admin.php confirms panel + plugin + record counts.
+
+Helper scripts: scripts/patch-filament-pages.ps1 + scripts/fix-bom.ps1.
+
+## Phase 8 - Resume Plan
 
 Phase 4.5 - Interaction state matrix:
 - Loading / empty / error / success states for every Livewire component
