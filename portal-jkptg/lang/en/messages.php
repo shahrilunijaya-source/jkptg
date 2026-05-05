@@ -68,4 +68,41 @@ return [
         'switch_to_ms' => 'Tukar ke Bahasa Melayu',
         'switch_to_en' => 'Switch to English',
     ],
+
+    'states' => [
+        'loading' => 'Loading...',
+        'empty' => [
+            'title' => 'No records found',
+            'message' => 'There is no data to display yet.',
+            'borang_search' => 'No matching forms. Try a different keyword or contact webmaster.',
+            'news' => 'No recent news.',
+            'tender' => 'No active tenders. View archive.',
+            'service_no_sop' => 'SOP not yet published. Contact the division.',
+            'search' => 'No results for ":q". Try a different keyword.',
+            'akaun' => 'No prior visits yet. Here are core services.',
+            'dashboard' => 'No data yet. See admin documentation.',
+        ],
+        'error' => [
+            'title' => 'Something went wrong',
+            'message' => 'The service is unavailable. Please try again shortly.',
+            'retry' => 'Retry',
+            'contact' => 'Contact :email',
+            'search_failed' => 'Search failed. Please try again.',
+            'connection' => 'Connection lost. Please try again.',
+            'login' => 'Invalid email or password.',
+        ],
+        'success' => [
+            'submitted' => 'Application submitted. Reference: :ref',
+            'saved' => 'Saved successfully.',
+        ],
+        'toast' => [
+            'dismiss' => 'Dismiss notification',
+        ],
+        'chatbot' => [
+            'greeting' => 'Hi! I am the JKPTG virtual assistant. How can I help?',
+            'privacy' => 'This conversation is logged for audit. No personal data is stored.',
+            'unknown' => 'I do not know yet. Please contact webmaster@jkptg.gov.my.',
+            'simple_mode_badge' => 'Simple mode active',
+        ],
+    ],
 ];
