@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  body { @apply bg-white text-gray-800 antialiased; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Inter', system-ui, sans-serif; }
+  :focus-visible { @apply outline-none shadow-focus-ring rounded; }
+}
+
+@layer components {
+  .skip-link {
+    position: absolute; left: -9999px; top: 0;
+  }
+  .skip-link:focus {
+    left: 1rem; top: 1rem; z-index: 100; padding: 0.5rem 1rem;
+    @apply bg-primary text-white rounded shadow-lg;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-mute transition;
+  }
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded font-semibold hover:bg-primary-pale transition;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 bg-primary-pale text-primary px-4 py-2 rounded font-semibold hover:bg-primary-200 transition;
+  }
+  .container-page {
+    @apply container mx-auto px-4;
+  }
+  .a11y-large-text { font-size: 1.125rem !important; line-height: 1.75rem !important; }
+  .a11y-extra-large-text { font-size: 1.25rem !important; line-height: 2rem !important; }
+  .a11y-high-contrast { filter: contrast(1.4); }
+}
+
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  header, footer, aside, .no-print, .chatbot-bubble { display: none !important; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: .85em; color: #555; }
+  main { max-width: 100% !important; }
+}
