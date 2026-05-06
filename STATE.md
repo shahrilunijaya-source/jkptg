@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 9 COMPLETE (Stage 7 in progress). Chatbot bubble live (canned default + Anthropic fallback chain). Ready for Phase 10.
-**Last updated:** 2026-05-06 (Phase 9 chatbot done)
+**Current stage:** Phase 10 COMPLETE (Stage 7 in progress). i18n parity 161/161 keys MS+EN, all 7 public pages verified BM<->EN switch. Ready for Phase 11.
+**Last updated:** 2026-05-06 (Phase 10 i18n polish done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -31,10 +31,9 @@
   - [x] Phase 7 - 9 Filament admin resources with Translatable plugin (52 routes registered)
   - [x] Phase 8 - Filament dashboard (4 widgets) + ActivityResource audit log + 528 visit_logs seeded
   - [x] Phase 9 - Chatbot Livewire bubble + LlmService (Anthropic Sonnet 4.6 + Canned fallback) + sanitizer + rate limiter + cost cap kill-switch
-  - [ ] Phase 10 - i18n polish (BM/EN parallel) <- NEXT
-
-
-  - [ ] Phase 10-12 - i18n, search, edge cases
+  - [x] Phase 10 - i18n polish (lang parity 161/161 MS+EN, 5 missing footer/utility keys patched, all 9 translatable models EN-complete, locale-switch verified across 7 public pages)
+  - [ ] Phase 11 - Search (Scout DB driver) <- NEXT
+  - [ ] Phase 12 - Edge cases (legacy redirects, SPLaSK, print, accessibility)
   - [ ] Phase 13 - Verification
   - [ ] Phase 14 - Hostinger deploy
   - [ ] Phase 14.5 - Walkthrough video
