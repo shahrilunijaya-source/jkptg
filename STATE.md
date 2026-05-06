@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 14.5 SCRIPT COMPLETE. VIDEO-SCRIPT.md ships full 5-min Loom walkthrough script with timestamped click sequences + tender talking-points cheat sheet. Build 100% complete except: (a) actual Hostinger Git push, (b) actual Loom recording — both require user-side credentials.
-**Last updated:** 2026-05-06 (Phase 14.5 walkthrough script ready)
+**Current stage:** Tender package COMPLETE. TENDER-RESPONSE.md (Bahasa Melayu formal) covers exec summary + 12 sections + SOC Compliance Matrix Lampiran A. Build 100% artifact-complete. Manual user actions remaining: (a) Loom recording, (b) Hostinger Git push, (c) fill _[FILL]_ tags in tender response, (d) submit.
+**Last updated:** 2026-05-06 (Tender response template ready)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
