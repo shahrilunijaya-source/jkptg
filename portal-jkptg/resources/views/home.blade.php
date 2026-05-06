@@ -43,8 +43,8 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             @foreach([
                 ['orang-awam', 'users', __('messages.persona.orang_awam.title'), __('messages.persona.orang_awam.summary'), __('messages.persona.cta_start')],
-                ['kementerian-jabatan', 'building-office-2', __('messages.persona.kementerian.title'), __('messages.persona.kementerian.summary'), __('messages.persona.cta_start')],
-                ['warga-jkptg', 'identification', __('messages.persona.warga.title'), __('messages.persona.warga.summary'), __('messages.persona.cta_login')],
+                ['kementerian-jabatan', 'building-office-2', __('messages.persona.kementerian_jabatan.title'), __('messages.persona.kementerian_jabatan.summary'), __('messages.persona.cta_start')],
+                ['warga-jkptg', 'identification', __('messages.persona.warga_jkptg.title'), __('messages.persona.warga_jkptg.summary'), __('messages.persona.cta_login')],
             ] as [$slug, $icon, $title, $summary, $cta])
                 <a href="{{ route('persona.show', $slug) }}"
                    class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition focus:outline-none focus:ring-2 focus:ring-jata-yellow">

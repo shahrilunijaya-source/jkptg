@@ -5,14 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Faq;
 use App\Models\Form;
 use App\Models\Service;
+use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $services = Service::where('active', true)->orderBy('sort')->get();
-        $categories = $services->pluck('category')->unique()->filter()->values();
-        return view('perkhidmatan.index', compact('services', 'categories'));
+        $query = Service::where('active', true)->orderBy('sort');
+        $activeCategory = $request->string('kategori')->toString() ?: null;
+        if ($activeCategory) {
+            $query->where('category', $activeCategory);
+        }
+        $services = $query->get();
+        $categories = Service::where('active', true)->orderBy('sort')->get()
+            ->pluck('category')->unique()->filter()->values();
+        return view('perkhidmatan.index', compact('services', 'categories', 'activeCategory'));
     }
 
     public function show(string $slug)

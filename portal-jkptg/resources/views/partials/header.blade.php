@@ -20,10 +20,10 @@
                 {{ __('messages.nav.perkhidmatan') }}
                 <x-heroicon-o-chevron-down class="w-4 h-4" />
             </button>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
+            <a href="{{ route('panduan.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
+            <a href="{{ route('korporat.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
+            <a href="{{ route('sumber.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
+            <a href="{{ route('hubungi.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
             <form action="{{ route('search.index') }}" method="get" class="ml-2 relative" role="search">
                 <label for="header-search" class="sr-only">{{ __('messages.search.input_label') }}</label>
                 <input id="header-search" type="search" name="q" minlength="2" required
@@ -58,11 +58,11 @@
                 <x-heroicon-o-magnifying-glass class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
             </form>
             <a href="{{ route('home') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.utama') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.perkhidmatan') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
-            <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
+            <a href="{{ route('service.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.perkhidmatan') }}</a>
+            <a href="{{ route('panduan.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
+            <a href="{{ route('korporat.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
+            <a href="{{ route('sumber.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
+            <a href="{{ route('hubungi.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
             <a href="{{ url('/admin/login') }}" class="btn-primary mt-2">{{ __('messages.nav.log_masuk') }}</a>
         </nav>
     </div>

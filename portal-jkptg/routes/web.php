@@ -4,6 +4,7 @@ use App\Http\Controllers\BorangController;
 use App\Http\Controllers\HubungiController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SeoController;
@@ -21,6 +22,7 @@ Route::get('/untuk/{persona}', [PersonaController::class, 'show'])
 Route::get('/perkhidmatan', [ServiceController::class, 'index'])->name('service.index');
 Route::get('/perkhidmatan/{slug}', [ServiceController::class, 'show'])->name('service.show');
 
+Route::get('/panduan', [PanduanController::class, 'index'])->name('panduan.index');
 Route::get('/panduan/borang', [BorangController::class, 'index'])->name('borang.index');
 
 Route::get('/korporat', [PageController::class, 'korporat'])->name('korporat.index');
@@ -28,6 +30,19 @@ Route::get('/sumber', [PageController::class, 'sumber'])->name('sumber.index');
 Route::get('/halaman/{slug}', [PageController::class, 'show'])->name('page.show');
 
 Route::get('/hubungi', [HubungiController::class, 'index'])->name('hubungi.index');
+Route::get('/hubungi/ibu-pejabat', [HubungiController::class, 'ibuPejabat'])->name('hubungi.ibu-pejabat');
+Route::get('/hubungi/cawangan', [HubungiController::class, 'cawangan'])->name('hubungi.cawangan');
+Route::get('/hubungi/cawangan/{slug}', [HubungiController::class, 'cawanganShow'])->name('hubungi.cawangan.show');
+Route::get('/hubungi/aduan', [HubungiController::class, 'aduan'])->name('hubungi.aduan');
+Route::post('/hubungi/aduan', [HubungiController::class, 'aduanStore'])->name('hubungi.aduan.store');
+
+Route::get('/soalan-lazim', [PageController::class, 'soalanLazim'])->name('faq.index');
+Route::get('/peta-laman', [PageController::class, 'petaLaman'])->name('peta-laman');
+
+// PPPA mandatory pages (rule 3.1)
+Route::get('/hak-cipta', fn () => app(PageController::class)->staticPage('hak-cipta'))->name('hak-cipta');
+Route::get('/dasar-web', fn () => app(PageController::class)->staticPage('dasar-web'))->name('dasar-web');
+Route::get('/panduan-pengguna', fn () => app(PageController::class)->staticPage('panduan-pengguna'))->name('panduan-pengguna');
 
 Route::get('/cari', [SearchController::class, 'index'])->name('search.index');
 
@@ -63,10 +78,14 @@ $legacy = [
     '/announcement' => '/sumber',
     '/tender' => '/sumber',
     '/tenders' => '/sumber',
-    '/faq' => '/sumber',
+    '/faq' => '/soalan-lazim',
     '/help' => '/cari',
     '/search' => '/cari',
-    '/sitemap' => '/sitemap.xml',
+    '/sitemap' => '/peta-laman',
+    // PPPA mandatory aliases
+    '/penafian' => '/halaman/disclaimer',
+    '/dasar-privasi' => '/halaman/polisi-privasi',
+    '/dasar-keselamatan' => '/halaman/polisi-keselamatan',
 ];
 foreach ($legacy as $from => $to) {
     Route::redirect($from, $to, 301);

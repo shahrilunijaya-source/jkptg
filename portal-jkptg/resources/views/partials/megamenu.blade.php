@@ -25,7 +25,7 @@
         <div class="text-sm uppercase font-semibold text-gray-500 tracking-wider mb-3">{{ __('messages.megamenu.most_popular') }}</div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             @foreach($featured as $service)
-                <a href="#" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
+                <a href="{{ route('service.show', $service->slug) }}" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
                     <div class="h-32 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white">
                         <x-heroicon-o-document-text class="w-12 h-12" />
                     </div>
@@ -40,9 +40,9 @@
         <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm border-t pt-4">
             <span class="text-gray-500">{{ __('messages.megamenu.categories') }}:</span>
             @foreach($categories as $cat)
-                <a href="#" class="text-primary hover:underline capitalize">{{ $cat }}</a>
+                <a href="{{ route('service.index', ['kategori' => $cat]) }}" class="text-primary hover:underline capitalize">{{ $cat }}</a>
             @endforeach
-            <a href="#" class="ml-auto font-semibold text-primary hover:underline flex items-center gap-1">
+            <a href="{{ route('service.index') }}" class="ml-auto font-semibold text-primary hover:underline flex items-center gap-1">
                 {{ __('messages.megamenu.all_services') }}
                 <x-heroicon-o-arrow-right class="w-4 h-4" />
             </a>
