@@ -1,14 +1,22 @@
 <header class="border-b bg-white sticky top-0 z-30 shadow-sm no-print" x-data="{ megaOpen: false, mobileOpen: false }" @keydown.escape.window="megaOpen = false; mobileOpen = false">
     <div class="container-page flex items-center justify-between py-3">
         <a href="{{ route('home') }}" class="flex items-center gap-3" aria-label="{{ __('messages.site_name') }}">
-            <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="w-12 h-12 object-contain flex-shrink-0">
-            <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-12 w-auto object-contain hidden sm:block">
-            <div class="sm:hidden">
-                <div class="font-display font-bold text-primary leading-tight">JKPTG</div>
+            <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="h-14 w-auto object-contain flex-shrink-0">
+            <div class="hidden md:block min-w-0">
+                <div class="text-[10px] uppercase tracking-[0.18em] text-gray-500 font-semibold leading-tight">
+                    {{ __('messages.utility.official_short') }}
+                </div>
+                <div class="font-display font-bold text-primary text-base lg:text-lg leading-tight">
+                    {{ __('messages.site_description') }}
+                </div>
+                <div class="text-xs text-gray-600 leading-tight">
+                    {{ __('messages.ministry_name') }}
+                </div>
             </div>
+            <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-12 w-auto object-contain flex-shrink-0 hidden lg:block ml-2 border-l border-gray-200 pl-3">
         </a>
 
-        <nav aria-label="{{ __('messages.nav.utama') }}" class="hidden lg:flex items-center gap-1 text-sm font-medium">
+        <nav aria-label="{{ __('messages.nav.utama') }}" class="hidden lg:flex items-center gap-0.5 text-xs font-medium">
             <a href="{{ route('home') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.utama') }}</a>
             <button type="button"
                     @click.stop="megaOpen = !megaOpen"
@@ -23,7 +31,6 @@
             <a href="{{ route('panduan.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
             <a href="{{ route('korporat.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
             <a href="{{ route('sumber.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
-            <a href="{{ route('hubungi.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
             <form action="{{ route('search.index') }}" method="get" class="ml-2 relative" role="search">
                 <label for="header-search" class="sr-only">{{ __('messages.search.input_label') }}</label>
                 <input id="header-search" type="search" name="q" minlength="2" required
@@ -31,11 +38,6 @@
                        class="w-44 xl:w-56 border border-gray-300 rounded-full pl-9 pr-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
                 <x-heroicon-o-magnifying-glass class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
             </form>
-            @auth
-                <a href="{{ url('/admin') }}" class="ml-2 btn-primary !px-4 !py-2">{{ __('messages.nav.log_masuk') }}</a>
-            @else
-                <a href="{{ url('/admin/login') }}" class="ml-2 btn-primary !px-4 !py-2">{{ __('messages.nav.log_masuk') }}</a>
-            @endauth
         </nav>
 
         <button type="button"
@@ -62,8 +64,6 @@
             <a href="{{ route('panduan.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>
             <a href="{{ route('korporat.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
             <a href="{{ route('sumber.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
-            <a href="{{ route('hubungi.index') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
-            <a href="{{ url('/admin/login') }}" class="btn-primary mt-2">{{ __('messages.nav.log_masuk') }}</a>
         </nav>
     </div>
 

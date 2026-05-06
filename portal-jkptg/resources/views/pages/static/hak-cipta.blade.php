@@ -1,10 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.footer.hak_cipta') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[['label' => __('messages.footer.hak_cipta')]]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -14,6 +12,8 @@
         <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.static.hak_cipta.heading') }}</h1>
     </div>
 </section>
+
+<x-breadcrumb :items="[['label' => __('messages.footer.hak_cipta')]]" />
 
 <section class="py-12">
     <div class="container-page max-w-3xl prose prose-sm md:prose-base text-gray-800">

@@ -1,4 +1,4 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.hubungi.hq') . ' | ' . __('messages.site_name'))
 
@@ -9,11 +9,6 @@
 @endpush
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],
-    ['label' => __('messages.hubungi.hq')],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -24,6 +19,11 @@
         <p class="text-white/85">{{ __('messages.hubungi.hq_help') }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],
+    ['label' => __('messages.hubungi.hq')],
+]" />
 
 <section class="py-12">
     <div class="container-page grid grid-cols-1 lg:grid-cols-2 gap-6">

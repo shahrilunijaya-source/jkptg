@@ -3,6 +3,7 @@
 return [
     'site_name' => 'JKPTG Official Portal',
     'site_description' => 'Department of the Director General of Federal Lands and Mines',
+    'ministry_name' => 'Ministry of Natural Resources and Environmental Sustainability',
     'skip_to_content' => 'Skip to main content',
     'on_this_page' => 'On this page',
 
@@ -34,6 +35,7 @@ return [
 
     'utility' => [
         'official_site' => 'Official Portal of the Department of Federal Lands and Mines',
+        'official_short' => 'Official Website',
         'soalan_lazim' => 'FAQ',
         'hubungi' => 'Contact Us',
         'aduan' => 'Complaints',

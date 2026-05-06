@@ -3,8 +3,6 @@
 @section('title', __('messages.nav.panduan') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[['label' => __('messages.nav.panduan')]]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -16,50 +14,68 @@
     </div>
 </section>
 
+<x-breadcrumb :items="[['label' => __('messages.nav.panduan')]]" />
+
 <section class="py-12">
-    <div class="container-page grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <a href="{{ route('borang.index') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-document-arrow-down class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.panduan.borang_title') }}</h2>
-            <p class="text-sm text-gray-600 mb-3">{{ __('messages.panduan.borang_desc') }}</p>
-            <div class="text-xs text-jata-red font-semibold">{{ trans_choice('messages.borang.results', $borangCount, ['count' => $borangCount]) }}</div>
-        </a>
+    <div class="container-page">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="{{ route('borang.index') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-document-arrow-down class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.panduan.borang_title') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.borang_desc') }}</p>
+                <div class="text-xs text-jata-red font-semibold mt-2">{{ trans_choice('messages.borang.results', $borangCount, ['count' => $borangCount]) }}</div>
+            </a>
 
-        <a href="{{ route('service.index') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-clipboard-document-list class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.panduan.sop_title') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.sop_desc') }}</p>
-        </a>
+            <a href="{{ route('service.index') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-clipboard-document-list class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.panduan.sop_title') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.sop_desc') }}</p>
+            </a>
 
-        <a href="{{ route('panduan.akta') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-scale class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.panduan.guides_panduan_link') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.guides_panduan_desc') }}</p>
-        </a>
+            <a href="{{ route('panduan.akta') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-scale class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.panduan.guides_panduan_link') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.guides_panduan_desc') }}</p>
+            </a>
 
-        <a href="{{ route('faq.index') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-question-mark-circle class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.utility.soalan_lazim') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.faq_desc') }}</p>
-        </a>
+            <a href="{{ route('faq.index') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-question-mark-circle class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.utility.soalan_lazim') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.faq_desc') }}</p>
+            </a>
 
-        <a href="{{ route('peta-laman') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-map class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.utility.peta_laman') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.peta_desc') }}</p>
-        </a>
+            <a href="{{ route('peta-laman') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-map class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.utility.peta_laman') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.peta_desc') }}</p>
+            </a>
 
-        <a href="{{ route('panduan-pengguna') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-academic-cap class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.panduan.user_title') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.user_desc') }}</p>
-        </a>
+            <a href="{{ route('panduan-pengguna') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-academic-cap class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.panduan.user_title') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.user_desc') }}</p>
+            </a>
 
-        <a href="{{ route('hubungi.aduan') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
-            <x-heroicon-o-megaphone class="w-8 h-8 text-primary mb-3" />
-            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.utility.aduan') }}</h2>
-            <p class="text-sm text-gray-600">{{ __('messages.panduan.aduan_desc') }}</p>
-        </a>
+            <a href="{{ route('hubungi.aduan') }}" class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                    <x-heroicon-o-megaphone class="w-5 h-5" />
+                </div>
+                <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ __('messages.utility.aduan') }}</h3>
+                <p class="text-sm text-gray-600 line-clamp-2">{{ __('messages.panduan.aduan_desc') }}</p>
+            </a>
+        </div>
     </div>
 </section>
 

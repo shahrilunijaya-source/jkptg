@@ -3,6 +3,7 @@
 return [
     'site_name' => 'Portal Rasmi JKPTG',
     'site_description' => 'Jabatan Ketua Pengarah Tanah dan Galian Persekutuan',
+    'ministry_name' => 'Kementerian Sumber Asli dan Kelestarian Alam',
     'skip_to_content' => 'Langkau ke kandungan utama',
     'on_this_page' => 'Pada halaman ini',
 
@@ -34,6 +35,7 @@ return [
 
     'utility' => [
         'official_site' => 'Laman Web Rasmi Jabatan Ketua Pengarah Tanah dan Galian Persekutuan',
+        'official_short' => 'Laman Web Rasmi',
         'soalan_lazim' => 'Soalan Lazim',
         'hubungi' => 'Hubungi Kami',
         'aduan' => 'Aduan',

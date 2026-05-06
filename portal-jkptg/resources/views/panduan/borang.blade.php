@@ -1,13 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.borang.title') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.panduan'), 'href' => '#'],
-    ['label' => __('messages.borang.title')],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -18,6 +13,11 @@
         <p class="text-white/85 max-w-2xl">{{ __('messages.borang.help') }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.panduan'), 'href' => '#'],
+    ['label' => __('messages.borang.title')],
+]" />
 
 <section class="py-12">
     <div class="container-page grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8">

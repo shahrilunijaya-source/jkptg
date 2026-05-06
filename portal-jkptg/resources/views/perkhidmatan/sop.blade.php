@@ -1,14 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.service.sop_title', ['name' => $service->name]))
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.perkhidmatan'), 'href' => route('service.index')],
-    ['label' => $service->name, 'href' => route('service.show', $service->slug)],
-    ['label' => __('messages.service.sop_breadcrumb')],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12 no-print">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -19,6 +13,12 @@
         <p class="text-white/85 max-w-2xl">{{ __('messages.service.sop_intro') }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.perkhidmatan'), 'href' => route('service.index')],
+    ['label' => $service->name, 'href' => route('service.show', $service->slug)],
+    ['label' => __('messages.service.sop_breadcrumb')],
+]" />
 
 <section class="py-12 print:py-4">
     <div class="container-page max-w-3xl">

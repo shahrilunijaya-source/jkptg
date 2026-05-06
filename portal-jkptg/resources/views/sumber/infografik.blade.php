@@ -1,13 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.sumber.infografik') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.sumber'), 'href' => route('sumber.index')],
-    ['label' => __('messages.sumber.infografik')],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -18,6 +13,11 @@
         <p class="text-white/85 max-w-2xl">{{ __('messages.sumber.infografik_desc') }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.sumber'), 'href' => route('sumber.index')],
+    ['label' => __('messages.sumber.infografik')],
+]" />
 
 <section class="py-12">
     <div class="container-page grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

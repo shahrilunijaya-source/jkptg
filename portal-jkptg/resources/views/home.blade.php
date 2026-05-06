@@ -70,7 +70,7 @@
         @else
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
                 @foreach($services as $service)
-                    <a href="#" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group transition">
+                    <a href="{{ route('service.show', $service->slug) }}" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group transition">
                         <x-heroicon-o-document-text class="w-8 h-8 mx-auto text-primary mb-2" />
                         <div class="font-semibold text-sm group-hover:text-primary leading-snug">{{ $service->name }}</div>
                     </a>

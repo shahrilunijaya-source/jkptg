@@ -1,13 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
-@section('title', __('messages.search.page_title') . ($q ? ': ' . $q : '') . ' — JKPTG')
+@section('title', __('messages.search.page_title') . ($q ? ': ' . $q : '') . ' â€” JKPTG')
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.utama'), 'url' => route('home')],
-    ['label' => __('messages.search.crumb')],
-]" />
-
 <section class="container-page py-8">
     <h1 class="font-display font-semibold text-3xl text-primary mb-2">{{ __('messages.search.page_title') }}</h1>
     @if ($q)
@@ -83,20 +78,20 @@
                                 @case('news')
                                     <div>
                                         <h3 class="font-semibold text-primary">{{ $item->title }}</h3>
-                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->published_at?->isoFormat('D MMM Y') }} · {{ $item->type }}</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->published_at?->isoFormat('D MMM Y') }} Â· {{ $item->type }}</p>
                                         <p class="text-sm text-gray-600 mt-1 line-clamp-2">{{ \Illuminate\Support\Str::limit($item->excerpt, 180) }}</p>
                                     </div>
                                     @break
                                 @case('tenders')
                                     <div>
                                         <h3 class="font-semibold text-primary">{{ $item->title }}</h3>
-                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->reference_no }} · {{ ucfirst($item->status) }} · {{ __('messages.search.closes') }}: {{ $item->closes_at?->isoFormat('D MMM Y') }}</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->reference_no }} Â· {{ ucfirst($item->status) }} Â· {{ __('messages.search.closes') }}: {{ $item->closes_at?->isoFormat('D MMM Y') }}</p>
                                     </div>
                                     @break
                                 @case('forms')
                                     <a href="{{ route('borang.index', ['q' => $q]) }}" class="block">
                                         <h3 class="font-semibold text-primary">{{ $item->name }}</h3>
-                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->slug }}.pdf · {{ $item->file_size_human ?? '' }}</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">{{ $item->slug }}.pdf Â· {{ $item->file_size_human ?? '' }}</p>
                                     </a>
                                     @break
                                 @case('faqs')
@@ -122,6 +117,11 @@
                     </p>
                 @endif
             </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.utama'), 'url' => route('home')],
+    ['label' => __('messages.search.crumb')],
+]" />
         @endif
     @endforeach
 </section>

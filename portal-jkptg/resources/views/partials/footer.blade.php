@@ -12,8 +12,8 @@
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
                 <div class="flex items-center gap-2 mb-3">
-                    <div class="w-10 h-10 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs" aria-hidden="true">JATA</div>
-                    <span class="font-display font-bold">JKPTG</span>
+                    <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="h-10 w-auto object-contain flex-shrink-0">
+                    <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-10 w-auto object-contain flex-shrink-0 brightness-0 invert">
                 </div>
                 <address class="not-italic text-sm text-white/80 leading-relaxed">
                     {{ $address }}

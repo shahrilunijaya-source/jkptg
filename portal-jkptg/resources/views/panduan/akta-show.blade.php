@@ -1,14 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', $act['title'] . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.panduan'), 'href' => route('panduan.index')],
-    ['label' => __('messages.panduan.akta_title'), 'href' => route('panduan.akta')],
-    ['label' => $act['title']],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12 no-print">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -19,6 +13,12 @@
         <div class="text-white/80 text-sm">{{ __('messages.panduan.akta_year') }}: {{ $act['year'] }}</div>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.panduan'), 'href' => route('panduan.index')],
+    ['label' => __('messages.panduan.akta_title'), 'href' => route('panduan.akta')],
+    ['label' => $act['title']],
+]" />
 
 <section class="py-12 print:py-4">
     <div class="container-page max-w-3xl">

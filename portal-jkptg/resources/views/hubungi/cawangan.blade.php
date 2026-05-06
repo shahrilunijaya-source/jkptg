@@ -1,13 +1,8 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.hubungi.branches') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],
-    ['label' => __('messages.hubungi.branches')],
-]" />
-
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
     <div class="container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
@@ -18,6 +13,11 @@
         <p class="text-white/85 max-w-2xl">{{ trans_choice('messages.hubungi.branch_count', $branches->count(), ['count' => $branches->count()]) }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],
+    ['label' => __('messages.hubungi.branches')],
+]" />
 
 <section class="py-12">
     <div class="container-page">

@@ -47,3 +47,4 @@ reference/scrape/03-screenshots/
 
 # Patch scripts (transient - kept for paper trail)
 # scripts/  # uncomment to exclude
+.gstack/

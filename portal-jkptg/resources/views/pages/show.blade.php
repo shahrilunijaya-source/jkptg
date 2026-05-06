@@ -1,11 +1,9 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', $page->title . ' | ' . __('messages.site_name'))
 @section('description', strip_tags($page->meta_description ?? ''))
 
 @section('content')
-<x-breadcrumb :items="[['label' => $page->title]]" />
-
 <section class="container-page py-12 max-w-4xl">
     <h1 class="font-display text-3xl md:text-4xl font-bold text-primary mb-6">{{ $page->title }}</h1>
     <article class="prose prose-slate max-w-none">
@@ -26,4 +24,6 @@
         </div>
     </div>
 </section>
+
+<x-breadcrumb :items="[['label' => $page->title]]" />
 @endsection

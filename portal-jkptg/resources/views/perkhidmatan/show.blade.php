@@ -1,4 +1,4 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', $service->name . ' | ' . __('messages.site_name'))
 
@@ -21,11 +21,6 @@
 @endpush
 
 @section('content')
-<x-breadcrumb :items="[
-    ['label' => __('messages.nav.perkhidmatan'), 'href' => route('service.index')],
-    ['label' => $service->name],
-]" />
-
 <section class="bg-primary text-white py-10">
     <div class="container-page">
         <div class="text-jata-yellow text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
@@ -36,6 +31,11 @@
         <p class="text-white/85 max-w-3xl">{{ $service->summary }}</p>
     </div>
 </section>
+
+<x-breadcrumb :items="[
+    ['label' => __('messages.nav.perkhidmatan'), 'href' => route('service.index')],
+    ['label' => $service->name],
+]" />
 
 {{-- Mobile dropdown nav --}}
 <details class="lg:hidden bg-white border-b">
