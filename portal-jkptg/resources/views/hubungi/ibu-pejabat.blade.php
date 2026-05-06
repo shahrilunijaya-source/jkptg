@@ -9,16 +9,7 @@
 @endpush
 
 @section('content')
-<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
-        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
-            <x-heroicon-o-building-office-2 class="w-4 h-4" />
-            <span>{{ __('messages.hubungi.hq') }}</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-5xl font-bold mb-1">{{ $hq->name }}</h1>
-        <p class="text-white/85">{{ __('messages.hubungi.hq_help') }}</p>
-    </div>
-</section>
+<x-statement-band :label="__('messages.hubungi.hq')" :title="$hq->name" :subtitle="__('messages.hubungi.hq_help')" />
 
 <x-breadcrumb :items="[
     ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],

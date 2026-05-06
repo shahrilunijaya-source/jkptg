@@ -19,26 +19,18 @@
 </nav>
 
 {{-- Hero --}}
-<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
-        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
-            <x-dynamic-component :component="'heroicon-o-' . $personaIcon" class="w-4 h-4" />
-            <span>{{ $title }}</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.persona.welcome') }}</h1>
-        <p class="text-white/85 mb-6 max-w-2xl">{{ $summary }}</p>
-        <form class="max-w-2xl flex bg-white rounded-md overflow-hidden shadow" role="search" action="#" method="get">
-            <label for="persona-search" class="sr-only">{{ __('messages.persona.search_label') }}</label>
-            <input type="search" id="persona-search" name="q"
-                   placeholder="{{ __('messages.persona.search_placeholder') }}"
-                   class="flex-1 px-4 py-3 text-gray-800 outline-none border-0 focus:ring-0">
-            <button type="submit" class="bg-primary px-5 text-white hover:bg-primary-light flex items-center gap-2">
-                <x-heroicon-o-magnifying-glass class="w-4 h-4" />
-                <span>{{ __('messages.persona.search_button') }}</span>
-            </button>
-        </form>
-    </div>
-</section>
+<x-statement-band :label="$title" :title="__('messages.persona.welcome')" :subtitle="$summary">
+    <form class="w-full max-w-2xl flex bg-white rounded-md overflow-hidden border border-slate-300" role="search" action="#" method="get">
+        <label for="persona-search" class="sr-only">{{ __('messages.persona.search_label') }}</label>
+        <input type="search" id="persona-search" name="q"
+               placeholder="{{ __('messages.persona.search_placeholder') }}"
+               class="flex-1 px-4 py-3 text-gray-800 outline-none border-0 focus:ring-0">
+        <button type="submit" class="bg-primary px-5 text-white hover:bg-primary-light flex items-center gap-2">
+            <x-heroicon-o-magnifying-glass class="w-4 h-4" />
+            <span>{{ __('messages.persona.search_button') }}</span>
+        </button>
+    </form>
+</x-statement-band>
 
 {{-- Body: 2-col main + sidebar --}}
 <section class="py-12">

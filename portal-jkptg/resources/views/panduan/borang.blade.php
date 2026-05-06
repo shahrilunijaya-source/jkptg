@@ -3,16 +3,7 @@
 @section('title', __('messages.borang.title') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
-        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
-            <x-heroicon-o-document-text class="w-4 h-4" />
-            <span>{{ __('messages.borang.title') }}</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.borang.heading') }}</h1>
-        <p class="text-white/85 max-w-2xl">{{ __('messages.borang.help') }}</p>
-    </div>
-</section>
+<x-statement-band :label="__('messages.borang.title')" :title="__('messages.borang.heading')" :subtitle="__('messages.borang.help')" />
 
 <x-breadcrumb :items="[
     ['label' => __('messages.nav.panduan'), 'href' => '#'],

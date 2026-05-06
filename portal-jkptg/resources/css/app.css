@@ -6,9 +6,9 @@
 
 @layer base {
   html { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-feature-settings: 'cv11','ss01','ss03'; }
-  body { @apply bg-white text-slate-900 antialiased; }
+  body { @apply bg-white text-slate-800 antialiased; }
   h1, h2, h3, h4, h5, h6 { font-family: 'Inter', system-ui, sans-serif; letter-spacing: -0.01em; }
-  :focus-visible { outline: 2px solid #243D57; outline-offset: 2px; border-radius: 2px; }
+  :focus-visible { outline: 2px solid #1B5E3F; outline-offset: 2px; border-radius: 2px; }
   .font-mono, code, kbd, samp, pre { font-feature-settings: 'tnum','lnum','ss01'; }
 }
 
@@ -21,36 +21,44 @@
     @apply bg-primary text-white;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-primary text-white px-4 py-2 font-semibold hover:bg-primary-700 transition-colors duration-150;
+    @apply inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-sm font-semibold hover:bg-primary-800 transition-colors duration-150;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 font-semibold hover:bg-primary hover:text-white transition-colors duration-150;
+    @apply inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-sm font-semibold hover:bg-primary hover:text-white transition-colors duration-150;
   }
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border border-slate-300 text-slate-900 px-4 py-2 font-semibold hover:border-slate-900 transition-colors duration-150;
+    @apply inline-flex items-center gap-2 border border-slate-300 text-slate-800 px-5 py-2.5 rounded-sm font-semibold hover:border-primary hover:text-primary transition-colors duration-150;
+  }
+  .btn-bronze {
+    @apply inline-flex items-center gap-2 bg-bronze text-white px-5 py-2.5 rounded-sm font-semibold hover:bg-bronze-dark transition-colors duration-150;
   }
   .container-page {
     @apply container mx-auto px-4;
   }
-  /* Gov-Tech building blocks */
-  .mono-cap {
-    @apply font-mono uppercase tracking-[0.12em] text-[11px] font-medium;
+  /* Section eyebrow — small caps, refined, NOT mono SaaS feel */
+  .eyebrow {
+    @apply uppercase tracking-[0.16em] text-[12px] font-semibold text-primary;
   }
+  .eyebrow-muted {
+    @apply uppercase tracking-[0.16em] text-[11px] font-semibold text-slate-500;
+  }
+  /* Mono kept ONLY for genuine data: refs, ISO dates, status pills */
   .mono-meta {
     @apply font-mono text-[12px] text-slate-500;
   }
-  .data-tile {
-    @apply block border border-slate-200 bg-white p-5 transition-colors duration-150 hover:border-slate-900 focus-visible:border-slate-900;
-  }
   .status-pill {
-    @apply inline-flex items-center font-mono uppercase tracking-[0.08em] text-[10px] font-medium border px-2 py-0.5;
+    @apply inline-flex items-center font-mono uppercase tracking-[0.08em] text-[10px] font-medium border px-2 py-0.5 rounded-sm;
   }
-  .status-pill--open    { @apply border-emerald-600 text-emerald-700 bg-emerald-50; }
+  .status-pill--open    { @apply border-emerald-700 text-emerald-800 bg-emerald-50; }
   .status-pill--closed  { @apply border-slate-400 text-slate-600 bg-slate-50; }
-  .status-pill--draft   { @apply border-amber-500 text-amber-700 bg-amber-50; }
+  .status-pill--draft   { @apply border-amber-600 text-amber-800 bg-amber-50; }
   .status-pill--baru    { @apply border-primary text-primary bg-primary-50; }
-  .kbd {
-    @apply font-mono text-[11px] border border-slate-300 bg-slate-50 text-slate-600 px-1.5 py-0.5;
+  /* Civic card — soft fill, hairline border, restrained shadow on hover */
+  .civic-card {
+    @apply block bg-white border border-slate-200 rounded-sm p-6 transition-shadow duration-200 ease-out hover:shadow-[0_2px_12px_rgba(11,50,32,0.08)] hover:border-primary-200;
+  }
+  .icon-medallion {
+    @apply inline-flex items-center justify-center w-11 h-11 rounded-sm bg-primary-50 text-primary;
   }
   .a11y-large-text { font-size: 1.125rem !important; line-height: 1.75rem !important; }
   .a11y-extra-large-text { font-size: 1.25rem !important; line-height: 2rem !important; }

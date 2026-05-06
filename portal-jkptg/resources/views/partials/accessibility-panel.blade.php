@@ -5,7 +5,7 @@
     <button type="button"
             @click="a11yOpen = !a11yOpen"
             :aria-expanded="a11yOpen ? 'true' : 'false'"
-            class="bg-slate-900 text-white w-7 hover:bg-slate-800 focus:outline-none focus-visible:bg-slate-800 transition-colors duration-150 flex items-center justify-center"
+            class="bg-primary-900 text-white w-7 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150 flex items-center justify-center"
             :title="a11yOpen ? '{{ __('messages.nav.close_menu') }}' : '{{ __('messages.a11y.panel_title') }}'">
         <span class="font-mono text-[10px] uppercase tracking-[0.18em] [writing-mode:vertical-rl] py-3">A11Y</span>
     </button>
@@ -19,10 +19,10 @@
          x-transition:leave="transition ease-in duration-150"
          x-transition:leave-start="opacity-100 translate-x-0"
          x-transition:leave-end="opacity-0 translate-x-2"
-         class="bg-slate-900 text-white flex flex-col border-l border-white/10">
+         class="bg-primary-900 text-white flex flex-col border-l border-white/10">
         <button type="button"
                 @click="a11y.large = !a11y.large; a11y.xlarge = false"
-                class="p-3 hover:bg-slate-800 focus:outline-none focus-visible:bg-slate-800 transition-colors duration-150"
+                class="p-3 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150"
                 :class="a11y.large ? 'bg-slate-800' : ''"
                 :aria-pressed="a11y.large ? 'true' : 'false'"
                 :title="'{{ __('messages.a11y.text_larger') }}'">
@@ -31,7 +31,7 @@
         </button>
         <button type="button"
                 @click="a11y.xlarge = !a11y.xlarge; a11y.large = false"
-                class="p-3 hover:bg-slate-800 focus:outline-none focus-visible:bg-slate-800 transition-colors duration-150"
+                class="p-3 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150"
                 :class="a11y.xlarge ? 'bg-slate-800' : ''"
                 :aria-pressed="a11y.xlarge ? 'true' : 'false'"
                 :title="'{{ __('messages.a11y.text_smaller') }}'">
@@ -40,7 +40,7 @@
         </button>
         <button type="button"
                 @click="a11y.contrast = !a11y.contrast"
-                class="p-3 hover:bg-slate-800 focus:outline-none focus-visible:bg-slate-800 transition-colors duration-150"
+                class="p-3 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150"
                 :class="a11y.contrast ? 'bg-slate-800' : ''"
                 :aria-pressed="a11y.contrast ? 'true' : 'false'"
                 :title="'{{ __('messages.a11y.high_contrast') }}'">
@@ -49,7 +49,7 @@
         </button>
         <button type="button"
                 @click="a11y.large = false; a11y.xlarge = false; a11y.contrast = false"
-                class="p-3 hover:bg-slate-800 focus:outline-none focus-visible:bg-slate-800 transition-colors duration-150"
+                class="p-3 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150"
                 :title="'{{ __('messages.a11y.reset') }}'">
             <x-heroicon-o-arrow-path class="w-5 h-5" />
             <span class="sr-only">{{ __('messages.a11y.reset') }}</span>

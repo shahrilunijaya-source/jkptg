@@ -3,15 +3,7 @@
 @section('title', __('messages.footer.hak_cipta') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
-        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
-            <x-heroicon-o-document-text class="w-4 h-4" />
-            <span>{{ __('messages.static.legal') }}</span>
-        </div>
-        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.static.hak_cipta.heading') }}</h1>
-    </div>
-</section>
+<x-statement-band :label="__('messages.static.legal')" :title="__('messages.static.hak_cipta.heading')" />
 
 <x-breadcrumb :items="[['label' => __('messages.footer.hak_cipta')]]" />
 

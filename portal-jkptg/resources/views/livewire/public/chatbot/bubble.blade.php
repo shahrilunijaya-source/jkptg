@@ -2,22 +2,22 @@
     @if (! $open)
         <button type="button"
                 wire:click="toggle"
-                class="bg-primary text-white px-4 py-3 hover:bg-primary-700 focus-visible:bg-primary-700 transition-colors duration-150 inline-flex items-center gap-2 border border-primary"
+                class="bg-primary text-white pl-4 pr-5 py-3 rounded-sm shadow-[0_4px_16px_rgba(11,50,32,0.25)] hover:bg-primary-800 focus-visible:bg-primary-800 transition-colors duration-150 inline-flex items-center gap-2.5"
                 aria-label="{{ __('messages.chatbot.open') }}">
-            <x-heroicon-o-chat-bubble-left-ellipsis class="w-4 h-4" aria-hidden="true" />
-            <span class="font-mono uppercase tracking-[0.12em] text-[11px] font-medium">{{ __('messages.chatbot.title') }}</span>
+            <x-heroicon-o-chat-bubble-left-ellipsis class="w-5 h-5" aria-hidden="true" />
+            <span class="text-[13px] font-semibold">{{ __('messages.chatbot.title') }}</span>
         </button>
     @else
         <section role="dialog"
                  aria-label="{{ __('messages.chatbot.title') }}"
                  class="w-[380px] max-w-[calc(100vw-3rem)] h-[580px] max-h-[calc(100vh-6rem)] bg-white border border-slate-300 flex flex-col overflow-hidden">
 
-            <header class="bg-slate-900 text-white px-4 py-3 flex items-center justify-between border-b border-slate-700">
+            <header class="bg-primary-900 text-white px-4 py-3 flex items-center justify-between border-b border-primary-800">
                 <div class="flex items-center gap-2.5 min-w-0">
                     <x-heroicon-s-chat-bubble-left-ellipsis class="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                     <div class="min-w-0">
                         <p class="font-semibold text-[13px] leading-tight">{{ __('messages.chatbot.title') }}</p>
-                        <p class="font-mono uppercase tracking-[0.08em] text-[10px] text-white/60 leading-tight mt-0.5">{{ __('messages.chatbot.subtitle') }}</p>
+                        <p class="text-[11px] text-white/65 leading-tight mt-0.5">{{ __('messages.chatbot.subtitle') }}</p>
                     </div>
                 </div>
                 <button type="button" wire:click="toggle"
@@ -38,16 +38,17 @@
                                 {!! nl2br(e($m['content'])) !!}
                             </div>
                             @if ($m['role'] === 'bot')
-                                <div class="font-mono tabular-nums text-[10px] text-slate-500 mt-1 flex items-center gap-2 px-1">
+                                <div class="text-[11px] text-slate-500 mt-1 flex items-center gap-2 px-1">
                                     <span>{{ $m['at'] }}</span>
                                     @if ($m['citation'])
-                                        <span class="inline-flex items-center gap-1 uppercase tracking-[0.06em]">
+                                        <span class="inline-flex items-center gap-1">
                                             <span aria-hidden="true">·</span>
-                                            REF · {{ $m['citation'] }}
+                                            <x-heroicon-o-bookmark class="w-3 h-3" aria-hidden="true" />
+                                            <span>{{ $m['citation'] }}</span>
                                         </span>
                                     @endif
                                     @if (! empty($m['fell_back']))
-                                        <span class="inline-flex items-center gap-1 uppercase tracking-[0.06em] text-amber-700">
+                                        <span class="inline-flex items-center gap-1 text-amber-700">
                                             <span aria-hidden="true">·</span>
                                             {{ __('messages.chatbot.fallback') }}
                                         </span>
@@ -74,7 +75,7 @@
                     @foreach ($this->quickReplies as $qr)
                         <button type="button"
                                 wire:click="useQuickReply({{ $qr->id }})"
-                                class="font-mono text-[11px] uppercase tracking-[0.06em] px-2.5 py-1 border border-slate-300 text-slate-700 hover:border-slate-900 hover:text-slate-900 focus:outline-none focus-visible:border-primary focus-visible:text-primary transition-colors duration-150">
+                                class="text-[12px] font-medium px-3 py-1.5 border border-slate-300 rounded-sm text-slate-700 hover:border-primary hover:text-primary focus:outline-none focus-visible:border-primary focus-visible:text-primary transition-colors duration-150">
                             {{ $qr->getTranslation('label', app()->getLocale(), false) ?: $qr->getTranslation('label', 'ms') }}
                         </button>
                     @endforeach
@@ -105,7 +106,7 @@
                 </button>
             </form>
 
-            <p class="font-mono text-[10px] text-slate-500 px-3 py-1.5 bg-slate-50 border-t border-slate-200 leading-snug">
+            <p class="text-[11px] text-slate-500 px-3 py-2 bg-canvas-mute border-t border-slate-200 leading-snug">
                 {{ __('messages.chatbot.disclaimer') }}
             </p>
         </section>

@@ -16,7 +16,7 @@
                     <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="h-11 w-auto object-contain flex-shrink-0">
                     <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-9 w-auto object-contain flex-shrink-0 brightness-0 invert">
                 </div>
-                <div class="mono-cap text-white/50 mb-2">{{ __('messages.utility.official_short') }}</div>
+                <div class="text-[11px] uppercase tracking-[0.16em] font-semibold text-bronze-light mb-2">{{ __('messages.utility.official_short') }}</div>
                 <div class="font-bold text-[15px] text-white leading-snug max-w-md">
                     {{ __('messages.site_description') }}
                 </div>
@@ -28,19 +28,19 @@
                 </address>
                 <dl class="text-[13px] text-white/80 space-y-1.5">
                     <div class="flex gap-3">
-                        <dt class="mono-cap text-white/40 w-12 shrink-0 pt-0.5">TEL</dt>
-                        <dd class="font-mono">{{ $phone }}</dd>
+                        <dt class="text-[11px] uppercase tracking-[0.14em] font-semibold text-white/45 w-14 shrink-0 pt-0.5">{{ app()->getLocale() === 'ms' ? 'Tel' : 'Tel' }}</dt>
+                        <dd class="font-medium">{{ $phone }}</dd>
                     </div>
                     <div class="flex gap-3">
-                        <dt class="mono-cap text-white/40 w-12 shrink-0 pt-0.5">EMEL</dt>
-                        <dd><a href="mailto:{{ $email }}" class="font-mono hover:text-white">{{ $email }}</a></dd>
+                        <dt class="text-[11px] uppercase tracking-[0.14em] font-semibold text-white/45 w-14 shrink-0 pt-0.5">{{ app()->getLocale() === 'ms' ? 'Emel' : 'Email' }}</dt>
+                        <dd><a href="mailto:{{ $email }}" class="font-medium hover:text-white">{{ $email }}</a></dd>
                     </div>
                 </dl>
             </div>
 
             {{-- Pautan Pantas --}}
             <div class="md:col-span-3">
-                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.footer.pautan_pantas') }}</h3>
+                <h3 class="text-[12px] uppercase tracking-[0.16em] font-semibold text-bronze-light mb-4">{{ __('messages.footer.pautan_pantas') }}</h3>
                 <ul class="text-[14px] space-y-2.5 text-white/85">
                     <li><a href="{{ route('faq.index') }}" class="hover:text-white">{{ __('messages.utility.soalan_lazim') }}</a></li>
                     <li><a href="{{ route('panduan.index') }}" class="hover:text-white">{{ __('messages.nav.panduan') }}</a></li>
@@ -52,7 +52,7 @@
 
             {{-- Korporat --}}
             <div class="md:col-span-2">
-                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.footer.korporat') }}</h3>
+                <h3 class="text-[12px] uppercase tracking-[0.16em] font-semibold text-bronze-light mb-4">{{ __('messages.footer.korporat') }}</h3>
                 <ul class="text-[14px] space-y-2.5 text-white/85">
                     <li><a href="{{ route('page.show', 'mengenai-jkptg') }}" class="hover:text-white">{{ __('messages.footer.mengenai') }}</a></li>
                     <li><a href="{{ route('page.show', 'piagam-pelanggan') }}" class="hover:text-white">{{ __('messages.footer.piagam') }}</a></li>
@@ -63,7 +63,7 @@
 
             {{-- Sumber --}}
             <div class="md:col-span-2">
-                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.nav.sumber') }}</h3>
+                <h3 class="text-[12px] uppercase tracking-[0.16em] font-semibold text-bronze-light mb-4">{{ __('messages.nav.sumber') }}</h3>
                 <ul class="text-[14px] space-y-2.5 text-white/85">
                     <li><a href="{{ route('sumber.index') }}" class="hover:text-white">{{ __('messages.nav.sumber') }}</a></li>
                     <li><a href="{{ route('panduan.index') }}" class="hover:text-white">{{ __('messages.nav.panduan') }}</a></li>
@@ -83,20 +83,20 @@
                 <a href="{{ route('dasar-web') }}" class="hover:text-white">{{ __('messages.peta_laman.dasar_web') }}</a>
                 <a href="{{ route('peta-laman') }}" class="hover:text-white">{{ __('messages.footer.peta_laman') }}</a>
             </nav>
-            <dl class="flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[11px]">
+            <dl class="flex flex-wrap items-center gap-x-6 gap-y-1.5 text-[12px]">
                 <div class="flex gap-2">
-                    <dt class="uppercase tracking-[0.08em] text-white/40">PELAWAT</dt>
-                    <dd class="text-white/80">{{ number_format($visitors) }}</dd>
+                    <dt class="text-white/45">{{ __('messages.footer.pelawat') }}:</dt>
+                    <dd class="text-white/85 font-semibold">{{ number_format($visitors) }}</dd>
                 </div>
                 @if($lastUpdatedFmt)
                 <div class="flex gap-2">
-                    <dt class="uppercase tracking-[0.08em] text-white/40">KEMASKINI</dt>
-                    <dd class="text-white/80">{{ $lastUpdatedFmt }}</dd>
+                    <dt class="text-white/45">{{ __('messages.footer.kemaskini') }}:</dt>
+                    <dd class="text-white/85 font-semibold">{{ \Illuminate\Support\Carbon::parse($lastUpdated)->isoFormat('D MMM Y') }}</dd>
                 </div>
                 @endif
                 <div class="flex gap-2">
-                    <dt class="uppercase tracking-[0.08em] text-white/40">© {{ date('Y') }}</dt>
-                    <dd class="text-white/80">JKPTG</dd>
+                    <dt class="text-white/45">© {{ date('Y') }}</dt>
+                    <dd class="text-white/85 font-semibold">JKPTG</dd>
                 </div>
             </dl>
         </div>
