@@ -12,6 +12,7 @@ return [
         'hubungi' => 'Hubungi Kami',
         'aduan' => 'Aduan',
         'peta_laman' => 'Peta Laman',
+        'aria_main_links' => 'Pautan utama PPPA',
     ],
 
     'nav' => [
@@ -55,6 +56,10 @@ return [
         'hak_cipta' => 'Hak Cipta',
         'pelawat' => 'Pelawat',
         'kemaskini' => 'Kemaskini',
+        'status_permohonan' => 'Status Permohonan',
+        'mengenai' => 'Mengenai JKPTG',
+        'piagam' => 'Piagam Pelanggan',
+        'kerjaya' => 'Kerjaya',
     ],
 
     'chatbot' => [

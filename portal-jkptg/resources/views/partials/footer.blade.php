@@ -27,7 +27,7 @@
                 <h3 class="font-semibold mb-3 text-jata-yellow">{{ __('messages.footer.pautan_pantas') }}</h3>
                 <ul class="text-sm space-y-2 text-white/80">
                     <li><a href="#" class="hover:text-white">{{ __('messages.utility.soalan_lazim') }}</a></li>
-                    <li><a href="#" class="hover:text-white">Status Permohonan</a></li>
+                    <li><a href="#" class="hover:text-white">{{ __('messages.footer.status_permohonan') }}</a></li>
                     <li><a href="#" class="hover:text-white">{{ __('messages.nav.panduan') }}</a></li>
                     <li><a href="#" class="hover:text-white">{{ __('messages.utility.aduan') }}</a></li>
                 </ul>
@@ -35,9 +35,9 @@
             <div>
                 <h3 class="font-semibold mb-3 text-jata-yellow">{{ __('messages.footer.korporat') }}</h3>
                 <ul class="text-sm space-y-2 text-white/80">
-                    <li><a href="#" class="hover:text-white">Mengenai JKPTG</a></li>
-                    <li><a href="#" class="hover:text-white">Piagam Pelanggan</a></li>
-                    <li><a href="#" class="hover:text-white">Kerjaya</a></li>
+                    <li><a href="#" class="hover:text-white">{{ __('messages.footer.mengenai') }}</a></li>
+                    <li><a href="#" class="hover:text-white">{{ __('messages.footer.piagam') }}</a></li>
+                    <li><a href="#" class="hover:text-white">{{ __('messages.footer.kerjaya') }}</a></li>
                     <li><a href="#" class="hover:text-white">{{ __('messages.utility.hubungi') }}</a></li>
                 </ul>
             </div>

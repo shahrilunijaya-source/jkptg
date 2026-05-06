@@ -12,6 +12,7 @@ return [
         'hubungi' => 'Contact Us',
         'aduan' => 'Complaints',
         'peta_laman' => 'Sitemap',
+        'aria_main_links' => 'PPPA main links',
     ],
 
     'nav' => [
@@ -55,6 +56,10 @@ return [
         'hak_cipta' => 'Copyright',
         'pelawat' => 'Visitors',
         'kemaskini' => 'Last Updated',
+        'status_permohonan' => 'Application Status',
+        'mengenai' => 'About JKPTG',
+        'piagam' => 'Client Charter',
+        'kerjaya' => 'Careers',
     ],
 
     'chatbot' => [

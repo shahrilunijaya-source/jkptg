@@ -1,7 +1,7 @@
 <div class="bg-primary text-white text-xs no-print">
     <div class="container-page flex flex-wrap items-center justify-between py-2 gap-2">
         <div class="hidden sm:block">{{ __('messages.utility.official_site') }}</div>
-        <nav aria-label="Pautan utama PPPA" class="flex flex-wrap gap-3 ml-auto items-center">
+        <nav aria-label="{{ __('messages.utility.aria_main_links') }}" class="flex flex-wrap gap-3 ml-auto items-center">
             <a href="#" class="hover:underline flex items-center gap-1">
                 <x-heroicon-o-question-mark-circle class="w-3.5 h-3.5" />
                 <span>{{ __('messages.utility.soalan_lazim') }}</span>
