@@ -1,46 +1,42 @@
-<div class="bg-primary text-white text-xs no-print">
-    <div class="container-page flex flex-wrap items-center justify-end py-2 gap-3">
-        <nav aria-label="{{ __('messages.utility.aria_main_links') }}" class="flex flex-wrap gap-4 items-center">
-            <a href="{{ route('faq.index') }}" class="hover:underline flex items-center gap-1.5">
-                <x-heroicon-o-question-mark-circle class="w-4 h-4" />
-                <span>{{ __('messages.utility.soalan_lazim') }}</span>
-            </a>
-            <a href="{{ route('hubungi.index') }}" class="hover:underline flex items-center gap-1.5">
-                <x-heroicon-o-envelope class="w-4 h-4" />
-                <span>{{ __('messages.utility.hubungi') }}</span>
-            </a>
-            <a href="{{ route('hubungi.aduan') }}" class="hover:underline flex items-center gap-1.5">
-                <x-heroicon-o-chat-bubble-left-right class="w-4 h-4" />
-                <span>{{ __('messages.utility.aduan') }}</span>
-            </a>
-            <a href="{{ route('peta-laman') }}" class="hover:underline flex items-center gap-1.5">
-                <x-heroicon-o-map class="w-4 h-4" />
-                <span>{{ __('messages.utility.peta_laman') }}</span>
-            </a>
+<div class="bg-slate-900 text-white text-xs no-print">
+    <div class="container-page flex flex-wrap items-center justify-between py-2 gap-3">
+        {{-- Breadcrumb: ministry chain (mono small caps) --}}
+        <div class="hidden md:flex items-center gap-2 mono-cap text-white/60" aria-label="{{ __('messages.utility.aria_chain') }}">
+            <span>KPKM</span>
+            <span class="text-white/30" aria-hidden="true">/</span>
+            <span>NRES</span>
+            <span class="text-white/30" aria-hidden="true">/</span>
+            <span class="text-white">JKPTG</span>
+        </div>
 
-            {{-- BM / EN pill --}}
-            <span class="inline-flex items-center border border-white/40 rounded-md overflow-hidden text-[11px] font-semibold">
+        <nav aria-label="{{ __('messages.utility.aria_main_links') }}" class="flex flex-wrap items-center gap-x-5 gap-y-1 ml-auto">
+            <a href="{{ route('faq.index') }}" class="font-mono uppercase tracking-[0.08em] text-[11px] text-white/80 hover:text-white">{{ __('messages.utility.soalan_lazim') }}</a>
+            <a href="{{ route('hubungi.index') }}" class="font-mono uppercase tracking-[0.08em] text-[11px] text-white/80 hover:text-white">{{ __('messages.utility.hubungi') }}</a>
+            <a href="{{ route('hubungi.aduan') }}" class="font-mono uppercase tracking-[0.08em] text-[11px] text-white/80 hover:text-white">{{ __('messages.utility.aduan') }}</a>
+            <a href="{{ route('peta-laman') }}" class="font-mono uppercase tracking-[0.08em] text-[11px] text-white/80 hover:text-white">{{ __('messages.utility.peta_laman') }}</a>
+
+            {{-- BM | EN segmented control --}}
+            <span class="inline-flex items-stretch border border-white/30 font-mono text-[11px] font-medium" role="group" aria-label="{{ __('messages.lang.toggle_label') }}">
                 <a href="{{ route('locale.switch', 'ms') }}"
-                   class="px-2 py-1 {{ app()->getLocale() === 'ms' ? 'bg-white/15' : 'hover:bg-white/10' }}"
-                   title="{{ __('messages.lang.switch_to_ms') }}">MS</a>
-                <span class="text-white/40" aria-hidden="true">/</span>
+                   aria-current="{{ app()->getLocale() === 'ms' ? 'true' : 'false' }}"
+                   class="px-2.5 py-1 transition-colors duration-150 {{ app()->getLocale() === 'ms' ? 'bg-white text-slate-900' : 'text-white/80 hover:text-white' }}">BM</a>
                 <a href="{{ route('locale.switch', 'en') }}"
-                   class="px-2 py-1 {{ app()->getLocale() === 'en' ? 'bg-white/15' : 'hover:bg-white/10' }}"
-                   title="{{ __('messages.lang.switch_to_en') }}">EN</a>
+                   aria-current="{{ app()->getLocale() === 'en' ? 'true' : 'false' }}"
+                   class="px-2.5 py-1 border-l border-white/30 transition-colors duration-150 {{ app()->getLocale() === 'en' ? 'bg-white text-slate-900' : 'text-white/80 hover:text-white' }}">EN</a>
             </span>
 
-            {{-- Log Masuk orange pill --}}
+            {{-- Log Masuk: restrained outlined ghost --}}
             @auth
                 <a href="{{ url('/admin') }}"
-                   class="inline-flex items-center gap-1.5 bg-jata-yellow text-primary font-semibold rounded-md px-3 py-1.5 hover:bg-yellow-300 transition">
-                    <x-heroicon-o-arrow-right-on-rectangle class="w-4 h-4" />
+                   class="inline-flex items-center gap-1.5 border border-white/40 hover:border-white text-white px-3 py-1 font-mono uppercase tracking-[0.08em] text-[11px] font-medium transition-colors duration-150">
                     <span>{{ __('messages.nav.log_masuk') }}</span>
+                    <span aria-hidden="true">→</span>
                 </a>
             @else
                 <a href="{{ url('/admin/login') }}"
-                   class="inline-flex items-center gap-1.5 bg-jata-yellow text-primary font-semibold rounded-md px-3 py-1.5 hover:bg-yellow-300 transition">
-                    <x-heroicon-o-arrow-right-on-rectangle class="w-4 h-4" />
+                   class="inline-flex items-center gap-1.5 border border-white/40 hover:border-white text-white px-3 py-1 font-mono uppercase tracking-[0.08em] text-[11px] font-medium transition-colors duration-150">
                     <span>{{ __('messages.nav.log_masuk') }}</span>
+                    <span aria-hidden="true">→</span>
                 </a>
             @endauth
         </nav>

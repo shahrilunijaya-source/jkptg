@@ -41,6 +41,7 @@ return [
         'aduan' => 'Complaints',
         'peta_laman' => 'Sitemap',
         'aria_main_links' => 'PPPA main links',
+        'aria_chain' => 'Ministry chain',
     ],
 
     'nav' => [
@@ -108,6 +109,7 @@ return [
     'lang' => [
         'switch_to_ms' => 'Tukar ke Bahasa Melayu',
         'switch_to_en' => 'Switch to English',
+        'toggle_label' => 'Toggle interface language',
     ],
 
     'home' => [

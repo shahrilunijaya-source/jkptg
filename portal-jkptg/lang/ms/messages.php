@@ -41,6 +41,7 @@ return [
         'aduan' => 'Aduan',
         'peta_laman' => 'Peta Laman',
         'aria_main_links' => 'Pautan utama PPPA',
+        'aria_chain' => 'Rantaian kementerian',
     ],
 
     'nav' => [
@@ -108,6 +109,7 @@ return [
     'lang' => [
         'switch_to_ms' => 'Tukar ke Bahasa Melayu',
         'switch_to_en' => 'Switch to English',
+        'toggle_label' => 'Tukar bahasa antara muka',
     ],
 
     'home' => [
