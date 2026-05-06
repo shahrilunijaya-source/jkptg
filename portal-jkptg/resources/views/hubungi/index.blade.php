@@ -2,23 +2,21 @@
 
 @section('title', __('messages.utility.hubungi') . ' | ' . __('messages.site_name'))
 
-@push('head')
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin="" />
-@endpush
-
 @section('content')
 <x-breadcrumb :items="[['label' => __('messages.utility.hubungi')]]" />
 
 <section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
-        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
-            <x-heroicon-o-phone class="w-4 h-4" />
-            <span>{{ __('messages.utility.hubungi') }}</span>
+    <div class="container-page flex items-center justify-between gap-6">
+        <div>
+            <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+                <x-heroicon-o-phone class="w-4 h-4" />
+                <span>{{ __('messages.utility.hubungi') }}</span>
+            </div>
+            <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.hubungi.heading') }}</h1>
+            <p class="text-white/85 max-w-2xl">{{ __('messages.hubungi.help') }}</p>
         </div>
-        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.hubungi.heading') }}</h1>
-        <p class="text-white/85 max-w-2xl">{{ __('messages.hubungi.help') }}</p>
+        <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG"
+             class="hidden md:block h-32 lg:h-40 w-auto object-contain flex-shrink-0 drop-shadow-lg">
     </div>
 </section>
 
@@ -58,7 +56,14 @@
 
             <div class="rounded-lg border overflow-hidden bg-white" style="min-height: 320px">
                 @if($hq->lat && $hq->lng)
-                    <div id="map" style="width: 100%; height: 320px;" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
+                    <iframe
+                        src="https://www.google.com/maps?q={{ $hq->lat }},{{ $hq->lng }}&z=16&hl={{ app()->getLocale() }}&output=embed"
+                        title="{{ __('messages.hubungi.map_label') }}"
+                        aria-label="{{ __('messages.hubungi.map_label') }}"
+                        style="width: 100%; height: 320px; border: 0;"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
                 @else
                     <x-state.empty icon="heroicon-o-map" :title="__('messages.hubungi.no_map')" tone="warning" />
                 @endif
@@ -98,23 +103,3 @@
 @endif
 @endsection
 
-@if($hq && $hq->lat && $hq->lng)
-@push('scripts')
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const map = L.map('map').setView([{{ $hq->lat }}, {{ $hq->lng }}], 16);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-            maxZoom: 19,
-        }).addTo(map);
-        L.marker([{{ $hq->lat }}, {{ $hq->lng }}])
-            .addTo(map)
-            .bindPopup(@json($hq->name . ' - ' . $hq->address))
-            .openPopup();
-    });
-</script>
-@endpush
-@endif

@@ -28,6 +28,13 @@ class PageController extends Controller
         return view('pages.show', compact('page'));
     }
 
+    public function korporatShow(string $slug)
+    {
+        $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
+        $section = 'korporat';
+        return view('pages.show', compact('page', 'section'));
+    }
+
     public function sumber()
     {
         return view('sumber.index');
@@ -59,5 +66,12 @@ class PageController extends Controller
         ];
         abort_unless(isset($views[$key]), 404);
         return view($views[$key]);
+    }
+
+    public function pagePdf(string $slug)
+    {
+        $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.page', compact('page'));
+        return $pdf->download("{$page->slug}.pdf");
     }
 }

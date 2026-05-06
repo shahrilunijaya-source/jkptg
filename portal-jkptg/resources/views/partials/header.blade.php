@@ -1,10 +1,10 @@
 <header class="border-b bg-white sticky top-0 z-30 shadow-sm no-print" x-data="{ megaOpen: false, mobileOpen: false }" @keydown.escape.window="megaOpen = false; mobileOpen = false">
     <div class="container-page flex items-center justify-between py-3">
         <a href="{{ route('home') }}" class="flex items-center gap-3" aria-label="{{ __('messages.site_name') }}">
-            <div class="w-12 h-12 rounded-full bg-jata-yellow flex items-center justify-center text-jata-red font-bold text-xs" aria-hidden="true">JATA</div>
-            <div>
+            <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="w-12 h-12 object-contain flex-shrink-0">
+            <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-12 w-auto object-contain hidden sm:block">
+            <div class="sm:hidden">
                 <div class="font-display font-bold text-primary leading-tight">JKPTG</div>
-                <div class="text-xs text-gray-600 leading-tight max-w-[16rem] hidden sm:block">{{ __('messages.site_description') }}</div>
             </div>
         </a>
 

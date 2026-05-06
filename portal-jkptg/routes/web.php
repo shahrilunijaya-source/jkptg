@@ -9,6 +9,7 @@ use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\SeoController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SumberController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', fn () => view('home'))->name('home');
@@ -20,14 +21,51 @@ Route::get('/untuk/{persona}', [PersonaController::class, 'show'])
     ->name('persona.show');
 
 Route::get('/perkhidmatan', [ServiceController::class, 'index'])->name('service.index');
-Route::get('/perkhidmatan/{slug}', [ServiceController::class, 'show'])->name('service.show');
+Route::get('/perkhidmatan/{slug}', [ServiceController::class, 'show'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service.show');
+Route::get('/perkhidmatan/{slug}/sop', [ServiceController::class, 'sop'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service.sop');
+Route::get('/perkhidmatan/{slug}/sop/pdf', [ServiceController::class, 'sopPdf'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service.sop.pdf');
+Route::get('/perkhidmatan/{slug}/carta-alir', [ServiceController::class, 'cartaAlir'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service.carta-alir');
+Route::get('/perkhidmatan/{slug}/carta-alir/pdf', [ServiceController::class, 'cartaAlirPdf'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('service.carta-alir.pdf');
 
 Route::get('/panduan', [PanduanController::class, 'index'])->name('panduan.index');
 Route::get('/panduan/borang', [BorangController::class, 'index'])->name('borang.index');
+Route::get('/panduan/akta', [PanduanController::class, 'akta'])->name('panduan.akta');
+Route::get('/panduan/akta/{slug}', [PanduanController::class, 'aktaShow'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('panduan.akta.show');
+Route::get('/panduan/akta/{slug}/pdf', [PanduanController::class, 'aktaPdf'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('panduan.akta.pdf');
 
 Route::get('/korporat', [PageController::class, 'korporat'])->name('korporat.index');
-Route::get('/sumber', [PageController::class, 'sumber'])->name('sumber.index');
+Route::get('/korporat/{slug}', [PageController::class, 'korporatShow'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('korporat.show');
+Route::get('/sumber', [SumberController::class, 'index'])->name('sumber.index');
+Route::get('/sumber/galeri/{type?}', [SumberController::class, 'galeri'])
+    ->where('type', 'gambar|audio|video')
+    ->name('sumber.galeri');
+Route::get('/sumber/data-terbuka', [SumberController::class, 'dataTerbuka'])->name('sumber.data-terbuka');
+Route::get('/sumber/pelan-strategik', [SumberController::class, 'pelanStrategik'])->name('sumber.pelan-strategik');
+Route::get('/sumber/penerbitan', [SumberController::class, 'penerbitan'])->name('sumber.penerbitan');
+Route::get('/sumber/infografik', [SumberController::class, 'infografik'])->name('sumber.infografik');
+Route::get('/sumber/arkib/{type?}', [SumberController::class, 'arkib'])
+    ->where('type', 'berita|tender|pengumuman|laporan')
+    ->name('sumber.arkib');
 Route::get('/halaman/{slug}', [PageController::class, 'show'])->name('page.show');
+Route::get('/halaman/{slug}/pdf', [PageController::class, 'pagePdf'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('page.pdf');
 
 Route::get('/hubungi', [HubungiController::class, 'index'])->name('hubungi.index');
 Route::get('/hubungi/ibu-pejabat', [HubungiController::class, 'ibuPejabat'])->name('hubungi.ibu-pejabat');

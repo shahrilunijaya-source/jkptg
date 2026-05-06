@@ -31,6 +31,12 @@
             <p class="text-sm text-gray-600">{{ __('messages.panduan.sop_desc') }}</p>
         </a>
 
+        <a href="{{ route('panduan.akta') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
+            <x-heroicon-o-scale class="w-8 h-8 text-primary mb-3" />
+            <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.panduan.guides_panduan_link') }}</h2>
+            <p class="text-sm text-gray-600">{{ __('messages.panduan.guides_panduan_desc') }}</p>
+        </a>
+
         <a href="{{ route('faq.index') }}" class="group block bg-white border rounded-lg p-6 hover:border-primary hover:shadow-md transition">
             <x-heroicon-o-question-mark-circle class="w-8 h-8 text-primary mb-3" />
             <h2 class="font-display font-bold text-lg mb-1 text-primary">{{ __('messages.utility.soalan_lazim') }}</h2>

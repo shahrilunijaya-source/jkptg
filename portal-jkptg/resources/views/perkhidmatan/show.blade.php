@@ -98,7 +98,7 @@
             <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.proses') }}</h2>
             @php $steps = $service->process_steps ?? []; @endphp
             @if(!empty($steps))
-                <ol class="space-y-4">
+                <ol class="space-y-4 mb-6">
                     @foreach($steps as $i => $step)
                         <li class="flex gap-4">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">{{ $i + 1 }}</div>
@@ -108,6 +108,16 @@
                         </li>
                     @endforeach
                 </ol>
+                <div class="flex flex-wrap gap-2">
+                    <a href="{{ route('service.sop', $service->slug) }}" class="text-sm font-semibold text-primary border border-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition flex items-center gap-1">
+                        <x-heroicon-o-clipboard-document-list class="w-4 h-4" />
+                        {{ __('messages.service.sop_breadcrumb') }}
+                    </a>
+                    <a href="{{ route('service.carta-alir', $service->slug) }}" class="text-sm font-semibold text-primary border border-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition flex items-center gap-1">
+                        <x-heroicon-o-arrow-trending-down class="w-4 h-4" />
+                        {{ __('messages.service.carta_alir_breadcrumb') }}
+                    </a>
+                </div>
             @else
                 <x-state.empty :title="__('messages.states.empty.title')" tone="warning" />
             @endif

@@ -44,4 +44,30 @@ class ServiceController extends Controller
 
         return view('perkhidmatan.show', compact('service', 'relatedForms', 'relatedFaqs'));
     }
+
+    public function sop(string $slug)
+    {
+        $service = Service::where('slug', $slug)->where('active', true)->firstOrFail();
+        return view('perkhidmatan.sop', compact('service'));
+    }
+
+    public function cartaAlir(string $slug)
+    {
+        $service = Service::where('slug', $slug)->where('active', true)->firstOrFail();
+        return view('perkhidmatan.carta-alir', compact('service'));
+    }
+
+    public function sopPdf(string $slug)
+    {
+        $service = Service::where('slug', $slug)->where('active', true)->firstOrFail();
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.sop', compact('service'));
+        return $pdf->download("SOP-{$service->slug}.pdf");
+    }
+
+    public function cartaAlirPdf(string $slug)
+    {
+        $service = Service::where('slug', $slug)->where('active', true)->firstOrFail();
+        $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.carta-alir', compact('service'));
+        return $pdf->download("CartaAlir-{$service->slug}.pdf");
+    }
 }
