@@ -62,6 +62,14 @@ return [
         'close' => 'Close chatbot',
         'placeholder' => 'Ask your question...',
         'send' => 'Send',
+        'title' => 'JKPTG Assistant',
+        'subtitle' => 'Prototype demo — not official advice',
+        'thinking' => 'Thinking...',
+        'input_label' => 'Your message',
+        'fallback' => 'KB answer',
+        'rate_limited' => 'Too many questions. Try again in :secs seconds.',
+        'error_generic' => 'Sorry, an error occurred. Please try again.',
+        'disclaimer' => 'Virtual assistant. For official matters, contact a JKPTG branch.',
     ],
 
     'lang' => [

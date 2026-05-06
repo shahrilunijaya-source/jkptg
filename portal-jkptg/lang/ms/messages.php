@@ -62,6 +62,14 @@ return [
         'close' => 'Tutup chatbot',
         'placeholder' => 'Tanya soalan anda...',
         'send' => 'Hantar',
+        'title' => 'Pembantu JKPTG',
+        'subtitle' => 'Demo prototaip — bukan nasihat rasmi',
+        'thinking' => 'Sedang menjawab...',
+        'input_label' => 'Mesej anda',
+        'fallback' => 'jawapan dari KB',
+        'rate_limited' => 'Terlalu banyak soalan. Cuba lagi dalam :secs saat.',
+        'error_generic' => 'Maaf, ralat berlaku. Sila cuba lagi.',
+        'disclaimer' => 'Pembantu maya. Untuk urusan rasmi, sila hubungi cawangan JKPTG.',
     ],
 
     'lang' => [

@@ -29,7 +29,7 @@
     </main>
 
     @include('partials.footer')
-    @include('partials.chatbot-bubble')
+    @livewire('public.chatbot.bubble')
 
     @livewireScripts
     @stack('scripts')
