@@ -9,8 +9,27 @@ use App\Models\Service;
 class PageController extends Controller
 {
     private const KORPORAT_SLUGS = [
-        'mengenai-jkptg', 'visi-misi', 'piagam-pelanggan',
-        'carta-organisasi', 'kerjaya', 'penerbitan',
+        // Profil utama (scraped from www.jkptg.gov.my)
+        'perutusan-ketua-pengarah',
+        'latar-belakang',
+        'visi-misi-objektif',
+        'fungsi-jabatan',
+        'piagam-pelanggan',
+        'carta-organisasi',
+        // Profil bahagian (11)
+        'bahagian-khidmat-pengurusan-bkp',
+        'bahagian-dasar-dan-konsultasi-bd-k',
+        'bahagian-standard-dan-inspektorat-bsi',
+        'bahagian-pengurusan-dan-perundangan-tanah-bppt',
+        'bahagian-harta-tanah-persekutuan-bhtp',
+        'bahagian-pengambilan-tanah-bpt',
+        'bahagian-pembahagian-pusaka-bpp',
+        'bahagian-hakmilik-strata-dan-stratum-bhss',
+        'bahagian-pengurusan-ict-pentadbiran-tanah-bpict-pt',
+        'unit-integriti',
+        'unit-undang-undang',
+        // Korporat tambahan
+        'kerjaya', 'penerbitan', 'mengenai-jkptg',
     ];
 
     public function korporat()
@@ -73,5 +92,10 @@ class PageController extends Controller
         $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
         $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.page', compact('page'));
         return $pdf->download("{$page->slug}.pdf");
+    }
+
+    public function logMasuk()
+    {
+        return view('auth.log-masuk');
     }
 }
