@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 8 COMPLETE (Stage 7 in progress). Dashboard widgets + audit log live. Ready for Phase 9.
-**Last updated:** 2026-05-06 (Phase 8 dashboard + audit log done)
+**Current stage:** Phase 9 COMPLETE (Stage 7 in progress). Chatbot bubble live (canned default + Anthropic fallback chain). Ready for Phase 10.
+**Last updated:** 2026-05-06 (Phase 9 chatbot done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -25,11 +25,13 @@
 - [~] Stage 7 - Build IN PROGRESS
   - [x] Phase 3 - DB schema + content seeders (13 migrations, 15 models, 64 seeded rows)
   - [x] Phase 4 - Public layouts (Tailwind+Vite, master layout, 6 partials, SetLocale middleware, BM/EN toggle verified)
- <- NEXT
-
-
-
-
+  - [x] Phase 4.5 - Interaction state matrix (6 reusable Blade components, 16 verified states)
+  - [x] Phase 5 - Homepage + 3 persona landings (Hero variant A overlay, Persona variant A classic)
+  - [x] Phase 6 - Service/borang/hubungi/korporat/sumber controllers and views (Service variant B sticky-nav)
+  - [x] Phase 7 - 9 Filament admin resources with Translatable plugin (52 routes registered)
+  - [x] Phase 8 - Filament dashboard (4 widgets) + ActivityResource audit log + 528 visit_logs seeded
+  - [x] Phase 9 - Chatbot Livewire bubble + LlmService (Anthropic Sonnet 4.6 + Canned fallback) + sanitizer + rate limiter + cost cap kill-switch
+  - [ ] Phase 10 - i18n polish (BM/EN parallel) <- NEXT
 
 
   - [ ] Phase 10-12 - i18n, search, edge cases
@@ -293,7 +295,24 @@ Helper scripts: scripts/patch-filament-pages.ps1 + scripts/fix-bom.ps1.
 
 verify-widgets.php confirms via reflection: all 8 stats, 7-day visitor chart 528 total, LlmCostMeter RM 0.00 / 200.00 (0%) green.
 
-## Phase 9 - Resume Plan
+## Phase 9 - Deliverables (LOCKED 2026-05-06)
+
+| Component | Detail |
+|-----------|--------|
+| LlmDriver interface | `chat(string $msg, array $history, string $locale): LlmResponse` + `name()` |
+| LlmResponse DTO | content, citation, prompt/completion tokens, cost USD/RM, latency, driver, model, fellBack, fallbackReason |
+| AnthropicDriver | Claude Sonnet 4.6 via Http::post /v1/messages, cost calc USD->RM 4.7x, locale-aware system prompt |
+| CannedDriver | KB token-match scorer (length-weighted), threshold>=2, BM/EN aware, fallback text |
+| Sanitizer | strip control chars + banned tokens (system:, <\|im_*\|>, etc.), 2000 char cap |
+| LlmService | orchestrates: kill-switch -> canned else try anthropic -> on RateLimit/Timeout/InvalidResponse fall back to canned. Accrues cost, flips kill-switch at cap, alert log at threshold |
+| Livewire Bubble | toggleable panel, quick replies, message log, thinking indicator, citation+fallback badges, RateLimiter (10/IP/hr) |
+| Persistence | chat_sessions (UUID cookie 30d), chat_messages (encrypted content cast), llm_api_logs every call |
+| config/chatbot.php | driver=canned default, anthropic block, rate_limit, sanitizer, system_prompt MS/EN, history_window=6 |
+| Lang keys | chatbot.title/subtitle/thinking/input_label/fallback/rate_limited/error_generic/disclaimer (MS+EN) |
+
+verify-chatbot.php confirms: 6 KB rows, 4 quick replies, sanitizer cleans `system:` + `<|im_start|>` + NUL, CannedDriver matches `pengambilan tanah` -> KB#kb-pengambilan-tempoh, end-to-end LlmService writes llm_api_logs row. Homepage 200 with wire:id present.
+
+## Phase 10 - Resume Plan
 
 Phase 4.5 - Interaction state matrix:
 - Loading / empty / error / success states for every Livewire component
