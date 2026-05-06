@@ -6,6 +6,7 @@ use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SeoController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +34,40 @@ Route::get('/cari', [SearchController::class, 'index'])->name('search.index');
 Route::get('/locale/{locale}', LocaleController::class)
     ->where('locale', 'ms|en')
     ->name('locale.switch');
+
+// SEO + SPLaSK
+Route::get('/sitemap.xml', [SeoController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [SeoController::class, 'robots'])->name('robots');
+Route::get('/.well-known/security.txt', [SeoController::class, 'securityTxt'])->name('security.txt');
+Route::get('/humans.txt', [SeoController::class, 'humansTxt'])->name('humans.txt');
+
+// Legacy URL redirects (common old JKPTG paths -> new slugs)
+$legacy = [
+    '/index.php' => '/',
+    '/index.html' => '/',
+    '/v2' => '/',
+    '/v2/' => '/',
+    '/ms' => '/',
+    '/en' => '/locale/en',
+    '/my' => '/',
+    '/services' => '/perkhidmatan',
+    '/service' => '/perkhidmatan',
+    '/forms' => '/panduan/borang',
+    '/form' => '/panduan/borang',
+    '/borang' => '/panduan/borang',
+    '/contact' => '/hubungi',
+    '/about' => '/korporat',
+    '/about-us' => '/korporat',
+    '/corporate' => '/korporat',
+    '/news' => '/sumber',
+    '/announcement' => '/sumber',
+    '/tender' => '/sumber',
+    '/tenders' => '/sumber',
+    '/faq' => '/sumber',
+    '/help' => '/cari',
+    '/search' => '/cari',
+    '/sitemap' => '/sitemap.xml',
+];
+foreach ($legacy as $from => $to) {
+    Route::redirect($from, $to, 301);
+}

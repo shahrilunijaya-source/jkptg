@@ -37,8 +37,24 @@
 }
 
 @media print {
-  body { background: #fff !important; color: #000 !important; }
-  header, footer, aside, .no-print, .chatbot-bubble { display: none !important; }
-  a[href]::after { content: " (" attr(href) ")"; font-size: .85em; color: #555; }
-  main { max-width: 100% !important; }
+  @page { margin: 1.5cm; size: A4; }
+  body { background: #fff !important; color: #000 !important; font-size: 11pt; line-height: 1.4; }
+  header, footer, aside, nav, .no-print, .chatbot-bubble, .skip-link, button, input[type="search"], select, form[role="search"] { display: none !important; }
+  a[href]:not([href^="#"]):not([href^="javascript"])::after { content: " (" attr(href) ")"; font-size: .85em; color: #555; }
+  abbr[title]::after { content: " (" attr(title) ")"; }
+  main, [role="main"], #content { max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+  h1, h2, h3 { page-break-after: avoid; color: #000 !important; }
+  img, table, figure, blockquote, pre { page-break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; }
+  table th, table td { border: 1px solid #999; padding: 4pt 6pt; }
+  thead { display: table-header-group; }
+  tr, .card, article, section { page-break-inside: avoid; }
+  .print-only { display: block !important; }
+  .print-meta { font-size: 9pt; color: #555; border-top: 1px solid #ccc; padding-top: 6pt; margin-top: 12pt; }
+  .print-meta::before { content: "JKPTG \2014 Cetak: "; }
+}
+.print-only { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
