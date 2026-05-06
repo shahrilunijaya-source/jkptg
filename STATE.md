@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 11 COMPLETE (Stage 7 in progress). Scout DB driver wired, cross-model search live across 7 models, header search input rendered. Ready for Phase 12.
-**Last updated:** 2026-05-06 (Phase 11 search done)
+**Current stage:** Phase 12 COMPLETE (Stage 7 BUILD COMPLETE). SPLaSK meta + SEO endpoints + 22 legacy redirects + print + a11y all live. Ready for Stage 8 QA.
+**Last updated:** 2026-05-06 (Phase 12 edge cases done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -33,7 +33,8 @@
   - [x] Phase 9 - Chatbot Livewire bubble + LlmService (Anthropic Sonnet 4.6 + Canned fallback) + sanitizer + rate limiter + cost cap kill-switch
   - [x] Phase 10 - i18n polish (lang parity 161/161 MS+EN, 5 missing footer/utility keys patched, all 9 translatable models EN-complete, locale-switch verified across 7 public pages)
   - [x] Phase 11 - Search (Scout DB driver, 7 Searchable models, /cari + SearchController, header+mobile search input, BM+EN cross-model verified, lang parity 184/184)
-  - [ ] Phase 12 - Edge cases (legacy redirects, SPLaSK, print, accessibility) <- NEXT
+  - [x] Phase 12 - Edge cases (16 SPLaSK meta tags, sitemap.xml 34 URLs, robots.txt, security.txt, humans.txt, 22 legacy redirects, print stylesheet polish, prefers-reduced-motion, a11y sweep — single h1 per page, all landmarks, skip-link)
+  - [ ] Phase 13 - Verification (Stage 8 QA + PPPA compliance + security audit) <- NEXT
   - [ ] Phase 13 - Verification
   - [ ] Phase 14 - Hostinger deploy
   - [ ] Phase 14.5 - Walkthrough video
