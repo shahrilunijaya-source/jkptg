@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 13 / Stage 8 COMPLETE. 73/73 verification PASS, 0 FAIL. Security headers (X-Frame/CSP/Permissions/Referrer/COOP/HSTS) live, code audit clean. DEPLOY-CHECKLIST.md ready. Ready for Phase 14 deploy.
-**Last updated:** 2026-05-06 (Phase 13 QA + security audit done)
+**Current stage:** Phase 14 PACKAGE COMPLETE. Production assets built, deploy.sh + .env.production.example + HOSTINGER-SETUP.md committed. 73/73 verify-stage8.ps1 PASS in production-cached mode locally. User must execute Hostinger Git pull + ./deploy.sh on server.
+**Last updated:** 2026-05-06 (Phase 14 deploy package ready)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -35,8 +35,9 @@
   - [x] Phase 11 - Search (Scout DB driver, 7 Searchable models, /cari + SearchController, header+mobile search input, BM+EN cross-model verified, lang parity 184/184)
   - [x] Phase 12 - Edge cases (16 SPLaSK meta tags, sitemap.xml 34 URLs, robots.txt, security.txt, humans.txt, 22 legacy redirects, print stylesheet polish, prefers-reduced-motion, a11y sweep — single h1 per page, all landmarks, skip-link)
   - [x] Phase 13 - Verification (Stage 8: SecurityHeaders middleware with CSP/HSTS/X-Frame/Permissions/Referrer/COOP, 73/73 verify-stage8.ps1 PASS, code audit clean, DEPLOY-CHECKLIST.md committed)
-  - [ ] Phase 14 - Hostinger deploy <- NEXT
-  - [ ] Phase 14.5 - Walkthrough video
+  - [x] Phase 14 - Hostinger deploy package (vite prod build, root+public .htaccess with HSTS+canonical+gzip+expires+sensitive-file-block, .env.production.example with SESSION_SECURE_COOKIE+APP_ENV=production, deploy.sh idempotent, HOSTINGER-SETUP.md 10 steps, production-cached mode locally re-verified 73/73 PASS)
+  - [ ] Phase 14.5 - Walkthrough video <- NEXT
+  - [ ] Phase 14.6 - Push to Hostinger (manual user step requiring Hostinger creds)
 - [x] Stage 8 - QA + PPPA compliance + security (verify-stage8.ps1 73/73 PASS, SecurityHeaders middleware, DEPLOY-CHECKLIST.md)
 - [ ] Stage 9 - Performance (folded into Phase 13 perf baseline; reserve for full Lighthouse run on prod URL)
 - [ ] Stage 10 - Ship (Hostinger via GitHub auto-pull) [= Phase 14]
