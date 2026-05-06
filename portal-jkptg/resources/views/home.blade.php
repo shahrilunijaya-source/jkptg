@@ -5,54 +5,88 @@
 @php
     $tagline = \App\Models\Setting::get('site.tagline');
     $tagline = is_array($tagline) ? ($tagline[app()->getLocale()] ?? '') : $tagline;
-    $services = \App\Models\Service::where('active', true)->orderBy('sort')->limit(6)->get();
-    $beritas = \App\Models\News::whereNotNull('published_at')->where('type', 'berita')->orderByDesc('published_at')->limit(3)->get();
-    $pengumumans = \App\Models\News::whereNotNull('published_at')->where('type', 'pengumuman')->orderByDesc('published_at')->limit(3)->get();
-    $tenders = \App\Models\Tender::where('status', 'open')->orderBy('closes_at')->limit(3)->get();
-    $heroImage = 'https://images.unsplash.com/photo-1571867424488-4565932edb41?auto=format&fit=crop&w=1920&q=70';
+    $services = \App\Models\Service::where('active', true)->orderBy('sort')->limit(8)->get();
+    $beritas = \App\Models\News::whereNotNull('published_at')->where('type', 'berita')->orderByDesc('published_at')->limit(5)->get();
+    $pengumumans = \App\Models\News::whereNotNull('published_at')->where('type', 'pengumuman')->orderByDesc('published_at')->limit(5)->get();
+    $tenders = \App\Models\Tender::whereIn('status', ['open', 'closed'])->orderByDesc('opens_at')->limit(5)->get();
+    $kpiServices = \App\Models\Service::where('active', true)->count();
+    $kpiTenders = \App\Models\Tender::where('status', 'open')->count();
+    $kpiCawangan = \App\Models\Cawangan::count();
 @endphp
 
 @section('content')
 
-{{-- HERO: Stage 5 variant A overlay --}}
-<section class="relative min-h-[640px] md:min-h-[720px] flex flex-col justify-between text-white overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center"
-         style="background-image: linear-gradient(180deg, rgba(15,30,51,0.55) 0%, rgba(15,30,51,0.85) 100%), url('{{ $heroImage }}');"
-         aria-hidden="true"></div>
+{{-- HERO: bilingual statement + KPI rail. No photo. --}}
+<section class="border-b border-slate-200 bg-white">
+    <div class="container-page py-16 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+            <div class="lg:col-span-8 max-w-3xl">
+                <div class="mono-cap text-slate-500 mb-5">{{ __('messages.site_name') }} · {{ now()->year }}</div>
+                <h1 class="text-[40px] sm:text-[52px] lg:text-[64px] font-bold text-slate-900 leading-[1.05] tracking-tight mb-6">
+                    {{ $tagline }}
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+                    {{ app()->getLocale() === 'ms'
+                        ? 'Merekod, melindungi dan menguruskan harta tanah Persekutuan untuk manfaat rakyat Malaysia. Saluran rasmi maklumat, perkhidmatan dan tender JKPTG.'
+                        : 'We record, protect, and manage federal land assets for the benefit of the Malaysian people. The official channel for JKPTG information, services, and tenders.' }}
+                </p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a href="#perkhidmatan" class="btn-primary">
+                        <span>{{ app()->getLocale() === 'ms' ? 'Lihat perkhidmatan' : 'Browse services' }}</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="#berita" class="btn-secondary">
+                        {{ app()->getLocale() === 'ms' ? 'Berita & Tender' : 'News & Tenders' }}
+                    </a>
+                </div>
+            </div>
 
-    <div class="relative container-page pt-16 md:pt-24 max-w-4xl">
-        <p class="font-display uppercase tracking-wider text-jata-yellow text-sm mb-3">{{ __('messages.site_name') }}</p>
-        <h1 class="font-display font-bold text-4xl md:text-6xl leading-tight mb-4">{{ $tagline }}</h1>
-        <p class="text-base md:text-lg text-white/90 max-w-2xl">
-            {{ app()->getLocale() === 'ms'
-                ? 'Kami merekodkan, melindungi dan menguruskan harta tanah negara untuk manfaat rakyat Malaysia.'
-                : 'We record, protect, and manage national land assets for the benefit of the Malaysian people.' }}
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#berita" class="bg-white text-primary font-semibold px-5 py-2.5 rounded hover:bg-primary-pale transition">
-                {{ app()->getLocale() === 'ms' ? 'Pengumuman Terkini' : 'Latest Announcements' }}
-            </a>
-            <a href="#tender" class="border border-white/60 text-white px-5 py-2.5 rounded hover:bg-white/10 transition">
-                {{ app()->getLocale() === 'ms' ? 'Iklan Perolehan' : 'Procurement Notices' }}
-            </a>
+            {{-- KPI rail --}}
+            <aside class="lg:col-span-4">
+                <dl class="grid grid-cols-3 lg:grid-cols-1 border border-slate-200 divide-y divide-slate-200 lg:divide-y lg:divide-x-0 max-lg:divide-y-0 max-lg:divide-x">
+                    <div class="p-5">
+                        <dt class="mono-cap text-slate-500 mb-1.5">{{ app()->getLocale() === 'ms' ? 'Perkhidmatan' : 'Services' }}</dt>
+                        <dd class="font-mono text-[28px] tabular-nums text-slate-900 leading-none">{{ str_pad($kpiServices, 2, '0', STR_PAD_LEFT) }}</dd>
+                    </div>
+                    <div class="p-5">
+                        <dt class="mono-cap text-slate-500 mb-1.5">{{ app()->getLocale() === 'ms' ? 'Tender Aktif' : 'Open Tenders' }}</dt>
+                        <dd class="font-mono text-[28px] tabular-nums text-slate-900 leading-none">{{ str_pad($kpiTenders, 2, '0', STR_PAD_LEFT) }}</dd>
+                    </div>
+                    <div class="p-5">
+                        <dt class="mono-cap text-slate-500 mb-1.5">{{ app()->getLocale() === 'ms' ? 'Cawangan' : 'Branches' }}</dt>
+                        <dd class="font-mono text-[28px] tabular-nums text-slate-900 leading-none">{{ str_pad($kpiCawangan, 2, '0', STR_PAD_LEFT) }}</dd>
+                    </div>
+                </dl>
+                <a href="{{ route('hubungi.cawangan') }}" class="mono-cap text-slate-500 hover:text-slate-900 mt-3 inline-flex items-center gap-1.5">
+                    <span>{{ app()->getLocale() === 'ms' ? 'STATISTIK PORTAL · ' : 'PORTAL STATISTICS · ' }}{{ now()->format('Y-m-d') }}</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+            </aside>
         </div>
     </div>
+</section>
 
-    {{-- 3 persona doors floating --}}
-    <div class="relative container-page pb-12 md:pb-20 mt-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+{{-- PERSONA STAT-CARDS --}}
+<section aria-labelledby="persona-heading" class="border-b border-slate-200 bg-white">
+    <div class="container-page py-12 md:py-16">
+        <div class="flex items-baseline justify-between mb-8">
+            <h2 id="persona-heading" class="mono-cap text-slate-500">{{ app()->getLocale() === 'ms' ? 'PILIH LALUAN ANDA' : 'CHOOSE YOUR PATH' }}</h2>
+            <span class="mono-meta">3 {{ app()->getLocale() === 'ms' ? 'persona' : 'personas' }}</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 border border-slate-200">
             @foreach([
-                ['orang-awam', 'users', __('messages.persona.orang_awam.title'), __('messages.persona.orang_awam.summary'), __('messages.persona.cta_start')],
-                ['kementerian-jabatan', 'building-office-2', __('messages.persona.kementerian_jabatan.title'), __('messages.persona.kementerian_jabatan.summary'), __('messages.persona.cta_start')],
-                ['warga-jkptg', 'identification', __('messages.persona.warga_jkptg.title'), __('messages.persona.warga_jkptg.summary'), __('messages.persona.cta_login')],
-            ] as [$slug, $icon, $title, $summary, $cta])
-                <a href="{{ route('persona.show', $slug) }}"
-                   class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition focus:outline-none focus:ring-2 focus:ring-jata-yellow">
-                    <x-dynamic-component :component="'heroicon-o-' . $icon" class="w-10 h-10 text-jata-yellow mb-3" />
-                    <h2 class="font-display font-bold text-xl mb-1">{{ $title }}</h2>
-                    <p class="text-sm text-white/85">{{ $summary }}</p>
-                    <div class="mt-3 text-jata-yellow group-hover:translate-x-1 transition flex items-center gap-1 text-sm font-semibold">
-                        {{ $cta }} <x-heroicon-o-arrow-right class="w-4 h-4" />
+                ['code' => 'P-01', 'slug' => 'orang-awam',           'title' => __('messages.persona.orang_awam.title'),           'summary' => __('messages.persona.orang_awam.summary'),           'cta' => __('messages.persona.cta_start')],
+                ['code' => 'P-02', 'slug' => 'kementerian-jabatan', 'title' => __('messages.persona.kementerian_jabatan.title'), 'summary' => __('messages.persona.kementerian_jabatan.summary'), 'cta' => __('messages.persona.cta_start')],
+                ['code' => 'P-03', 'slug' => 'warga-jkptg',          'title' => __('messages.persona.warga_jkptg.title'),          'summary' => __('messages.persona.warga_jkptg.summary'),          'cta' => __('messages.persona.cta_login')],
+            ] as $persona)
+                <a href="{{ route('persona.show', $persona['slug']) }}"
+                   class="group relative bg-white p-7 transition-colors duration-150 hover:bg-slate-50 focus-visible:bg-slate-50 flex flex-col">
+                    <div class="mono-cap text-slate-500 mb-3">{{ $persona['code'] }}</div>
+                    <h3 class="text-[22px] font-semibold text-slate-900 leading-tight mb-2 tracking-tight">{{ $persona['title'] }}</h3>
+                    <p class="text-[14px] text-slate-600 leading-relaxed mb-6 flex-1">{{ $persona['summary'] }}</p>
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-slate-200">
+                        <span class="text-[13px] font-medium text-primary">{{ $persona['cta'] }}</span>
+                        <span class="text-slate-400 group-hover:text-primary group-hover:translate-x-0.5 transition" aria-hidden="true">→</span>
                     </div>
                 </a>
             @endforeach
@@ -60,19 +94,34 @@
     </div>
 </section>
 
-{{-- 6 SERVICE TILES STRIP --}}
-<section class="bg-gray-50 py-12">
-    <div class="container-page">
-        <h2 class="font-display text-2xl font-bold text-primary mb-2">{{ __('messages.home.services_title') }}</h2>
-        <p class="text-gray-600 mb-6">{{ __('messages.home.services_subtitle') }}</p>
+{{-- SERVICES — dense data tiles --}}
+<section id="perkhidmatan" aria-labelledby="services-heading" class="border-b border-slate-200 bg-slate-50">
+    <div class="container-page py-12 md:py-16">
+        <div class="flex items-baseline justify-between mb-8">
+            <div>
+                <h2 id="services-heading" class="mono-cap text-slate-500 mb-2">{{ __('messages.home.services_title') }}</h2>
+                <p class="text-[15px] text-slate-600 max-w-2xl">{{ __('messages.home.services_subtitle') }}</p>
+            </div>
+            <a href="{{ route('service.index') }}" class="hidden md:inline-flex items-center gap-1.5 mono-cap text-slate-500 hover:text-slate-900">
+                <span>{{ __('messages.home.view_all') }}</span>
+                <span aria-hidden="true">→</span>
+            </a>
+        </div>
         @if($services->isEmpty())
             <x-state.empty icon="heroicon-o-archive-box-x-mark" :title="__('messages.states.empty.title')" :message="__('messages.states.empty.message')" tone="warning" />
         @else
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-                @foreach($services as $service)
-                    <a href="{{ route('service.show', $service->slug) }}" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group transition">
-                        <x-heroicon-o-document-text class="w-8 h-8 mx-auto text-primary mb-2" />
-                        <div class="font-semibold text-sm group-hover:text-primary leading-snug">{{ $service->name }}</div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-slate-200 border border-slate-200">
+                @foreach($services as $i => $service)
+                    <a href="{{ route('service.show', $service->slug) }}"
+                       class="group bg-white p-5 transition-colors duration-150 hover:bg-slate-50 flex flex-col gap-3 min-h-[148px]">
+                        <div class="flex items-center justify-between">
+                            <span class="mono-cap text-slate-400">SVC-{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                            <span class="text-slate-300 group-hover:text-primary group-hover:translate-x-0.5 transition" aria-hidden="true">→</span>
+                        </div>
+                        <div class="font-semibold text-slate-900 text-[15px] leading-snug group-hover:text-primary transition-colors">{{ $service->name }}</div>
+                        @if($service->summary ?? null)
+                            <div class="text-[13px] text-slate-500 leading-snug line-clamp-2">{{ $service->summary }}</div>
+                        @endif
                     </a>
                 @endforeach
             </div>
@@ -80,98 +129,95 @@
     </div>
 </section>
 
-{{-- BERITA & PENGUMUMAN 3-TAB --}}
-<section id="berita" class="py-12 bg-white" x-data="{ tab: 'berita' }">
-    <div class="container-page">
-        <div class="flex items-end justify-between mb-6">
-            <h2 class="font-display text-2xl font-bold text-primary">{{ __('messages.home.news_title') }}</h2>
-            <a href="#" class="text-sm text-primary hover:underline">{{ __('messages.home.view_all') }} &rarr;</a>
+{{-- NEWS / TENDER / PENGUMUMAN — flat list, mono dates, status pills --}}
+<section id="berita" aria-labelledby="news-heading" class="border-b border-slate-200 bg-white" x-data="{ tab: 'berita' }">
+    <div class="container-page py-12 md:py-16">
+        <div class="flex items-baseline justify-between mb-6">
+            <h2 id="news-heading" class="mono-cap text-slate-500">{{ __('messages.home.news_title') }}</h2>
+            <a href="{{ route('search.index') }}" class="mono-cap text-slate-500 hover:text-slate-900">
+                {{ __('messages.home.view_all') }} →
+            </a>
         </div>
-        <div role="tablist" class="border-b flex gap-1 mb-6">
-            <button role="tab" :aria-selected="tab === 'berita'" @click="tab = 'berita'"
-                    :class="tab === 'berita' ? 'border-primary text-primary' : 'border-transparent text-gray-600 hover:text-primary'"
-                    class="px-4 py-2 border-b-2 font-semibold transition">
-                {{ __('messages.home.tab_berita') }}
-            </button>
-            <button role="tab" :aria-selected="tab === 'tender'" @click="tab = 'tender'"
-                    :class="tab === 'tender' ? 'border-primary text-primary' : 'border-transparent text-gray-600 hover:text-primary'"
-                    class="px-4 py-2 border-b-2 font-semibold transition">
-                {{ __('messages.home.tab_tender') }}
-            </button>
-            <button role="tab" :aria-selected="tab === 'pengumuman'" @click="tab = 'pengumuman'"
-                    :class="tab === 'pengumuman' ? 'border-primary text-primary' : 'border-transparent text-gray-600 hover:text-primary'"
-                    class="px-4 py-2 border-b-2 font-semibold transition">
-                {{ __('messages.home.tab_pengumuman') }}
-            </button>
+        <div role="tablist" class="border-b border-slate-200 flex gap-0 mb-0">
+            @foreach([
+                ['key' => 'berita', 'label' => __('messages.home.tab_berita')],
+                ['key' => 'tender', 'label' => __('messages.home.tab_tender')],
+                ['key' => 'pengumuman', 'label' => __('messages.home.tab_pengumuman')],
+            ] as $tab)
+                <button role="tab"
+                        :aria-selected="tab === '{{ $tab['key'] }}'"
+                        @click="tab = '{{ $tab['key'] }}'"
+                        :class="tab === '{{ $tab['key'] }}' ? 'text-slate-900 border-primary' : 'text-slate-500 border-transparent hover:text-slate-900'"
+                        class="relative px-4 py-3 -mb-px border-b-2 font-medium text-[14px] transition-colors duration-150 focus-visible:outline-none">
+                    {{ $tab['label'] }}
+                </button>
+            @endforeach
         </div>
 
         {{-- Berita panel --}}
-        <div role="tabpanel" x-show="tab === 'berita'">
+        <div role="tabpanel" x-show="tab === 'berita'" class="divide-y divide-slate-100">
             @if($beritas->isEmpty())
                 <x-state.empty icon="heroicon-o-newspaper" :title="__('messages.states.empty.news')" tone="warning" />
             @else
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    @foreach($beritas as $b)
-                        <article class="rounded-lg overflow-hidden border hover:shadow transition group">
-                            <div class="h-40 bg-gradient-to-br from-primary-pale to-primary-light"></div>
-                            <div class="p-4">
-                                <div class="text-xs text-gray-500 mb-1">{{ $b->published_at?->isoFormat('D MMM Y') }}</div>
-                                <h3 class="font-semibold text-primary mb-2 group-hover:underline">{{ $b->title }}</h3>
-                                <p class="text-sm text-gray-700">{{ $b->excerpt }}</p>
-                            </div>
-                        </article>
-                    @endforeach
-                </div>
+                @foreach($beritas as $b)
+                    <a href="#" class="grid grid-cols-12 gap-4 py-4 items-baseline hover:bg-slate-50 transition-colors duration-150 px-1 -mx-1">
+                        <div class="col-span-3 md:col-span-2 mono-meta tabular-nums">{{ $b->published_at?->format('Y-m-d') }}</div>
+                        <div class="col-span-9 md:col-span-9 text-[15px] font-medium text-slate-900 hover:text-primary leading-snug">{{ $b->title }}</div>
+                        <div class="hidden md:flex md:col-span-1 justify-end">
+                            <span class="status-pill status-pill--baru">BARU</span>
+                        </div>
+                    </a>
+                @endforeach
             @endif
         </div>
 
         {{-- Tender panel --}}
-        <div id="tender" role="tabpanel" x-show="tab === 'tender'" x-cloak>
+        <div id="tender" role="tabpanel" x-show="tab === 'tender'" x-cloak class="divide-y divide-slate-100">
             @if($tenders->isEmpty())
                 <x-state.empty icon="heroicon-o-document-text" :title="__('messages.states.empty.tender')" tone="info" />
             @else
-                <div class="space-y-3">
-                    @foreach($tenders as $t)
-                        @php $daysLeft = (int) round(now()->diffInHours($t->closes_at) / 24); @endphp
-                        <a href="#" class="flex flex-wrap items-center gap-3 p-4 border rounded hover:border-primary hover:shadow transition">
-                            <div class="font-mono text-xs text-gray-500 w-32">{{ $t->reference_no }}</div>
-                            <div class="flex-1 font-semibold text-primary">{{ $t->title }}</div>
-                            <div class="text-sm text-gray-600">{{ $t->closes_at->isoFormat('D MMM Y, H:mm') }}</div>
-                            <span class="text-xs px-2 py-0.5 rounded {{ $daysLeft <= 7 ? 'bg-amber-100 text-amber-800' : 'bg-green-100 text-green-800' }}">
-                                {{ $daysLeft > 0 ? $daysLeft . ' ' . (app()->getLocale() === 'ms' ? 'hari lagi' : 'days left') : (app()->getLocale() === 'ms' ? 'Tutup' : 'Closed') }}
-                            </span>
-                        </a>
-                    @endforeach
-                </div>
+                @foreach($tenders as $t)
+                    @php $statusClass = $t->status === 'open' ? 'status-pill--open' : 'status-pill--closed'; @endphp
+                    <a href="#" class="grid grid-cols-12 gap-4 py-4 items-baseline hover:bg-slate-50 transition-colors duration-150 px-1 -mx-1">
+                        <div class="col-span-4 md:col-span-2 font-mono text-[12px] text-slate-500 tabular-nums truncate">{{ $t->reference_no }}</div>
+                        <div class="col-span-8 md:col-span-7 text-[15px] font-medium text-slate-900 hover:text-primary leading-snug">{{ $t->title }}</div>
+                        <div class="hidden md:block md:col-span-2 mono-meta tabular-nums">{{ $t->closes_at?->format('Y-m-d') }}</div>
+                        <div class="hidden md:flex md:col-span-1 justify-end">
+                            <span class="status-pill {{ $statusClass }}">{{ strtoupper($t->status) }}</span>
+                        </div>
+                    </a>
+                @endforeach
             @endif
         </div>
 
         {{-- Pengumuman panel --}}
-        <div role="tabpanel" x-show="tab === 'pengumuman'" x-cloak>
+        <div role="tabpanel" x-show="tab === 'pengumuman'" x-cloak class="divide-y divide-slate-100">
             @if($pengumumans->isEmpty())
                 <x-state.empty icon="heroicon-o-megaphone" :title="__('messages.states.empty.news')" tone="warning" />
             @else
-                <ul class="divide-y rounded-lg border">
-                    @foreach($pengumumans as $p)
-                        <li class="p-4 flex flex-wrap items-center gap-3 hover:bg-gray-50 transition">
-                            <div class="text-xs text-gray-500 w-24">{{ $p->published_at?->isoFormat('D MMM Y') }}</div>
-                            <a href="#" class="font-semibold text-primary hover:underline flex-1">{{ $p->title }}</a>
+                @foreach($pengumumans as $p)
+                    <a href="#" class="grid grid-cols-12 gap-4 py-4 items-baseline hover:bg-slate-50 transition-colors duration-150 px-1 -mx-1">
+                        <div class="col-span-3 md:col-span-2 mono-meta tabular-nums">{{ $p->published_at?->format('Y-m-d') }}</div>
+                        <div class="col-span-9 md:col-span-9 text-[15px] font-medium text-slate-900 hover:text-primary leading-snug">{{ $p->title }}</div>
+                        <div class="hidden md:flex md:col-span-1 justify-end">
                             @if($p->important)
-                                <span class="text-xs px-2 py-0.5 bg-amber-100 text-amber-800 rounded">{{ app()->getLocale() === 'ms' ? 'Penting' : 'Important' }}</span>
+                                <span class="status-pill status-pill--draft">PENTING</span>
                             @endif
-                        </li>
-                    @endforeach
-                </ul>
+                        </div>
+                    </a>
+                @endforeach
             @endif
         </div>
     </div>
 </section>
 
-{{-- PAUTAN AGENSI strip --}}
-<section class="bg-primary-pale py-10">
-    <div class="container-page">
-        <h2 class="font-display text-lg font-semibold text-primary mb-4">{{ __('messages.home.agencies_title') }}</h2>
-        <div class="flex flex-wrap items-center gap-4">
+{{-- AGENCIES — monochrome wordmark row --}}
+<section aria-labelledby="agencies-heading" class="bg-white">
+    <div class="container-page py-10 md:py-12">
+        <div class="flex items-baseline justify-between mb-5">
+            <h2 id="agencies-heading" class="mono-cap text-slate-500">{{ __('messages.home.agencies_title') }}</h2>
+        </div>
+        <ul class="flex flex-wrap items-center gap-x-8 gap-y-3">
             @foreach([
                 'Kementerian Sumber Asli',
                 'Jabatan Ukur dan Pemetaan',
@@ -179,12 +225,14 @@
                 'e-Tanah Negeri',
                 'SISPAA',
                 'JPN',
+                'JPPH',
+                'MyGovernment',
             ] as $agency)
-                <a href="#" class="bg-white rounded p-3 px-5 text-sm font-medium text-gray-700 border hover:border-primary hover:text-primary transition">
-                    {{ $agency }}
-                </a>
+                <li>
+                    <a href="#" class="text-[13px] font-medium text-slate-500 hover:text-slate-900 transition-colors duration-150 underline-offset-4 hover:underline decoration-slate-300">{{ $agency }}</a>
+                </li>
             @endforeach
-        </div>
+        </ul>
     </div>
 </section>
 
