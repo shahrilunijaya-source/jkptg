@@ -39,10 +39,8 @@ class Page extends Model
     public function toSearchableArray(): array
     {
         return [
-            'title_ms' => $this->getTranslation('title', 'ms'),
-            'title_en' => $this->getTranslation('title', 'en', false),
-            'body_ms' => strip_tags($this->getTranslation('body', 'ms')),
-            'body_en' => strip_tags($this->getTranslation('body', 'en', false)),
+            'title' => $this->getRawOriginal('title'),
+            'body' => $this->getRawOriginal('body'),
             'slug' => $this->slug,
         ];
     }

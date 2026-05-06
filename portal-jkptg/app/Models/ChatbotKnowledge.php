@@ -26,10 +26,9 @@ class ChatbotKnowledge extends Model
     public function toSearchableArray(): array
     {
         return [
-            'question_ms' => $this->getTranslation('question', 'ms'),
-            'question_en' => $this->getTranslation('question', 'en', false),
-            'answer_ms' => $this->getTranslation('answer', 'ms'),
-            'keywords' => is_array($this->keywords) ? implode(' ', $this->keywords) : '',
+            'question' => $this->getRawOriginal('question'),
+            'answer' => $this->getRawOriginal('answer'),
+            'slug' => $this->slug,
             'category' => $this->category,
         ];
     }

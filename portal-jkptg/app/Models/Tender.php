@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
 
 class Tender extends Model
 {
-    use HasTranslations, LogsActivity;
+    use HasTranslations, LogsActivity, Searchable;
 
     public array $translatable = ['title', 'description'];
 
@@ -32,5 +33,21 @@ class Tender extends Model
     public function isOpen(): bool
     {
         return $this->status === 'open' && $this->closes_at?->isFuture();
+    }
+
+    public function toSearchableArray(): array
+    {
+        return [
+            'title' => $this->getRawOriginal('title'),
+            'description' => $this->getRawOriginal('description'),
+            'slug' => $this->slug,
+            'reference_no' => $this->reference_no,
+            'status' => $this->status,
+        ];
+    }
+
+    public function shouldBeSearchable(): bool
+    {
+        return in_array($this->status, ['open', 'closed'], true);
     }
 }

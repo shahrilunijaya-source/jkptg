@@ -5,6 +5,7 @@ use App\Http\Controllers\HubungiController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::get('/sumber', [PageController::class, 'sumber'])->name('sumber.index');
 Route::get('/halaman/{slug}', [PageController::class, 'show'])->name('page.show');
 
 Route::get('/hubungi', [HubungiController::class, 'index'])->name('hubungi.index');
+
+Route::get('/cari', [SearchController::class, 'index'])->name('search.index');
 
 Route::get('/locale/{locale}', LocaleController::class)
     ->where('locale', 'ms|en')

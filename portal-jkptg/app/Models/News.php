@@ -36,9 +36,9 @@ class News extends Model
     public function toSearchableArray(): array
     {
         return [
-            'title_ms' => $this->getTranslation('title', 'ms'),
-            'title_en' => $this->getTranslation('title', 'en', false),
-            'body_ms' => strip_tags($this->getTranslation('body', 'ms')),
+            'title' => $this->getRawOriginal('title'),
+            'excerpt' => $this->getRawOriginal('excerpt'),
+            'slug' => $this->slug,
             'type' => $this->type,
         ];
     }

@@ -24,6 +24,13 @@
             <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.korporat') }}</a>
             <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.sumber') }}</a>
             <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.hubungi') }}</a>
+            <form action="{{ route('search.index') }}" method="get" class="ml-2 relative" role="search">
+                <label for="header-search" class="sr-only">{{ __('messages.search.input_label') }}</label>
+                <input id="header-search" type="search" name="q" minlength="2" required
+                       placeholder="{{ __('messages.search.placeholder') }}"
+                       class="w-44 xl:w-56 border border-gray-300 rounded-full pl-9 pr-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                <x-heroicon-o-magnifying-glass class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+            </form>
             @auth
                 <a href="{{ url('/admin') }}" class="ml-2 btn-primary !px-4 !py-2">{{ __('messages.nav.log_masuk') }}</a>
             @else
@@ -43,6 +50,13 @@
 
     <div x-show="mobileOpen" x-cloak class="lg:hidden border-t bg-white shadow-md">
         <nav class="container-page py-3 flex flex-col gap-1 text-sm font-medium">
+            <form action="{{ route('search.index') }}" method="get" class="relative mb-2" role="search">
+                <label for="mobile-search" class="sr-only">{{ __('messages.search.input_label') }}</label>
+                <input id="mobile-search" type="search" name="q" minlength="2" required
+                       placeholder="{{ __('messages.search.placeholder') }}"
+                       class="w-full border border-gray-300 rounded-full pl-9 pr-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+                <x-heroicon-o-magnifying-glass class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" aria-hidden="true" />
+            </form>
             <a href="{{ route('home') }}" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.utama') }}</a>
             <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.perkhidmatan') }}</a>
             <a href="#" class="px-3 py-2 rounded hover:bg-primary-pale">{{ __('messages.nav.panduan') }}</a>

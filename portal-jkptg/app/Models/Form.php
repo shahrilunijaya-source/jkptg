@@ -3,13 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Translatable\HasTranslations;
 
 class Form extends Model
 {
-    use HasTranslations, LogsActivity;
+    use HasTranslations, LogsActivity, Searchable;
 
     public array $translatable = ['name', 'description'];
 
@@ -35,5 +36,20 @@ class Form extends Model
         if ($bytes < 1024) return $bytes . ' B';
         if ($bytes < 1024 * 1024) return round($bytes / 1024, 1) . ' KB';
         return round($bytes / (1024 * 1024), 1) . ' MB';
+    }
+
+    public function toSearchableArray(): array
+    {
+        return [
+            'name' => $this->getRawOriginal('name'),
+            'description' => $this->getRawOriginal('description'),
+            'slug' => $this->slug,
+            'category' => $this->category,
+        ];
+    }
+
+    public function shouldBeSearchable(): bool
+    {
+        return $this->active;
     }
 }

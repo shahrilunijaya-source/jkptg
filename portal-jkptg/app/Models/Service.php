@@ -31,10 +31,9 @@ class Service extends Model
     public function toSearchableArray(): array
     {
         return [
-            'name_ms' => $this->getTranslation('name', 'ms'),
-            'name_en' => $this->getTranslation('name', 'en', false),
-            'summary_ms' => $this->getTranslation('summary', 'ms'),
-            'summary_en' => $this->getTranslation('summary', 'en', false),
+            'name' => $this->getRawOriginal('name'),
+            'summary' => $this->getRawOriginal('summary'),
+            'slug' => $this->slug,
             'category' => $this->category,
         ];
     }
