@@ -168,6 +168,62 @@
 </section>
 @endif
 
+{{-- MESEJ KETUA PENGARAH --}}
+<section aria-labelledby="dg-heading" class="bg-canvas-mute border-b border-slate-200">
+    <div class="container-page py-16 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            {{-- Portrait + seal --}}
+            <figure class="lg:col-span-4 max-w-sm mx-auto lg:mx-0">
+                <div class="relative">
+                    <div class="aspect-[4/5] bg-primary-100 border border-primary-200 overflow-hidden rounded-sm">
+                        <img src="{{ asset('images/dg/dg-portrait.jpg') }}"
+                             onerror="this.src='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80';"
+                             alt="{{ app()->getLocale() === 'ms' ? 'Potret Ketua Pengarah JKPTG' : 'Portrait of the Director General of JKPTG' }}"
+                             class="w-full h-full object-cover grayscale-[0.15]">
+                    </div>
+                    {{-- Bronze seal corner --}}
+                    <div class="absolute -bottom-4 -right-4 hidden md:flex items-center justify-center w-20 h-20 bg-bronze text-white shadow-[0_8px_24px_-6px_rgba(11,50,32,0.35)]">
+                        <img src="{{ asset('images/jata-negara.png') }}" alt="" class="w-12 h-12 object-contain brightness-0 invert" aria-hidden="true">
+                    </div>
+                </div>
+                <figcaption class="mt-6 lg:mt-8">
+                    <div class="text-[12px] uppercase tracking-[0.16em] font-semibold text-bronze mb-1">{{ app()->getLocale() === 'ms' ? 'Ketua Pengarah' : 'Director General' }}</div>
+                    <div class="text-[18px] font-bold text-canvas-ink leading-tight">{{ app()->getLocale() === 'ms' ? 'YBhg. Datuk Hj. Ketua Pengarah' : 'YBhg. Datuk Hj. Director General' }}</div>
+                    <div class="text-[13px] text-slate-600 mt-1 leading-snug">{{ app()->getLocale() === 'ms' ? 'Jabatan Ketua Pengarah Tanah dan Galian Persekutuan' : 'Department of the Director General of Federal Lands and Mines' }}</div>
+                </figcaption>
+            </figure>
+
+            {{-- Message --}}
+            <div class="lg:col-span-8 max-w-2xl">
+                <span class="eyebrow">{{ app()->getLocale() === 'ms' ? 'Mesej Ketua Pengarah' : "Director General's Message" }}</span>
+                <h2 id="dg-heading" class="text-[28px] md:text-[36px] font-bold text-canvas-ink leading-tight tracking-tight mt-3 mb-6 [text-wrap:balance]">
+                    {{ app()->getLocale() === 'ms'
+                        ? 'Memperteguh tadbir urus tanah Persekutuan untuk masa depan rakyat.'
+                        : 'Strengthening federal land governance for the future of our people.' }}
+                </h2>
+                <div class="space-y-4 text-[15px] md:text-[16px] text-slate-700 leading-relaxed">
+                    <p>{{ app()->getLocale() === 'ms'
+                        ? 'Sebagai peneraju tadbir urus tanah Persekutuan, JKPTG komited memastikan setiap urusan tanah dilaksanakan dengan telus, cekap dan beramanah, demi menjaga warisan negara untuk generasi akan datang.'
+                        : 'As the steward of federal land governance, JKPTG is committed to ensuring every land transaction is carried out with transparency, efficiency and integrity, safeguarding the nation\'s heritage for generations to come.' }}</p>
+                    <p>{{ app()->getLocale() === 'ms'
+                        ? 'Portal rasmi ini adalah saluran utama anda untuk mengakses perkhidmatan, polisi, akta dan maklumat terkini berkaitan tanah Persekutuan. Kami akan terus memperbaiki kualiti penyampaian secara berterusan.'
+                        : 'This official portal is your primary channel to access services, policies, acts and current information on federal lands. We will continue to improve service quality on an ongoing basis.' }}</p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+                    <a href="{{ route('page.show', 'mengenai-jkptg') }}" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-primary hover:text-primary-800">
+                        <span>{{ app()->getLocale() === 'ms' ? 'Mengenai JKPTG' : 'About JKPTG' }}</span>
+                        <x-heroicon-o-arrow-right class="w-4 h-4" />
+                    </a>
+                    <a href="{{ route('page.show', 'piagam-pelanggan') }}" class="inline-flex items-center gap-1.5 text-[14px] font-semibold text-slate-600 hover:text-primary">
+                        <span>{{ app()->getLocale() === 'ms' ? 'Piagam Pelanggan' : 'Client Charter' }}</span>
+                        <x-heroicon-o-arrow-right class="w-4 h-4" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- SERVICES — civic card grid --}}
 <section id="perkhidmatan" aria-labelledby="services-heading" class="bg-white border-b border-slate-200">
     <div class="container-page py-16 md:py-20">
