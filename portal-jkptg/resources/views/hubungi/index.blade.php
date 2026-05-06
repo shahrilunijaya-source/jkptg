@@ -77,7 +77,7 @@
             {{-- Map --}}
             <div class="lg:col-span-7 bg-white">
                 @if($hq->lat && $hq->lng)
-                    <div id="map" style="width: 100%; height: 100%; min-height: 360px;" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
+                    <div id="map" class="w-full h-[400px] lg:h-[480px]" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
                 @else
                     <x-state.empty icon="heroicon-o-map" :title="__('messages.hubungi.no_map')" tone="warning" />
                 @endif
