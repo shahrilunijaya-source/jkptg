@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             ContentSeeder::class,
             JkptgKorporatScrapeSeeder::class,
+            JkptgLeadersSeeder::class,
         ]);
     }
 }

@@ -203,6 +203,8 @@ return [
     'korporat' => [
         'heading' => 'Maklumat Korporat JKPTG',
         'help' => 'Latar belakang, struktur, piagam pelanggan dan kerjaya.',
+        'pengurusan_tertinggi' => 'Pengurusan Tertinggi',
+        'pengurusan_subtitle' => 'Ketua Pengarah, Timbalan-timbalan Ketua Pengarah, dan Ketua Pegawai Digital JKPTG.',
     ],
 
     'sumber' => [
@@ -399,6 +401,44 @@ return [
             'privacy' => 'Perbualan ini direkod untuk audit. Tiada data peribadi disimpan.',
             'unknown' => 'Saya belum tahu. Hubungi webmaster@jkptg.gov.my.',
             'simple_mode_badge' => 'Mod ringkas aktif',
+        ],
+    ],
+
+    'auth' => [
+        'page_title' => 'Log Masuk — Portal JKPTG',
+        'back' => 'Kembali ke Laman Utama',
+        'badge' => 'Portal Rasmi',
+        'left_title_1' => 'Portal',
+        'left_title_2' => 'JKPTG',
+        'left_desc' => 'Sistem akses kakitangan dan pengguna berdaftar Jabatan Ketua Pengarah Tanah dan Galian Persekutuan untuk pengurusan kandungan dan perkhidmatan dalam talian.',
+        'features' => [
+            'f1' => 'Pengurusan kandungan portal jabatan',
+            'f2' => 'Semak status permohonan dan e-perkhidmatan',
+            'f3' => 'Akses borang dan dokumen rasmi',
+            'f4' => 'Jejak audit penuh untuk pegawai',
+        ],
+        'card_title' => 'Log Masuk',
+        'card_sub' => 'Masukkan kelayakan akaun JKPTG anda untuk meneruskan.',
+        'gov_badge' => 'JKPTG · Kementerian Sumber Asli dan Kelestarian Alam',
+        'email_label' => 'E-mel',
+        'email_placeholder' => 'nama@jkptg.gov.my',
+        'password_label' => 'Kata Laluan',
+        'remember' => 'Ingat saya',
+        'forgot' => 'Lupa Kata Laluan?',
+        'submit' => 'Log Masuk',
+        'no_account' => 'Belum ada akaun?',
+        'contact_admin' => 'Hubungi pentadbir sistem',
+        'demo_link' => 'Lihat Akaun Demo →',
+        'demo_modal_title' => 'Akaun Demo',
+        'demo_modal_badge' => 'Persekitaran Ujian',
+        'demo_col_role' => 'Peranan',
+        'demo_col_email' => 'E-mel',
+        'demo_col_pw' => 'Kata Laluan',
+        'demo_modal_foot' => 'Klik baris untuk isi borang secara automatik',
+        'copyright' => 'Portal JKPTG &copy; :year Jabatan Ketua Pengarah Tanah dan Galian Persekutuan',
+        'errors' => [
+            'invalid' => 'E-mel atau kata laluan tidak betul.',
+            'throttled' => 'Terlalu banyak cubaan log masuk. Cuba semula dalam :seconds saat.',
         ],
     ],
 ];

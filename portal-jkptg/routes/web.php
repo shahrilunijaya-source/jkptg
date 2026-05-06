@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\BorangController;
 use App\Http\Controllers\HubungiController;
 use App\Http\Controllers\LocaleController;
@@ -48,6 +49,8 @@ Route::get('/panduan/akta/{slug}/pdf', [PanduanController::class, 'aktaPdf'])
     ->name('panduan.akta.pdf');
 
 Route::get('/korporat', [PageController::class, 'korporat'])->name('korporat.index');
+Route::get('/korporat/pengurusan-tertinggi', [PageController::class, 'pengurusanTertinggi'])
+    ->name('korporat.pengurusan');
 Route::get('/korporat/{slug}', [PageController::class, 'korporatShow'])
     ->where('slug', '[a-z0-9-]+')
     ->name('korporat.show');
@@ -76,6 +79,9 @@ Route::post('/hubungi/aduan', [HubungiController::class, 'aduanStore'])->name('h
 
 Route::get('/soalan-lazim', [PageController::class, 'soalanLazim'])->name('faq.index');
 Route::get('/peta-laman', [PageController::class, 'petaLaman'])->name('peta-laman');
+Route::get('/log-masuk', [LoginController::class, 'show'])->name('log-masuk');
+Route::post('/log-masuk', [LoginController::class, 'store'])->name('log-masuk.store');
+Route::post('/log-keluar', [LoginController::class, 'destroy'])->name('log-keluar');
 
 // PPPA mandatory pages (rule 3.1)
 Route::get('/hak-cipta', fn () => app(PageController::class)->staticPage('hak-cipta'))->name('hak-cipta');

@@ -8,6 +8,13 @@ use App\Models\Service;
 
 class PageController extends Controller
 {
+    private const LEADER_SLUGS = [
+        'ketua-pengarah',
+        'timbalan-ketua-pengarah-sektor-kemajuan-pengurusan-perundangan-skpp',
+        'timbalan-ketua-pengarah-sektor-penyelarasan-operasi-spo',
+        'ketua-pegawai-maklumat-cio',
+    ];
+
     private const KORPORAT_SLUGS = [
         // Profil utama (scraped from www.jkptg.gov.my)
         'perutusan-ketua-pengarah',
@@ -16,6 +23,11 @@ class PageController extends Controller
         'fungsi-jabatan',
         'piagam-pelanggan',
         'carta-organisasi',
+        // Pengurusan tertinggi (4 leaders with photos)
+        'ketua-pengarah',
+        'timbalan-ketua-pengarah-sektor-kemajuan-pengurusan-perundangan-skpp',
+        'timbalan-ketua-pengarah-sektor-penyelarasan-operasi-spo',
+        'ketua-pegawai-maklumat-cio',
         // Profil bahagian (11)
         'bahagian-khidmat-pengurusan-bkp',
         'bahagian-dasar-dan-konsultasi-bd-k',
@@ -52,6 +64,15 @@ class PageController extends Controller
         $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
         $section = 'korporat';
         return view('pages.show', compact('page', 'section'));
+    }
+
+    public function pengurusanTertinggi()
+    {
+        $leaders = Page::whereIn('slug', self::LEADER_SLUGS)
+            ->where('published', true)
+            ->orderBy('sort')
+            ->get();
+        return view('korporat.pengurusan-tertinggi', compact('leaders'));
     }
 
     public function sumber()
@@ -92,10 +113,5 @@ class PageController extends Controller
         $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
         $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('pdf.page', compact('page'));
         return $pdf->download("{$page->slug}.pdf");
-    }
-
-    public function logMasuk()
-    {
-        return view('auth.log-masuk');
     }
 }

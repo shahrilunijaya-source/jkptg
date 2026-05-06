@@ -203,6 +203,8 @@ return [
     'korporat' => [
         'heading' => 'Corporate Information',
         'help' => 'Background, structure, customer charter and careers.',
+        'pengurusan_tertinggi' => 'Top Management',
+        'pengurusan_subtitle' => 'Director-General, Deputy Directors-General, and Chief Digital Officer of JKPTG.',
     ],
 
     'sumber' => [
@@ -399,6 +401,44 @@ return [
             'privacy' => 'This conversation is logged for audit. No personal data is stored.',
             'unknown' => 'I do not know yet. Please contact webmaster@jkptg.gov.my.',
             'simple_mode_badge' => 'Simple mode active',
+        ],
+    ],
+
+    'auth' => [
+        'page_title' => 'Log In — JKPTG Portal',
+        'back' => 'Back to Home',
+        'badge' => 'Official Portal',
+        'left_title_1' => 'JKPTG',
+        'left_title_2' => 'Portal',
+        'left_desc' => 'Authenticated access for JKPTG officers and registered users to manage portal content and online services.',
+        'features' => [
+            'f1' => 'Portal content management for officers',
+            'f2' => 'Track applications and e-service status',
+            'f3' => 'Access official forms and documents',
+            'f4' => 'Full audit trail for departmental users',
+        ],
+        'card_title' => 'Log In',
+        'card_sub' => 'Enter your JKPTG account credentials to continue.',
+        'gov_badge' => 'JKPTG · Ministry of Natural Resources and Environmental Sustainability',
+        'email_label' => 'Email',
+        'email_placeholder' => 'name@jkptg.gov.my',
+        'password_label' => 'Password',
+        'remember' => 'Remember me',
+        'forgot' => 'Forgot Password?',
+        'submit' => 'Log In',
+        'no_account' => 'Don\'t have an account?',
+        'contact_admin' => 'Contact system administrator',
+        'demo_link' => 'View Demo Accounts →',
+        'demo_modal_title' => 'Demo Accounts',
+        'demo_modal_badge' => 'Test Environment',
+        'demo_col_role' => 'Role',
+        'demo_col_email' => 'Email',
+        'demo_col_pw' => 'Password',
+        'demo_modal_foot' => 'Click a row to auto-fill the form',
+        'copyright' => 'JKPTG Portal &copy; :year Department of the Director General of Federal Lands and Mines',
+        'errors' => [
+            'invalid' => 'Invalid email or password.',
+            'throttled' => 'Too many login attempts. Try again in :seconds seconds.',
         ],
     ],
 ];
