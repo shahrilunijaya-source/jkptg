@@ -1,7 +1,7 @@
 ﻿# Portal-JKPTG - Build State
 
-**Current stage:** Phase 12 COMPLETE (Stage 7 BUILD COMPLETE). SPLaSK meta + SEO endpoints + 22 legacy redirects + print + a11y all live. Ready for Stage 8 QA.
-**Last updated:** 2026-05-06 (Phase 12 edge cases done)
+**Current stage:** Phase 13 / Stage 8 COMPLETE. 73/73 verification PASS, 0 FAIL. Security headers (X-Frame/CSP/Permissions/Referrer/COOP/HSTS) live, code audit clean. DEPLOY-CHECKLIST.md ready. Ready for Phase 14 deploy.
+**Last updated:** 2026-05-06 (Phase 13 QA + security audit done)
 **Target portal:** https://www.jkptg.gov.my/en/ (EN) and /my/ (BM default)
 
 ---
@@ -34,13 +34,12 @@
   - [x] Phase 10 - i18n polish (lang parity 161/161 MS+EN, 5 missing footer/utility keys patched, all 9 translatable models EN-complete, locale-switch verified across 7 public pages)
   - [x] Phase 11 - Search (Scout DB driver, 7 Searchable models, /cari + SearchController, header+mobile search input, BM+EN cross-model verified, lang parity 184/184)
   - [x] Phase 12 - Edge cases (16 SPLaSK meta tags, sitemap.xml 34 URLs, robots.txt, security.txt, humans.txt, 22 legacy redirects, print stylesheet polish, prefers-reduced-motion, a11y sweep — single h1 per page, all landmarks, skip-link)
-  - [ ] Phase 13 - Verification (Stage 8 QA + PPPA compliance + security audit) <- NEXT
-  - [ ] Phase 13 - Verification
-  - [ ] Phase 14 - Hostinger deploy
+  - [x] Phase 13 - Verification (Stage 8: SecurityHeaders middleware with CSP/HSTS/X-Frame/Permissions/Referrer/COOP, 73/73 verify-stage8.ps1 PASS, code audit clean, DEPLOY-CHECKLIST.md committed)
+  - [ ] Phase 14 - Hostinger deploy <- NEXT
   - [ ] Phase 14.5 - Walkthrough video
-- [ ] Stage 8 - QA + PPPA compliance + security
-- [ ] Stage 9 - Performance
-- [ ] Stage 10 - Ship (Hostinger via GitHub auto-pull)
+- [x] Stage 8 - QA + PPPA compliance + security (verify-stage8.ps1 73/73 PASS, SecurityHeaders middleware, DEPLOY-CHECKLIST.md)
+- [ ] Stage 9 - Performance (folded into Phase 13 perf baseline; reserve for full Lighthouse run on prod URL)
+- [ ] Stage 10 - Ship (Hostinger via GitHub auto-pull) [= Phase 14]
 
 ---
 
