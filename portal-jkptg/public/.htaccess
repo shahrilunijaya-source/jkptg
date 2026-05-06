@@ -5,6 +5,15 @@
 
     RewriteEngine On
 
+    # Force HTTPS (production only — Hostinger flips this on automatically once SSL provisioned)
+    # RewriteCond %{HTTPS} !=on
+    # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Force www (canonical host)
+    # RewriteCond %{HTTP_HOST} ^jkptg\.gov\.my$ [NC]
+    # RewriteRule ^(.*)$ https://www.jkptg.gov.my/$1 [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -19,3 +28,33 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+
+# Static asset compression + cache (Hostinger LiteSpeed compatible)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css                 "access plus 1 month"
+    ExpiresByType application/javascript   "access plus 1 month"
+    ExpiresByType image/jpeg               "access plus 1 month"
+    ExpiresByType image/png                "access plus 1 month"
+    ExpiresByType image/svg+xml            "access plus 1 month"
+    ExpiresByType image/webp               "access plus 1 month"
+    ExpiresByType image/x-icon             "access plus 1 year"
+    ExpiresByType font/woff                "access plus 1 year"
+    ExpiresByType font/woff2               "access plus 1 year"
+    ExpiresByType application/pdf          "access plus 1 week"
+    ExpiresDefault                         "access plus 2 days"
+</IfModule>
+
+# Block dotfiles
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Block sensitive files
+<FilesMatch "(\.env|composer\.(json|lock)|package(-lock)?\.json|artisan|\.git|README\.md|verify-.*\.(php|ps1))$">
+    Require all denied
+</FilesMatch>
