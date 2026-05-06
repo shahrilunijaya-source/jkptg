@@ -5,78 +5,100 @@
   $email = \App\Models\Setting::get('site.email', 'webmaster@jkptg.gov.my');
   $visitors = \App\Models\Setting::get('site.visitor_count', 0);
   $lastUpdated = \App\Models\Setting::get('site.last_updated');
-  $lastUpdatedFmt = $lastUpdated ? \Illuminate\Support\Carbon::parse($lastUpdated)->isoFormat('D MMM Y') : '';
+  $lastUpdatedFmt = $lastUpdated ? \Illuminate\Support\Carbon::parse($lastUpdated)->format('Y-m-d') : '';
 @endphp
-<footer class="bg-footer text-white pt-12 pb-6 no-print">
+<footer class="bg-footer text-white pt-16 pb-8 no-print">
     <div class="container-page">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-                <div class="flex items-center gap-2 mb-3">
-                    <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="h-10 w-auto object-contain flex-shrink-0">
-                    <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-10 w-auto object-contain flex-shrink-0 brightness-0 invert">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
+            {{-- Brand + address --}}
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-3 mb-5">
+                    <img src="{{ asset('images/jata-negara.png') }}" alt="Jata Negara" class="h-11 w-auto object-contain flex-shrink-0">
+                    <img src="{{ asset('images/logo-jkptg.png') }}" alt="JKPTG" class="h-9 w-auto object-contain flex-shrink-0 brightness-0 invert">
                 </div>
-                <address class="not-italic text-sm text-white/80 leading-relaxed">
+                <div class="mono-cap text-white/50 mb-2">{{ __('messages.utility.official_short') }}</div>
+                <div class="font-bold text-[15px] text-white leading-snug max-w-md">
+                    {{ __('messages.site_description') }}
+                </div>
+                <div class="text-[13px] text-white/60 mb-5 leading-snug max-w-md">
+                    {{ __('messages.ministry_name') }}
+                </div>
+                <address class="not-italic text-[13px] text-white/70 leading-relaxed max-w-md mb-4">
                     {{ $address }}
                 </address>
-                <div class="mt-3 text-sm text-white/80 space-y-1">
-                    <div class="flex items-center gap-2"><x-heroicon-o-phone class="w-4 h-4" /><span>{{ $phone }}</span></div>
-                    <div class="flex items-center gap-2"><x-heroicon-o-envelope class="w-4 h-4" /><span>{{ $email }}</span></div>
-                </div>
+                <dl class="text-[13px] text-white/80 space-y-1.5">
+                    <div class="flex gap-3">
+                        <dt class="mono-cap text-white/40 w-12 shrink-0 pt-0.5">TEL</dt>
+                        <dd class="font-mono">{{ $phone }}</dd>
+                    </div>
+                    <div class="flex gap-3">
+                        <dt class="mono-cap text-white/40 w-12 shrink-0 pt-0.5">EMEL</dt>
+                        <dd><a href="mailto:{{ $email }}" class="font-mono hover:text-white">{{ $email }}</a></dd>
+                    </div>
+                </dl>
             </div>
-            <div>
-                <h3 class="font-semibold mb-3 text-jata-yellow">{{ __('messages.footer.pautan_pantas') }}</h3>
-                <ul class="text-sm space-y-2 text-white/80">
+
+            {{-- Pautan Pantas --}}
+            <div class="md:col-span-3">
+                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.footer.pautan_pantas') }}</h3>
+                <ul class="text-[14px] space-y-2.5 text-white/85">
                     <li><a href="{{ route('faq.index') }}" class="hover:text-white">{{ __('messages.utility.soalan_lazim') }}</a></li>
                     <li><a href="{{ route('panduan.index') }}" class="hover:text-white">{{ __('messages.nav.panduan') }}</a></li>
                     <li><a href="{{ route('borang.index') }}" class="hover:text-white">{{ __('messages.borang.title') }}</a></li>
                     <li><a href="{{ route('hubungi.aduan') }}" class="hover:text-white">{{ __('messages.utility.aduan') }}</a></li>
+                    <li><a href="{{ route('search.index') }}" class="hover:text-white">{{ __('messages.search.input_label') }}</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="font-semibold mb-3 text-jata-yellow">{{ __('messages.footer.korporat') }}</h3>
-                <ul class="text-sm space-y-2 text-white/80">
+
+            {{-- Korporat --}}
+            <div class="md:col-span-2">
+                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.footer.korporat') }}</h3>
+                <ul class="text-[14px] space-y-2.5 text-white/85">
                     <li><a href="{{ route('page.show', 'mengenai-jkptg') }}" class="hover:text-white">{{ __('messages.footer.mengenai') }}</a></li>
                     <li><a href="{{ route('page.show', 'piagam-pelanggan') }}" class="hover:text-white">{{ __('messages.footer.piagam') }}</a></li>
                     <li><a href="{{ route('page.show', 'kerjaya') }}" class="hover:text-white">{{ __('messages.footer.kerjaya') }}</a></li>
                     <li><a href="{{ route('hubungi.index') }}" class="hover:text-white">{{ __('messages.utility.hubungi') }}</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="font-semibold mb-3 text-jata-yellow">{{ __('messages.footer.sosial') }}</h3>
-                <div class="flex gap-3 mb-4">
-                    <a href="{{ \App\Models\Setting::get('social.facebook', '#') }}" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="Facebook">
-                        <x-heroicon-o-globe-alt class="w-4 h-4" />
-                    </a>
-                    <a href="{{ \App\Models\Setting::get('social.twitter', '#') }}" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="X / Twitter">
-                        <x-heroicon-o-megaphone class="w-4 h-4" />
-                    </a>
-                    <a href="{{ \App\Models\Setting::get('social.youtube', '#') }}" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center" aria-label="YouTube">
-                        <x-heroicon-o-play class="w-4 h-4" />
-                    </a>
-                </div>
-                <h3 class="font-semibold mb-2 text-jata-yellow text-sm">{{ __('messages.footer.kata_kunci') }}</h3>
-                <div class="flex flex-wrap gap-1.5 text-xs">
-                    <a href="{{ route('search.index', ['q' => 'pengambilan tanah']) }}" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pengambilan tanah</a>
-                    <a href="{{ route('search.index', ['q' => 'pusaka']) }}" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pusaka</a>
-                    <a href="{{ route('search.index', ['q' => 'pajakan']) }}" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">pajakan</a>
-                    <a href="{{ route('borang.index') }}" class="bg-white/10 hover:bg-white/20 px-2 py-1 rounded">borang</a>
-                </div>
+
+            {{-- Sumber --}}
+            <div class="md:col-span-2">
+                <h3 class="mono-cap text-white/50 mb-4">{{ __('messages.nav.sumber') }}</h3>
+                <ul class="text-[14px] space-y-2.5 text-white/85">
+                    <li><a href="{{ route('sumber.index') }}" class="hover:text-white">{{ __('messages.nav.sumber') }}</a></li>
+                    <li><a href="{{ route('panduan.index') }}" class="hover:text-white">{{ __('messages.nav.panduan') }}</a></li>
+                    <li><a href="{{ route('peta-laman') }}" class="hover:text-white">{{ __('messages.footer.peta_laman') }}</a></li>
+                    <li><a href="{{ route('dasar-web') }}" class="hover:text-white">{{ __('messages.peta_laman.dasar_web') }}</a></li>
+                </ul>
             </div>
         </div>
-        <div class="border-t border-white/10 pt-6 flex flex-wrap items-center justify-between gap-3 text-xs text-white/70">
-            <div class="flex flex-wrap gap-x-4 gap-y-1">
+
+        {{-- Legal strip --}}
+        <div class="border-t border-white/10 pt-6 flex flex-wrap items-start justify-between gap-x-6 gap-y-3 text-[12px] text-white/60">
+            <nav aria-label="Legal" class="flex flex-wrap gap-x-5 gap-y-1.5">
                 <a href="{{ route('page.show', 'disclaimer') }}" class="hover:text-white">{{ __('messages.footer.disclaimer') }}</a>
                 <a href="{{ route('page.show', 'polisi-privasi') }}" class="hover:text-white">{{ __('messages.footer.polisi_privasi') }}</a>
                 <a href="{{ route('page.show', 'polisi-keselamatan') }}" class="hover:text-white">{{ __('messages.footer.polisi_keselamatan') }}</a>
                 <a href="{{ route('hak-cipta') }}" class="hover:text-white">{{ __('messages.footer.hak_cipta') }}</a>
                 <a href="{{ route('dasar-web') }}" class="hover:text-white">{{ __('messages.peta_laman.dasar_web') }}</a>
                 <a href="{{ route('peta-laman') }}" class="hover:text-white">{{ __('messages.footer.peta_laman') }}</a>
-            </div>
-            <div>
-                {{ __('messages.footer.hak_cipta') }} &copy; {{ date('Y') }} JKPTG.
-                {{ __('messages.footer.pelawat') }}: <strong>{{ number_format($visitors) }}</strong>.
-                @if($lastUpdatedFmt) {{ __('messages.footer.kemaskini') }}: {{ $lastUpdatedFmt }}. @endif
-            </div>
+            </nav>
+            <dl class="flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[11px]">
+                <div class="flex gap-2">
+                    <dt class="uppercase tracking-[0.08em] text-white/40">PELAWAT</dt>
+                    <dd class="text-white/80">{{ number_format($visitors) }}</dd>
+                </div>
+                @if($lastUpdatedFmt)
+                <div class="flex gap-2">
+                    <dt class="uppercase tracking-[0.08em] text-white/40">KEMASKINI</dt>
+                    <dd class="text-white/80">{{ $lastUpdatedFmt }}</dd>
+                </div>
+                @endif
+                <div class="flex gap-2">
+                    <dt class="uppercase tracking-[0.08em] text-white/40">© {{ date('Y') }}</dt>
+                    <dd class="text-white/80">JKPTG</dd>
+                </div>
+            </dl>
         </div>
     </div>
 </footer>
