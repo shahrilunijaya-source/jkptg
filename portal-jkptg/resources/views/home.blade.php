@@ -89,7 +89,7 @@
                 ['slug' => 'warga-jkptg',          'icon' => 'identification',         'title' => __('messages.persona.warga_jkptg.title'),          'summary' => __('messages.persona.warga_jkptg.summary'),          'cta' => __('messages.persona.cta_login')],
             ] as $persona)
                 <a href="{{ route('persona.show', $persona['slug']) }}"
-                   class="group bg-white rounded-2xl p-7 shadow-[0_8px_24px_-8px_rgba(11,50,32,0.18)] hover:shadow-[0_16px_40px_-8px_rgba(11,50,32,0.28)] transition-all duration-200 flex flex-col">
+                   class="group bg-white rounded-sm border border-slate-200 p-7 shadow-[0_8px_24px_-8px_rgba(11,50,32,0.25)] hover:shadow-[0_12px_32px_-8px_rgba(11,50,32,0.35)] hover:border-primary-200 transition-all duration-200 flex flex-col">
                     <div class="flex items-start justify-between mb-4">
                         <span class="icon-medallion w-12 h-12">
                             <x-dynamic-component :component="'heroicon-o-' . $persona['icon']" class="w-6 h-6" />
@@ -175,7 +175,7 @@
             {{-- Portrait + seal --}}
             <figure class="lg:col-span-4 max-w-sm mx-auto lg:mx-0">
                 <div class="relative">
-                    <div class="aspect-[4/5] bg-primary-100 overflow-hidden rounded-2xl">
+                    <div class="aspect-[4/5] bg-primary-100 border border-primary-200 overflow-hidden rounded-sm">
                         <img src="{{ asset('images/dg/dg-portrait.jpg') }}"
                              onerror="this.src='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80';"
                              alt="{{ app()->getLocale() === 'ms' ? 'Potret Ketua Pengarah JKPTG' : 'Portrait of the Director General of JKPTG' }}"

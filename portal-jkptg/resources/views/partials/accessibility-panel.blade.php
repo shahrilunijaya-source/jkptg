@@ -7,7 +7,7 @@
             :aria-expanded="a11yOpen ? 'true' : 'false'"
             class="bg-primary-900 text-white w-7 hover:bg-primary-800 focus:outline-none focus-visible:bg-primary-800 transition-colors duration-150 flex items-center justify-center"
             :title="a11yOpen ? '{{ __('messages.nav.close_menu') }}' : '{{ __('messages.a11y.panel_title') }}'">
-        <span class="font-mono text-[10px] uppercase tracking-[0.18em] [writing-mode:vertical-rl] py-3">A11Y</span>
+        <span class="text-[10px] uppercase tracking-[0.18em] font-semibold [writing-mode:vertical-rl] py-3">A11Y</span>
     </button>
 
     {{-- Panel --}}
