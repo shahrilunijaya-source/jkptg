@@ -78,7 +78,7 @@
             </ul>
 
             @if($service->processing_days)
-                <div class="mt-8 bg-canvas-mute border border-slate-200 rounded-sm p-5">
+                <div class="mt-8 bg-canvas-mute rounded-2xl p-5 shadow-[0_2px_8px_rgba(11,50,32,0.05)]">
                     <div class="eyebrow-muted mb-2">{{ __('messages.service.processing_time') }}</div>
                     <div class="font-bold text-[36px] text-primary leading-none">{{ $service->processing_days }}</div>
                     <div class="text-[13px] text-slate-600 mt-1">{{ app()->getLocale() === 'ms' ? 'hari bekerja' : 'working days' }}</div>
@@ -142,7 +142,7 @@
                 @if(!empty($docs))
                     <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         @foreach($docs as $doc)
-                            <li class="flex items-start gap-3 bg-canvas-mute rounded-sm p-4 text-[14px] text-slate-700">
+                            <li class="flex items-start gap-3 bg-canvas-mute rounded-xl p-4 text-[14px] text-slate-700">
                                 <x-heroicon-o-check-circle class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
                                 <span>{{ $doc }}</span>
                             </li>
@@ -160,7 +160,7 @@
                 @else
                     <div class="space-y-3">
                         @foreach($relatedForms as $form)
-                            <a href="#" class="flex items-center justify-between gap-4 bg-white border border-slate-200 rounded-sm p-4 hover:border-primary transition-colors duration-150 group">
+                            <a href="#" class="flex items-center justify-between gap-4 bg-white rounded-2xl p-4 shadow-[0_1px_8px_rgba(11,50,32,0.06)] hover:shadow-[0_4px_16px_rgba(11,50,32,0.12)] transition-shadow duration-150 group">
                                 <div class="flex items-center gap-3 min-w-0">
                                     <span class="icon-medallion w-9 h-9 flex-shrink-0">
                                         <x-heroicon-o-document-text class="w-4 h-4" />
@@ -187,7 +187,7 @@
                 @else
                     <div class="space-y-3">
                         @foreach($relatedFaqs as $faq)
-                            <details class="bg-white border border-slate-200 rounded-sm group">
+                            <details class="bg-white rounded-2xl shadow-[0_1px_8px_rgba(11,50,32,0.06)] group">
                                 <summary class="p-4 cursor-pointer flex items-center justify-between gap-4 text-[14.5px] font-semibold text-canvas-ink hover:text-primary transition-colors">
                                     <span>{{ $faq->question }}</span>
                                     <x-heroicon-o-chevron-down class="w-4 h-4 group-open:rotate-180 transition-transform flex-shrink-0" />

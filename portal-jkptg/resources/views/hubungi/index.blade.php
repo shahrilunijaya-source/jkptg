@@ -38,7 +38,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {{-- Address + contact --}}
-            <div class="lg:col-span-5 bg-white border border-slate-200 rounded-sm p-6 md:p-7">
+            <div class="lg:col-span-5 bg-white rounded-2xl p-6 md:p-7 shadow-[0_2px_16px_rgba(11,50,32,0.06)]">
                 <dl class="space-y-5 text-[14px]">
                     <div class="flex items-start gap-3">
                         <span class="icon-medallion w-9 h-9 flex-shrink-0">
@@ -87,7 +87,7 @@
             </div>
 
             {{-- Map --}}
-            <div class="lg:col-span-7 bg-white border border-slate-200 rounded-sm overflow-hidden">
+            <div class="lg:col-span-7 bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(11,50,32,0.06)]">
                 @if($hq->lat && $hq->lng)
                     <div id="map" class="w-full h-[400px] lg:h-[480px]" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
                 @else
