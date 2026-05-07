@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  html { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-feature-settings: 'cv11','ss01','ss03'; }
-  body { @apply bg-white text-slate-800 antialiased; }
-  h1, h2, h3, h4, h5, h6 { font-family: 'Inter', system-ui, sans-serif; letter-spacing: -0.01em; }
-  :focus-visible { outline: 2px solid #1B5E3F; outline-offset: 2px; border-radius: 2px; }
-  .font-mono, code, kbd, samp, pre { font-feature-settings: 'tnum','lnum','ss01'; }
+  html { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+  body { @apply bg-white text-gray-800 antialiased; }
+  h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', 'Inter', system-ui, sans-serif; }
+  :focus-visible { @apply outline-none shadow-focus-ring rounded; }
 }
 
 @layer components {
@@ -18,42 +17,19 @@
   }
   .skip-link:focus {
     left: 1rem; top: 1rem; z-index: 100; padding: 0.5rem 1rem;
-    @apply bg-primary text-white;
+    @apply bg-primary text-white rounded shadow-lg;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-sm font-semibold hover:bg-primary-800 transition-colors duration-150;
+    @apply inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-mute transition;
   }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-primary text-primary px-5 py-2.5 rounded-sm font-semibold hover:bg-primary hover:text-white transition-colors duration-150;
+    @apply inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded font-semibold hover:bg-primary-pale transition;
   }
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border border-slate-300 text-slate-800 px-5 py-2.5 rounded-sm font-semibold hover:border-primary hover:text-primary transition-colors duration-150;
-  }
-  .btn-bronze {
-    @apply inline-flex items-center gap-2 bg-bronze text-white px-5 py-2.5 rounded-sm font-semibold hover:bg-bronze-dark transition-colors duration-150;
+    @apply inline-flex items-center gap-2 bg-primary-pale text-primary px-4 py-2 rounded font-semibold hover:bg-primary-200 transition;
   }
   .container-page {
     @apply container mx-auto px-4;
-  }
-  .eyebrow {
-    @apply uppercase tracking-[0.16em] text-[12px] font-semibold text-primary;
-  }
-  .eyebrow-muted {
-    @apply uppercase tracking-[0.16em] text-[11px] font-semibold text-slate-500;
-  }
-  .status-pill {
-    @apply inline-flex items-center uppercase tracking-[0.08em] text-[10px] font-semibold border px-2 py-0.5 rounded-sm;
-  }
-  .status-pill--open    { @apply border-emerald-700 text-emerald-800 bg-emerald-50; }
-  .status-pill--closed  { @apply border-slate-400 text-slate-600 bg-slate-50; }
-  .status-pill--draft   { @apply border-amber-600 text-amber-800 bg-amber-50; }
-  .status-pill--baru    { @apply border-primary text-primary bg-primary-50; }
-  /* Civic card — soft fill, hairline border, restrained shadow on hover */
-  .civic-card {
-    @apply block bg-white border border-slate-200 rounded-sm p-6 transition-shadow duration-200 ease-out hover:shadow-[0_2px_12px_rgba(11,50,32,0.08)] hover:border-primary-200;
-  }
-  .icon-medallion {
-    @apply inline-flex items-center justify-center w-11 h-11 rounded-sm bg-primary-50 text-primary;
   }
   .a11y-large-text { font-size: 1.125rem !important; line-height: 1.75rem !important; }
   .a11y-extra-large-text { font-size: 1.25rem !important; line-height: 2rem !important; }

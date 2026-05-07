@@ -3,7 +3,16 @@
 @section('title', __('messages.sumber.infografik') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-statement-band icon="sparkles" :label="__('messages.nav.sumber')" :title="__('messages.sumber.infografik')" :subtitle="__('messages.sumber.infografik_desc')" />
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-sparkles class="w-4 h-4" />
+            <span>{{ __('messages.sumber.infografik') }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.sumber.infografik') }}</h1>
+        <p class="text-white/85 max-w-2xl">{{ __('messages.sumber.infografik_desc') }}</p>
+    </div>
+</section>
 
 <x-breadcrumb :items="[
     ['label' => __('messages.nav.sumber'), 'href' => route('sumber.index')],

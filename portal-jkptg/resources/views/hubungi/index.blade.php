@@ -9,87 +9,56 @@
 @endpush
 
 @section('content')
-<x-statement-band
-    icon="phone"
-    :label="__('messages.utility.hubungi')"
-    :title="__('messages.hubungi.heading')"
-    :subtitle="__('messages.hubungi.help')">
-    <a href="{{ route('hubungi.aduan') }}" class="inline-flex items-center gap-2 bg-bronze hover:bg-bronze-dark text-white px-5 py-2.5 rounded-sm font-semibold transition-colors duration-150">
-        <x-heroicon-o-chat-bubble-left-right class="w-4 h-4" />
-        <span>{{ __('messages.utility.aduan') }}</span>
-    </a>
-    @if($branches->count())
-        <a href="#cawangan" class="inline-flex items-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 text-white px-5 py-2.5 rounded-sm font-semibold transition-colors duration-150">
-            <x-heroicon-o-map-pin class="w-4 h-4" />
-            <span>{{ __('messages.hubungi.branches') }} ({{ $branches->count() }})</span>
-        </a>
-    @endif
-</x-statement-band>
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-phone class="w-4 h-4" />
+            <span>{{ __('messages.utility.hubungi') }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.hubungi.heading') }}</h1>
+        <p class="text-white/85 max-w-2xl">{{ __('messages.hubungi.help') }}</p>
+    </div>
+</section>
 
 <x-breadcrumb :items="[['label' => __('messages.utility.hubungi')]]" />
 
 @if($hq)
-<section class="bg-canvas-mute border-b border-slate-200">
-    <div class="container-page py-12 md:py-16">
-        <div class="max-w-2xl mb-8">
-            <span class="eyebrow-muted">{{ __('messages.hubungi.hq') }}</span>
-            <h2 class="text-[24px] md:text-[28px] font-bold text-canvas-ink leading-tight tracking-tight mt-2">{{ $hq->name }}</h2>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
-            {{-- Address + contact --}}
-            <div class="lg:col-span-5 bg-white border border-slate-200 rounded-sm p-6 md:p-7">
-                <dl class="space-y-5 text-[14px]">
+<section class="py-12">
+    <div class="container-page">
+        <h2 class="font-display text-2xl font-bold text-primary mb-1">{{ __('messages.hubungi.hq') }}</h2>
+        <p class="text-gray-600 text-sm mb-6">{{ $hq->name }}</p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-white border rounded-lg p-6 space-y-4">
+                <div class="flex items-start gap-3">
+                    <x-heroicon-o-map-pin class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <address class="not-italic text-sm text-gray-700 leading-relaxed">{{ $hq->address }}</address>
+                </div>
+                @if($hq->phone)
                     <div class="flex items-start gap-3">
-                        <span class="icon-medallion w-9 h-9 flex-shrink-0">
-                            <x-heroicon-o-map-pin class="w-4 h-4" />
-                        </span>
-                        <div>
-                            <dt class="text-[12px] uppercase tracking-[0.12em] font-semibold text-slate-500 mb-1">{{ app()->getLocale() === 'ms' ? 'Alamat' : 'Address' }}</dt>
-                            <dd><address class="not-italic text-slate-700 leading-relaxed">{{ $hq->address }}</address></dd>
+                        <x-heroicon-o-phone class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <div class="text-sm">
+                            <div class="font-semibold">{{ $hq->phone }}</div>
+                            @if($hq->fax)<div class="text-gray-500 text-xs">Faks: {{ $hq->fax }}</div>@endif
                         </div>
                     </div>
-                    @if($hq->phone)
-                        <div class="flex items-start gap-3">
-                            <span class="icon-medallion w-9 h-9 flex-shrink-0">
-                                <x-heroicon-o-phone class="w-4 h-4" />
-                            </span>
-                            <div>
-                                <dt class="text-[12px] uppercase tracking-[0.12em] font-semibold text-slate-500 mb-1">{{ app()->getLocale() === 'ms' ? 'Telefon' : 'Phone' }}</dt>
-                                <dd class="text-slate-800 font-semibold">{{ $hq->phone }}</dd>
-                                @if($hq->fax)<dd class="text-slate-500 text-[12px] mt-0.5">{{ app()->getLocale() === 'ms' ? 'Faks' : 'Fax' }}: {{ $hq->fax }}</dd>@endif
-                            </div>
-                        </div>
-                    @endif
-                    @if($hq->email)
-                        <div class="flex items-start gap-3">
-                            <span class="icon-medallion w-9 h-9 flex-shrink-0">
-                                <x-heroicon-o-envelope class="w-4 h-4" />
-                            </span>
-                            <div>
-                                <dt class="text-[12px] uppercase tracking-[0.12em] font-semibold text-slate-500 mb-1">{{ app()->getLocale() === 'ms' ? 'Emel' : 'Email' }}</dt>
-                                <dd><a href="mailto:{{ $hq->email }}" class="text-primary font-semibold hover:underline">{{ $hq->email }}</a></dd>
-                            </div>
-                        </div>
-                    @endif
-                    @if($hq->opening_hours)
-                        <div class="flex items-start gap-3">
-                            <span class="icon-medallion w-9 h-9 flex-shrink-0">
-                                <x-heroicon-o-clock class="w-4 h-4" />
-                            </span>
-                            <div>
-                                <dt class="text-[12px] uppercase tracking-[0.12em] font-semibold text-slate-500 mb-1">{{ app()->getLocale() === 'ms' ? 'Waktu Operasi' : 'Operating Hours' }}</dt>
-                                <dd class="text-slate-700 leading-snug">{{ $hq->opening_hours }}</dd>
-                            </div>
-                        </div>
-                    @endif
-                </dl>
+                @endif
+                @if($hq->email)
+                    <div class="flex items-start gap-3">
+                        <x-heroicon-o-envelope class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <a href="mailto:{{ $hq->email }}" class="text-primary hover:underline text-sm">{{ $hq->email }}</a>
+                    </div>
+                @endif
+                @if($hq->opening_hours)
+                    <div class="flex items-start gap-3">
+                        <x-heroicon-o-clock class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <p class="text-sm text-gray-700">{{ $hq->opening_hours }}</p>
+                    </div>
+                @endif
             </div>
 
-            {{-- Map --}}
-            <div class="lg:col-span-7 bg-white border border-slate-200 rounded-sm overflow-hidden">
+            <div class="rounded-lg border overflow-hidden bg-white" style="min-height: 320px">
                 @if($hq->lat && $hq->lng)
-                    <div id="map" class="w-full h-[400px] lg:h-[480px]" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
+                    <div id="map" style="width: 100%; height: 320px;" aria-label="{{ __('messages.hubungi.map_label') }}"></div>
                 @else
                     <x-state.empty icon="heroicon-o-map" :title="__('messages.hubungi.no_map')" tone="warning" />
                 @endif
@@ -100,41 +69,25 @@
 @endif
 
 @if($branches->count())
-<section id="cawangan" class="bg-white border-b border-slate-200">
-    <div class="container-page py-12 md:py-16">
-        <div class="flex items-end justify-between mb-8 flex-wrap gap-3">
-            <div class="max-w-2xl">
-                <span class="eyebrow-muted">{{ __('messages.hubungi.branches') }}</span>
-                <h2 class="text-[24px] md:text-[28px] font-bold text-canvas-ink leading-tight tracking-tight mt-2">
-                    {{ app()->getLocale() === 'ms' ? 'Cawangan Negeri' : 'State Branches' }}
-                </h2>
-                <p class="text-[14px] text-slate-600 mt-1">{{ trans_choice('messages.hubungi.branch_count', $branches->count(), ['count' => $branches->count()]) }}</p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<section class="bg-gray-50 py-12">
+    <div class="container-page">
+        <h2 class="font-display text-2xl font-bold text-primary mb-1">{{ __('messages.hubungi.branches') }}</h2>
+        <p class="text-gray-600 text-sm mb-6">{{ trans_choice('messages.hubungi.branch_count', $branches->count(), ['count' => $branches->count()]) }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach($branches as $b)
-                <article class="civic-card flex flex-col">
-                    <div class="flex items-center justify-between mb-3">
-                        <span class="icon-medallion w-9 h-9">
-                            <x-heroicon-o-map-pin class="w-4 h-4" />
-                        </span>
-                        <span class="text-[11px] uppercase tracking-[0.14em] font-semibold text-bronze">{{ $b->state }}</span>
+                <article class="bg-white border rounded-lg p-5 hover:shadow transition">
+                    <div class="flex items-center gap-2 text-xs text-jata-red font-semibold uppercase tracking-wider mb-2">
+                        <x-heroicon-o-map-pin class="w-3.5 h-3.5" />
+                        <span>{{ $b->state }}</span>
                     </div>
-                    <h3 class="text-[16px] font-bold text-canvas-ink leading-snug mb-2">{{ $b->name }}</h3>
-                    <address class="not-italic text-[13px] text-slate-600 mb-4 leading-relaxed line-clamp-3">{{ $b->address }}</address>
-                    <dl class="text-[13px] space-y-1.5 text-slate-700 mt-auto pt-3 border-t border-slate-100">
+                    <h3 class="font-display font-bold text-primary mb-2">{{ $b->name }}</h3>
+                    <address class="not-italic text-sm text-gray-700 mb-3 leading-relaxed">{{ $b->address }}</address>
+                    <dl class="text-sm space-y-1 text-gray-700">
                         @if($b->phone)
-                            <div class="flex items-center gap-2">
-                                <x-heroicon-o-phone class="w-3.5 h-3.5 text-slate-400" aria-hidden="true" />
-                                <span>{{ $b->phone }}</span>
-                            </div>
+                            <div class="flex items-center gap-2"><x-heroicon-o-phone class="w-3.5 h-3.5 text-primary" />{{ $b->phone }}</div>
                         @endif
                         @if($b->email)
-                            <div class="flex items-center gap-2 min-w-0">
-                                <x-heroicon-o-envelope class="w-3.5 h-3.5 text-slate-400 flex-shrink-0" aria-hidden="true" />
-                                <a href="mailto:{{ $b->email }}" class="text-primary hover:underline truncate">{{ $b->email }}</a>
-                            </div>
+                            <div class="flex items-center gap-2"><x-heroicon-o-envelope class="w-3.5 h-3.5 text-primary" /><a href="mailto:{{ $b->email }}" class="text-primary hover:underline">{{ $b->email }}</a></div>
                         @endif
                     </dl>
                 </article>

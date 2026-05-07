@@ -1,44 +1,34 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', $service->name . ' | ' . __('messages.site_name'))
 
 @php
     $sections = [
-        ['id' => 'tentang',    'label' => __('messages.service.tentang')],
-        ['id' => 'kelayakan',  'label' => __('messages.service.kelayakan')],
-        ['id' => 'proses',     'label' => __('messages.service.proses')],
-        ['id' => 'dokumen',    'label' => __('messages.service.dokumen')],
-        ['id' => 'borang',     'label' => __('messages.service.borang')],
-        ['id' => 'faq',        'label' => __('messages.service.faq')],
+        ['id' => 'tentang', 'label' => __('messages.service.tentang')],
+        ['id' => 'kelayakan', 'label' => __('messages.service.kelayakan')],
+        ['id' => 'proses', 'label' => __('messages.service.proses')],
+        ['id' => 'dokumen', 'label' => __('messages.service.dokumen')],
+        ['id' => 'borang', 'label' => __('messages.service.borang')],
+        ['id' => 'faq', 'label' => __('messages.service.faq')],
     ];
 @endphp
 
 @push('head')
 <style>
-    .toc-link.active { color: #1B5E3F; font-weight: 700; background: #E8F0EA; }
+    .nav-link.active { color: #243D57; font-weight: 600; border-left-color: #243D57; }
     .prose-section { scroll-margin-top: 7rem; }
 </style>
 @endpush
 
 @section('content')
-{{-- Pictorial hero with category crumb --}}
-<section class="relative isolate overflow-hidden">
-    <div class="absolute inset-0 z-0"
-         style="background-image: url('https://images.unsplash.com/photo-1591274029987-58ddb3935833?auto=format&fit=crop&w=2400&q=80'); background-size: cover; background-position: center 40%;"
-         aria-hidden="true"></div>
-    <div class="absolute inset-0 z-0"
-         style="background: linear-gradient(180deg, rgba(11,50,32,0.65) 0%, rgba(11,50,32,0.72) 50%, rgba(11,50,32,0.85) 100%);"
-         aria-hidden="true"></div>
-    <div class="relative z-10 container-page py-16 md:py-24 text-white">
-        <div class="flex items-center gap-3 mb-5 flex-wrap">
-            <span class="inline-block w-8 h-px bg-bronze-light" aria-hidden="true"></span>
-            <x-heroicon-o-document-text class="w-4 h-4 text-bronze-light" aria-hidden="true" />
-            <span class="text-[12px] uppercase tracking-[0.2em] font-semibold text-bronze-light">{{ __('messages.nav.perkhidmatan') }}</span>
-            <span class="text-white/40" aria-hidden="true">/</span>
-            <span class="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/85 capitalize">{{ $service->category }}</span>
+<section class="bg-primary text-white py-10">
+    <div class="container-page">
+        <div class="text-jata-yellow text-sm uppercase tracking-wider mb-2 flex items-center gap-2">
+            <x-heroicon-o-document-text class="w-4 h-4" />
+            <span class="capitalize">{{ $service->category }}</span>
         </div>
-        <h1 class="text-[32px] md:text-[44px] font-bold leading-[1.05] tracking-tight mb-4 max-w-3xl [text-wrap:balance]">{{ $service->name }}</h1>
-        <p class="text-[16px] md:text-[18px] text-white/85 leading-relaxed max-w-3xl">{{ $service->summary }}</p>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ $service->name }}</h1>
+        <p class="text-white/85 max-w-3xl">{{ $service->summary }}</p>
     </div>
 </section>
 
@@ -47,166 +37,160 @@
     ['label' => $service->name],
 ]" />
 
-{{-- Mobile TOC --}}
-<details class="lg:hidden bg-white border-b border-slate-200">
-    <summary class="container-page py-3 flex items-center justify-between cursor-pointer text-[14px] font-semibold text-primary">
+{{-- Mobile dropdown nav --}}
+<details class="lg:hidden bg-white border-b">
+    <summary class="container-page py-3 flex items-center justify-between cursor-pointer font-semibold text-primary">
         <span>{{ __('messages.on_this_page') }}</span>
         <x-heroicon-o-chevron-down class="w-4 h-4" />
     </summary>
-    <ul class="container-page pb-4 space-y-1">
+    <ul class="container-page pb-4 text-sm space-y-2">
         @foreach($sections as $s)
-            <li><a href="#{{ $s['id'] }}" class="block py-1.5 text-[14px] text-slate-700 hover:text-primary">{{ $s['label'] }}</a></li>
+            <li><a href="#{{ $s['id'] }}" class="text-primary hover:underline">{{ $s['label'] }}</a></li>
         @endforeach
     </ul>
 </details>
 
-<section class="bg-white border-b border-slate-200">
-    <div class="container-page py-12 grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-10 lg:gap-16">
+<section class="container-page py-10 grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-10">
 
-        {{-- Sticky left rail --}}
-        <aside class="hidden lg:block sticky top-28 self-start">
-            <div class="eyebrow-muted mb-4">{{ __('messages.on_this_page') }}</div>
-            <ul class="space-y-px">
-                @foreach($sections as $i => $s)
-                    <li>
-                        <a href="#{{ $s['id'] }}"
-                           class="toc-link block px-3 py-2 text-[14px] text-slate-700 hover:bg-canvas-mute hover:text-primary transition-colors duration-150 rounded-sm {{ $i === 0 ? 'active' : '' }}">
-                            {{ $s['label'] }}
+    {{-- Sticky left rail --}}
+    <nav aria-label="{{ __('messages.on_this_page') }}" class="hidden lg:block sticky top-24 self-start text-sm">
+        <div class="text-xs uppercase font-semibold text-gray-500 tracking-wider mb-3">{{ __('messages.on_this_page') }}</div>
+        <ul class="border-l border-gray-200 space-y-1">
+            @foreach($sections as $i => $s)
+                <li>
+                    <a href="#{{ $s['id'] }}"
+                       class="nav-link block px-3 py-1.5 border-l-2 -ml-px {{ $i === 0 ? 'active' : 'border-transparent' }} text-gray-700 hover:text-primary">
+                        {{ $s['label'] }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+        @if($service->processing_days)
+            <div class="mt-6 p-4 bg-primary-pale rounded">
+                <div class="text-xs text-primary font-semibold mb-1">{{ __('messages.service.processing_time') }}</div>
+                <div class="text-2xl font-display font-bold text-primary">{{ $service->processing_days }} {{ app()->getLocale() === 'ms' ? 'hari' : 'days' }}</div>
+            </div>
+        @endif
+    </nav>
+
+    <article class="max-w-3xl space-y-12">
+        <section id="tentang" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.tentang') }}</h2>
+            <p class="mb-3">{{ $service->summary }}</p>
+            @if($service->sop_path)
+                <a href="#" class="inline-flex items-center gap-2 text-primary hover:underline text-sm font-semibold">
+                    <x-heroicon-o-arrow-down-tray class="w-4 h-4" />
+                    {{ __('messages.service.download_sop') }}
+                </a>
+            @endif
+        </section>
+
+        <section id="kelayakan" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.kelayakan') }}</h2>
+            @if($service->getTranslations('eligibility'))
+                <p>{{ $service->eligibility }}</p>
+            @else
+                <x-state.empty :title="__('messages.states.empty.service_no_sop')" tone="warning" />
+            @endif
+        </section>
+
+        <section id="proses" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.proses') }}</h2>
+            @php $steps = $service->process_steps ?? []; @endphp
+            @if(!empty($steps))
+                <ol class="space-y-4 mb-6">
+                    @foreach($steps as $i => $step)
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">{{ $i + 1 }}</div>
+                            <div>
+                                <h3 class="font-semibold">{{ $step }}</h3>
+                            </div>
+                        </li>
+                    @endforeach
+                </ol>
+                <div class="flex flex-wrap gap-2">
+                    <a href="{{ route('service.sop', $service->slug) }}" class="text-sm font-semibold text-primary border border-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition flex items-center gap-1">
+                        <x-heroicon-o-clipboard-document-list class="w-4 h-4" />
+                        {{ __('messages.service.sop_breadcrumb') }}
+                    </a>
+                    <a href="{{ route('service.carta-alir', $service->slug) }}" class="text-sm font-semibold text-primary border border-primary px-4 py-2 rounded hover:bg-primary hover:text-white transition flex items-center gap-1">
+                        <x-heroicon-o-arrow-trending-down class="w-4 h-4" />
+                        {{ __('messages.service.carta_alir_breadcrumb') }}
+                    </a>
+                </div>
+            @else
+                <x-state.empty :title="__('messages.states.empty.title')" tone="warning" />
+            @endif
+        </section>
+
+        <section id="dokumen" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.dokumen') }}</h2>
+            @php $docs = $service->required_documents ?? []; @endphp
+            @if(!empty($docs))
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                    @foreach($docs as $doc)
+                        <li class="flex items-center gap-2 p-3 border rounded">
+                            <x-heroicon-o-check-circle class="w-4 h-4 text-primary flex-shrink-0" />
+                            <span>{{ $doc }}</span>
+                        </li>
+                    @endforeach
+                </ul>
+            @else
+                <p class="text-gray-600 text-sm">{{ __('messages.service.docs_help') }}</p>
+            @endif
+        </section>
+
+        <section id="borang" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.borang') }}</h2>
+            @if($relatedForms->isEmpty())
+                <x-state.empty icon="heroicon-o-document-text" :title="__('messages.states.empty.borang_search')" tone="info" />
+            @else
+                <div class="space-y-3">
+                    @foreach($relatedForms as $form)
+                        <a href="#" class="flex items-center justify-between p-4 border rounded hover:border-primary hover:shadow transition">
+                            <div class="flex items-center gap-3">
+                                <x-heroicon-o-document-text class="w-5 h-5 text-primary flex-shrink-0" />
+                                <div>
+                                    <div class="font-semibold">{{ $form->name }}</div>
+                                    <div class="text-xs text-gray-500">v{{ $form->version }} - {{ $form->file_size_human }}</div>
+                                </div>
+                            </div>
+                            <span class="text-primary text-sm font-semibold flex items-center gap-1">
+                                {{ __('messages.service.muat_turun') }}
+                                <x-heroicon-o-arrow-down-tray class="w-4 h-4" />
+                            </span>
                         </a>
-                    </li>
-                @endforeach
-            </ul>
-
-            @if($service->processing_days)
-                <div class="mt-8 bg-canvas-mute border border-slate-200 rounded-sm p-5">
-                    <div class="eyebrow-muted mb-2">{{ __('messages.service.processing_time') }}</div>
-                    <div class="font-bold text-[36px] text-primary leading-none">{{ $service->processing_days }}</div>
-                    <div class="text-[13px] text-slate-600 mt-1">{{ app()->getLocale() === 'ms' ? 'hari bekerja' : 'working days' }}</div>
+                    @endforeach
                 </div>
             @endif
-        </aside>
+        </section>
 
-        <article class="max-w-3xl space-y-12">
-            <section id="tentang" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-3">{{ __('messages.service.tentang') }}</h2>
-                <p class="text-slate-700 leading-relaxed mb-4">{{ $service->summary }}</p>
-                @if($service->sop_path)
-                    <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-800 text-[14px]">
-                        <x-heroicon-o-arrow-down-tray class="w-4 h-4" />
-                        <span>{{ __('messages.service.download_sop') }}</span>
-                    </a>
-                @endif
-            </section>
-
-            <section id="kelayakan" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-3">{{ __('messages.service.kelayakan') }}</h2>
-                @if($service->getTranslations('eligibility'))
-                    <p class="text-slate-700 leading-relaxed">{{ $service->eligibility }}</p>
-                @else
-                    <x-state.empty :title="__('messages.states.empty.service_no_sop')" tone="warning" />
-                @endif
-            </section>
-
-            <section id="proses" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-5">{{ __('messages.service.proses') }}</h2>
-                @php $steps = $service->process_steps ?? []; @endphp
-                @if(!empty($steps))
-                    <ol class="space-y-5 mb-7">
-                        @foreach($steps as $i => $step)
-                            <li class="flex gap-5">
-                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-[15px]">{{ $i + 1 }}</div>
-                                <div class="pt-2">
-                                    <h3 class="text-[15px] font-semibold text-canvas-ink leading-snug">{{ $step }}</h3>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ol>
-                    <div class="flex flex-wrap gap-3">
-                        <a href="{{ route('service.sop', $service->slug) }}" class="btn-outline">
-                            <x-heroicon-o-clipboard-document-list class="w-4 h-4" />
-                            <span>{{ __('messages.service.sop_breadcrumb') }}</span>
-                        </a>
-                        <a href="{{ route('service.carta-alir', $service->slug) }}" class="btn-outline">
-                            <x-heroicon-o-arrow-trending-down class="w-4 h-4" />
-                            <span>{{ __('messages.service.carta_alir_breadcrumb') }}</span>
-                        </a>
-                    </div>
-                @else
-                    <x-state.empty :title="__('messages.states.empty.title')" tone="warning" />
-                @endif
-            </section>
-
-            <section id="dokumen" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-5">{{ __('messages.service.dokumen') }}</h2>
-                @php $docs = $service->required_documents ?? []; @endphp
-                @if(!empty($docs))
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        @foreach($docs as $doc)
-                            <li class="flex items-start gap-3 bg-canvas-mute rounded-sm p-4 text-[14px] text-slate-700">
-                                <x-heroicon-o-check-circle class="w-4 h-4 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-                                <span>{{ $doc }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                @else
-                    <p class="text-[14px] text-slate-500">{{ __('messages.service.docs_help') }}</p>
-                @endif
-            </section>
-
-            <section id="borang" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-5">{{ __('messages.service.borang') }}</h2>
-                @if($relatedForms->isEmpty())
-                    <x-state.empty icon="heroicon-o-document-text" :title="__('messages.states.empty.borang_search')" tone="info" />
-                @else
-                    <div class="space-y-3">
-                        @foreach($relatedForms as $form)
-                            <a href="#" class="flex items-center justify-between gap-4 bg-white border border-slate-200 rounded-sm p-4 hover:border-primary transition-colors duration-150 group">
-                                <div class="flex items-center gap-3 min-w-0">
-                                    <span class="icon-medallion w-9 h-9 flex-shrink-0">
-                                        <x-heroicon-o-document-text class="w-4 h-4" />
-                                    </span>
-                                    <div class="min-w-0">
-                                        <div class="font-semibold text-canvas-ink text-[14px] leading-snug truncate">{{ $form->name }}</div>
-                                        <div class="text-[12px] text-slate-500 mt-0.5">v{{ $form->version }} · {{ $form->file_size_human }}</div>
-                                    </div>
-                                </div>
-                                <span class="text-primary text-[13px] font-semibold flex items-center gap-1 flex-shrink-0">
-                                    <span class="hidden sm:inline">{{ __('messages.service.muat_turun') }}</span>
-                                    <x-heroicon-o-arrow-down-tray class="w-4 h-4" />
-                                </span>
-                            </a>
-                        @endforeach
-                    </div>
-                @endif
-            </section>
-
-            <section id="faq" class="prose-section">
-                <h2 class="text-[24px] md:text-[26px] font-bold text-canvas-ink leading-tight tracking-tight mb-5">{{ __('messages.service.faq') }}</h2>
-                @if($relatedFaqs->isEmpty())
-                    <x-state.empty icon="heroicon-o-question-mark-circle" :title="__('messages.states.empty.title')" tone="warning" />
-                @else
-                    <div class="space-y-3">
-                        @foreach($relatedFaqs as $faq)
-                            <details class="bg-white border border-slate-200 rounded-sm group">
-                                <summary class="p-4 cursor-pointer flex items-center justify-between gap-4 text-[14.5px] font-semibold text-canvas-ink hover:text-primary transition-colors">
-                                    <span>{{ $faq->question }}</span>
-                                    <x-heroicon-o-chevron-down class="w-4 h-4 group-open:rotate-180 transition-transform flex-shrink-0" />
-                                </summary>
-                                <div class="px-4 pb-4 text-[14px] text-slate-700 leading-relaxed">{{ $faq->answer }}</div>
-                            </details>
-                        @endforeach
-                    </div>
-                @endif
-            </section>
-        </article>
-    </div>
+        <section id="faq" class="prose-section">
+            <h2 class="font-display text-2xl font-bold text-primary mb-3">{{ __('messages.service.faq') }}</h2>
+            @if($relatedFaqs->isEmpty())
+                <x-state.empty icon="heroicon-o-question-mark-circle" :title="__('messages.states.empty.title')" tone="warning" />
+            @else
+                <div class="space-y-2">
+                    @foreach($relatedFaqs as $faq)
+                        <details class="border rounded">
+                            <summary class="p-4 cursor-pointer font-semibold flex items-center justify-between">
+                                <span>{{ $faq->question }}</span>
+                                <x-heroicon-o-chevron-down class="w-4 h-4" />
+                            </summary>
+                            <div class="p-4 pt-0 text-sm text-gray-700">{{ $faq->answer }}</div>
+                        </details>
+                    @endforeach
+                </div>
+            @endif
+        </section>
+    </article>
 </section>
 
 {{-- Sticky bottom-right Apply CTA --}}
-<div class="fixed bottom-6 right-6 z-30 no-print">
-    <a href="#" class="btn-primary shadow-[0_4px_16px_rgba(11,50,32,0.25)]">
+<div class="fixed bottom-6 right-6 z-30 flex flex-col gap-3 items-end no-print">
+    <a href="#" class="bg-primary hover:bg-primary-mute text-white font-semibold px-5 py-3 rounded-full shadow-xl flex items-center gap-2">
         <x-heroicon-o-pencil-square class="w-4 h-4" />
-        <span>{{ __('messages.service.mohon_sekarang') }}</span>
+        {{ __('messages.service.mohon_sekarang') }}
         <x-heroicon-o-arrow-right class="w-4 h-4" />
     </a>
 </div>
@@ -215,13 +199,13 @@
 @push('scripts')
 <script>
   const sections = document.querySelectorAll('.prose-section');
-  const links = document.querySelectorAll('.toc-link');
+  const links = document.querySelectorAll('.nav-link');
   if (sections.length && links.length && 'IntersectionObserver' in window) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           links.forEach(l => l.classList.remove('active'));
-          const link = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
+          const link = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
           if (link) link.classList.add('active');
         }
       });

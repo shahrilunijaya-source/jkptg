@@ -49,23 +49,13 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-      },
-      fontFeatureSettings: {
-        tabular: '"tnum","lnum"',
-      },
-      letterSpacing: {
-        'mono-cap': '0.12em',
+        display: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       maxWidth: {
         prose: '65ch',
       },
       boxShadow: {
-        'focus-ring': '0 0 0 2px #FFFFFF, 0 0 0 4px #243D57',
-      },
-      transitionTimingFunction: {
-        'out-quart': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'focus-ring': '0 0 0 3px rgba(27, 94, 63, 0.45)',
       },
     },
   },

@@ -3,27 +3,21 @@
 @section('title', __('messages.nav.korporat') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-statement-band :label="__('messages.nav.korporat')" :title="__('messages.korporat.heading')" :subtitle="__('messages.korporat.help')" />
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-building-office-2 class="w-4 h-4" />
+            <span>{{ __('messages.nav.korporat') }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.korporat.heading') }}</h1>
+        <p class="text-white/85 max-w-2xl">{{ __('messages.korporat.help') }}</p>
+    </div>
+</section>
 
 <x-breadcrumb :items="[['label' => __('messages.nav.korporat')]]" />
 
 <section class="py-12">
     <div class="container-page">
-        {{-- Featured: Pengurusan Tertinggi --}}
-        <a href="{{ route('korporat.pengurusan') }}"
-           class="group block mb-6 rounded-lg border-2 border-primary bg-primary-pale p-5 hover:bg-primary hover:text-white transition">
-            <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded bg-white text-primary flex items-center justify-center flex-shrink-0 group-hover:bg-jata-yellow">
-                    <x-heroicon-o-user-group class="w-6 h-6" />
-                </div>
-                <div class="flex-1">
-                    <h3 class="font-semibold text-lg mb-1">{{ __('messages.korporat.pengurusan_tertinggi') }}</h3>
-                    <p class="text-sm opacity-90">{{ __('messages.korporat.pengurusan_subtitle') }}</p>
-                </div>
-                <x-heroicon-o-arrow-right class="w-5 h-5 mt-2" />
-            </div>
-        </a>
-
         @if($pages->isEmpty())
             <x-state.empty :title="__('messages.states.empty.title')" tone="warning" />
         @else

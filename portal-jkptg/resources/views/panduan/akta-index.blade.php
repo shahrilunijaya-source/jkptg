@@ -3,7 +3,16 @@
 @section('title', __('messages.panduan.akta_title') . ' | ' . __('messages.site_name'))
 
 @section('content')
-<x-statement-band :label="__('messages.nav.panduan')" :title="__('messages.panduan.akta_heading')" :subtitle="__('messages.panduan.akta_help')" />
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-scale class="w-4 h-4" />
+            <span>{{ __('messages.nav.panduan') }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.panduan.akta_heading') }}</h1>
+        <p class="text-white/85 max-w-2xl">{{ __('messages.panduan.akta_help') }}</p>
+    </div>
+</section>
 
 <x-breadcrumb :items="[
     ['label' => __('messages.nav.panduan'), 'href' => route('panduan.index')],

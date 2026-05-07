@@ -1,76 +1,49 @@
-@extends('layouts.public')
+﻿@extends('layouts.public')
 
 @section('title', __('messages.nav.perkhidmatan') . ' | ' . __('messages.site_name'))
 
-@php
-    $catIcons = [
-        'tanah' => 'map',
-        'pusaka' => 'building-library',
-        'pajakan' => 'document-text',
-        'penyerahan' => 'arrow-uturn-left',
-        'lesen' => 'document-magnifying-glass',
-        'strata' => 'building-office-2',
-    ];
-    $serviceIconPool = ['document-text','map','home-modern','banknotes','document-magnifying-glass','scale','building-library','clipboard-document-list'];
-@endphp
-
 @section('content')
-<x-statement-band
-    icon="document-text"
-    :label="__('messages.nav.perkhidmatan')"
-    :title="__('messages.megamenu.tagline')"
-    :subtitle="__('messages.persona.services_help')" />
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-document-text class="w-4 h-4" />
+            <span>{{ __('messages.nav.perkhidmatan') }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ __('messages.megamenu.tagline') }}</h1>
+        <p class="text-white/85 max-w-2xl">{{ __('messages.persona.services_help') }}</p>
+    </div>
+</section>
 
 <x-breadcrumb :items="[['label' => __('messages.nav.perkhidmatan')]]" />
 
-<section class="bg-canvas-mute border-b border-slate-200">
-    <div class="container-page py-12 md:py-16">
+<section class="py-12">
+    <div class="container-page">
         @if($services->isEmpty())
             <x-state.empty icon="heroicon-o-archive-box-x-mark" :title="__('messages.states.empty.title')" tone="warning" />
         @else
-            @php $globalIndex = 0; @endphp
             @foreach($categories as $cat)
                 @php $catServices = $services->where('category', $cat); @endphp
-                <div class="mb-14 last:mb-0">
-                    <div class="flex items-end justify-between mb-6 flex-wrap gap-3">
-                        <div class="flex items-center gap-3">
-                            <span class="icon-medallion w-9 h-9">
-                                <x-dynamic-component :component="'heroicon-o-' . ($catIcons[$cat] ?? 'document-text')" class="w-4 h-4" />
-                            </span>
-                            <div>
-                                <span class="eyebrow-muted">{{ app()->getLocale() === 'ms' ? 'Kategori' : 'Category' }}</span>
-                                <h2 class="text-[22px] md:text-[24px] font-bold text-canvas-ink leading-tight tracking-tight mt-1 capitalize">{{ $cat }}</h2>
+                <h2 class="font-display text-xl font-bold text-primary mb-4 capitalize flex items-center gap-2">
+                    <span class="w-1.5 h-6 bg-jata-yellow rounded"></span>
+                    {{ ucfirst($cat) }}
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+                    @foreach($catServices as $service)
+                        <a href="{{ route('service.show', $service->slug) }}"
+                           class="group rounded-lg border bg-white p-5 hover:shadow hover:border-primary transition">
+                            <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center mb-3">
+                                <x-heroicon-o-document-text class="w-5 h-5" />
                             </div>
-                        </div>
-                        <span class="text-[13px] text-slate-500">{{ $catServices->count() }} {{ app()->getLocale() === 'ms' ? 'perkhidmatan' : 'services' }}</span>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        @foreach($catServices as $service)
-                            @php $iconName = $serviceIconPool[$globalIndex % count($serviceIconPool)]; $globalIndex++; @endphp
-                            <a href="{{ route('service.show', $service->slug) }}"
-                               class="civic-card flex flex-col group">
-                                <span class="icon-medallion mb-4">
-                                    <x-dynamic-component :component="'heroicon-o-' . $iconName" class="w-5 h-5" />
-                                </span>
-                                <h3 class="text-[16px] font-bold text-canvas-ink leading-snug mb-2 group-hover:text-primary transition-colors">{{ $service->name }}</h3>
-                                <p class="text-[13.5px] text-slate-600 leading-relaxed line-clamp-3 mb-4 flex-1">{{ $service->summary }}</p>
-                                <div class="flex items-center justify-between text-[13px] mt-auto pt-3 border-t border-slate-100">
-                                    @if($service->processing_days)
-                                        <span class="text-slate-500 flex items-center gap-1">
-                                            <x-heroicon-o-clock class="w-3.5 h-3.5" aria-hidden="true" />
-                                            {{ $service->processing_days }} {{ app()->getLocale() === 'ms' ? 'hari' : 'days' }}
-                                        </span>
-                                    @else
-                                        <span></span>
-                                    @endif
-                                    <span class="font-semibold text-primary inline-flex items-center gap-1">
-                                        {{ app()->getLocale() === 'ms' ? 'Lihat' : 'View' }}
-                                        <x-heroicon-o-arrow-right class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                                    </span>
-                                </div>
-                            </a>
-                        @endforeach
-                    </div>
+                            <h3 class="font-semibold text-primary group-hover:underline mb-1">{{ $service->name }}</h3>
+                            <p class="text-sm text-gray-600 line-clamp-2">{{ $service->summary }}</p>
+                            @if($service->processing_days)
+                                <p class="text-xs text-gray-500 mt-3 flex items-center gap-1">
+                                    <x-heroicon-o-clock class="w-3.5 h-3.5" />
+                                    {{ $service->processing_days }} {{ app()->getLocale() === 'ms' ? 'hari' : 'days' }}
+                                </p>
+                            @endif
+                        </a>
+                    @endforeach
                 </div>
             @endforeach
         @endif

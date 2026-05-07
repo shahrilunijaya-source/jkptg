@@ -9,7 +9,15 @@
 @endpush
 
 @section('content')
-<x-statement-band :label="$branch->state" :title="$branch->name" compact />
+<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
+    <div class="container-page">
+        <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
+            <x-heroicon-o-map-pin class="w-4 h-4" />
+            <span>{{ $branch->state }}</span>
+        </div>
+        <h1 class="font-display text-3xl md:text-5xl font-bold mb-3">{{ $branch->name }}</h1>
+    </div>
+</section>
 
 <x-breadcrumb :items="[
     ['label' => __('messages.utility.hubungi'), 'href' => route('hubungi.index')],
