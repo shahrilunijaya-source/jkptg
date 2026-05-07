@@ -14,12 +14,12 @@
     :label="__('messages.utility.hubungi')"
     :title="__('messages.hubungi.heading')"
     :subtitle="__('messages.hubungi.help')">
-    <a href="{{ route('hubungi.aduan') }}" class="btn-primary">
+    <a href="{{ route('hubungi.aduan') }}" class="inline-flex items-center gap-2 bg-bronze hover:bg-bronze-dark text-white px-5 py-2.5 rounded-sm font-semibold transition-colors duration-150">
         <x-heroicon-o-chat-bubble-left-right class="w-4 h-4" />
         <span>{{ __('messages.utility.aduan') }}</span>
     </a>
     @if($branches->count())
-        <a href="#cawangan" class="btn-secondary">
+        <a href="#cawangan" class="inline-flex items-center gap-2 border border-white/40 hover:border-white hover:bg-white/10 text-white px-5 py-2.5 rounded-sm font-semibold transition-colors duration-150">
             <x-heroicon-o-map-pin class="w-4 h-4" />
             <span>{{ __('messages.hubungi.branches') }} ({{ $branches->count() }})</span>
         </a>

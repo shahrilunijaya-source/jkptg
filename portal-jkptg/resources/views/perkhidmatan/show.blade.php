@@ -21,17 +21,24 @@
 @endpush
 
 @section('content')
-{{-- Statement band — civic, with category eyebrow --}}
-<section class="bg-canvas border-b border-slate-200">
-    <div class="container-page py-12 md:py-16">
-        <div class="flex items-center gap-2 mb-4">
-            <x-heroicon-o-document-text class="w-4 h-4 text-bronze" aria-hidden="true" />
-            <span class="eyebrow">{{ __('messages.nav.perkhidmatan') }}</span>
-            <span class="text-slate-300" aria-hidden="true">/</span>
-            <span class="eyebrow text-slate-500 capitalize">{{ $service->category }}</span>
+{{-- Pictorial hero with category crumb --}}
+<section class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 z-0"
+         style="background-image: url('https://images.unsplash.com/photo-1591274029987-58ddb3935833?auto=format&fit=crop&w=2400&q=80'); background-size: cover; background-position: center 40%;"
+         aria-hidden="true"></div>
+    <div class="absolute inset-0 z-0"
+         style="background: linear-gradient(180deg, rgba(11,50,32,0.65) 0%, rgba(11,50,32,0.72) 50%, rgba(11,50,32,0.85) 100%);"
+         aria-hidden="true"></div>
+    <div class="relative z-10 container-page py-16 md:py-24 text-white">
+        <div class="flex items-center gap-3 mb-5 flex-wrap">
+            <span class="inline-block w-8 h-px bg-bronze-light" aria-hidden="true"></span>
+            <x-heroicon-o-document-text class="w-4 h-4 text-bronze-light" aria-hidden="true" />
+            <span class="text-[12px] uppercase tracking-[0.2em] font-semibold text-bronze-light">{{ __('messages.nav.perkhidmatan') }}</span>
+            <span class="text-white/40" aria-hidden="true">/</span>
+            <span class="text-[12px] uppercase tracking-[0.18em] font-semibold text-white/85 capitalize">{{ $service->category }}</span>
         </div>
-        <h1 class="text-[32px] md:text-[44px] font-bold text-canvas-ink leading-[1.1] tracking-tight mb-4 max-w-3xl">{{ $service->name }}</h1>
-        <p class="text-[16px] md:text-[17px] text-slate-700 leading-relaxed max-w-3xl">{{ $service->summary }}</p>
+        <h1 class="text-[32px] md:text-[44px] font-bold leading-[1.05] tracking-tight mb-4 max-w-3xl [text-wrap:balance]">{{ $service->name }}</h1>
+        <p class="text-[16px] md:text-[18px] text-white/85 leading-relaxed max-w-3xl">{{ $service->summary }}</p>
     </div>
 </section>
 
