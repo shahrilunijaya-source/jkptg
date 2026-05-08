@@ -9,8 +9,10 @@
 @endpush
 
 @section('content')
-<section class="bg-gradient-to-br from-primary to-primary-mute text-white py-12">
-    <div class="container-page">
+<section class="relative text-white py-16 md:py-24 overflow-hidden">
+    <div class="absolute inset-0"
+         style="background-image: linear-gradient(180deg, rgba(15,30,51,0.55) 0%, rgba(15,30,51,0.88) 100%), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;" aria-hidden="true"></div>
+    <div class="relative container-page">
         <div class="flex items-center gap-2 text-jata-yellow text-sm uppercase tracking-wider mb-2">
             <x-heroicon-o-phone class="w-4 h-4" />
             <span>{{ __('messages.utility.hubungi') }}</span>
@@ -23,7 +25,7 @@
 <x-breadcrumb :items="[['label' => __('messages.utility.hubungi')]]" />
 
 @if($hq)
-<section class="py-12">
+<section class="py-10">
     <div class="container-page">
         <h2 class="font-display text-2xl font-bold text-primary mb-1">{{ __('messages.hubungi.hq') }}</h2>
         <p class="text-gray-600 text-sm mb-6">{{ $hq->name }}</p>
@@ -69,13 +71,14 @@
 @endif
 
 @if($branches->count())
-<section class="bg-gray-50 py-12">
+<section class="bg-gray-50 py-10">
     <div class="container-page">
         <h2 class="font-display text-2xl font-bold text-primary mb-1">{{ __('messages.hubungi.branches') }}</h2>
         <p class="text-gray-600 text-sm mb-6">{{ trans_choice('messages.hubungi.branch_count', $branches->count(), ['count' => $branches->count()]) }}</p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             @foreach($branches as $b)
-                <article class="bg-white border rounded-lg p-5 hover:shadow transition">
+                <article class="reveal-on-scroll bg-white border rounded-lg p-5 hover-lift"
+                         style="--reveal-delay:{{ $loop->index * 40 }}ms">
                     <div class="flex items-center gap-2 text-xs text-jata-red font-semibold uppercase tracking-wider mb-2">
                         <x-heroicon-o-map-pin class="w-3.5 h-3.5" />
                         <span>{{ $b->state }}</span>

@@ -1,0 +1,1696 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/en/",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/soalan-lazim-3",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/hubungi-kami/ibu-pejabat",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/borang-3",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/peta-laman",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pengarah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-kemajuan-pengurusan-perundangan-skpp",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-penyelarasan-operasi-spo",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pegawai-maklumat-cio",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/perutusan-ketua-pengarah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/latar-belakang",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/visi-misi-objektif",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/piagam-pelanggan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/piagam-pelanggan/prestasi-piagam-pelanggan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/fungsi-jabatan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/carta-organisasi/kementerian-tenaga-dan-sumber-asli",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/carta-organisasi/jabatan-ketua-pengarah-tanah-galian-jkptg",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-khidmat-pengurusan-bkp",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-dasar-dan-konsultasi-bd-k",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-standard-dan-inspektorat-bsi",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-dan-perundangan-tanah-bppt",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-harta-tanah-persekutuan-bhtp",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengambilan-tanah-bpt",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pembahagian-pusaka-bpp",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-hakmilik-strata-dan-stratum-bhss",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-ict-pentadbiran-tanah-bpict-pt",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-integriti",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-undang-undang",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kedah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-wilayah-persekutuan-kuala-lumpur",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-selangor",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pulau-pinang",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perak",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-negeri-sembilan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perlis",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pahang",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-terengganu",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kelantan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-melaka",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-johor",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sabah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sarawak",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/pembahagian-harta-pusaka",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/sop",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/carta-alir",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/penyerahan-balik-pelepasan-tanah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/lesen-pasir",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/pajakan-tanah-persekutuan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/permohonan/permohonan-penyewaan-tanah-persekutuan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-permohonan-pengambilan-tanah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-pajakan-kecil",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "idx": 0,
+    "action": "/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "method": "post",
+    "id": "zoo-filter-form-185",
+    "name": "zoo-filter-form-185",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[a96fdf4d-412d-4923-b9af-2f2df0187b1d]",
+        "id": "0_a96fdf4d-412d-4923-b9af-2f2df0187b1d",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[426674aa-41c7-48a3-b7b2-b10b293627f1]",
+        "id": "1_426674aa-41c7-48a3-b7b2-b10b293627f1",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[7b432993-53b1-4258-98a8-2d9c0570aac8]",
+        "id": "2_7b432993-53b1-4258-98a8-2d9c0570aac8",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[_itemcategory-0][]",
+        "id": "elements_itemcategory-0",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "option",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "controller",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "app_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_ordering",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_permalink",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "redirect_if_one",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "columns",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "zoofilter[item_layout]",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "elayout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "ordering_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "module_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "Itemid",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "items_per_page",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "search_limit",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/peperiksaan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/tabung-khas-hakmilik-strata",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/kanun-tanah-negara",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/enakmen-rizab-melayu",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pemuliharaan-tanah",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-harta-pusaka-kecil-pembahagian-1955",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pelantar-benua",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-hakmilik-strata-1985",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-tanah-kawasan-penempatan-berkelompok-1960",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/bahagian-penguatkuasaan-dan-hasil-persekutuan",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/bahagian-penguatkuasaan-dan-hasil-persekutuan",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "18c5889a0fbef3603596030eb7bae9b3",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/bahagian-penguatkuasaan-dan-hasil-persekutuan",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/bahagian-pengambilan-tanah",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/bahagian-pengambilan-tanah",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "3daa894751396cd0b5cd4a53d22be519",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/bahagian-pengambilan-tanah",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/pembahagian-pusaka-kecil",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/pembahagian-pusaka-kecil",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "abfdd61ba745efb61aa155af4aa55a75",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/pembahagian-pusaka-kecil",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/umum/category/15",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/umum/category/15",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "829039f3ecbff562fb7fd8df31f143c7",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/umum/category/15",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/galeri/audio",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/galeri/gambar",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/galeri/gambar",
+    "method": "post",
+    "id": "adminForm",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order_Dir",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "limitstart",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/galeri/gambar",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pelan-strategik-pendigitalan-psp-jkptg-2022-2026",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pelan-strategik-jkptg-2022-2026",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/data-terbuka-kerajaan",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "1dd90ced1fca09dd26e814a0bed6daa3",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "fileordering",
+        "id": "fileordering",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "2e6a7af5b62df76a2b53ef0992dca9c1",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "fileordering",
+        "id": "fileordering",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "73f51bf5c72399fc53560c6352b72ea7",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-keratan-akhbar",
+    "idx": 0,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 0,
+    "action": "/my/carian?f=3",
+    "method": "get",
+    "id": "mod-finder-searchform164",
+    "name": "",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "q",
+        "id": "mod-finder-searchword164",
+        "required": false,
+        "placeholder": "Cari..."
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "f",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 1,
+    "action": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "method": "post",
+    "id": "adminForm",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order_Dir",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "limitstart",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 2,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 0,
+    "action": "/my/carian?f=2",
+    "method": "get",
+    "id": "mod-finder-searchform161",
+    "name": "",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "q",
+        "id": "mod-finder-searchword161",
+        "required": false,
+        "placeholder": "Cari..."
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "f",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 1,
+    "action": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "method": "post",
+    "id": "adminForm",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order_Dir",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "limitstart",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 2,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender",
+    "idx": 0,
+    "action": "/my/sumber/arkib/arkib-sebut-harga-tender",
+    "method": "post",
+    "id": "zoo-filter-form-186",
+    "name": "zoo-filter-form-186",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[_itemcategory-0][]",
+        "id": "elements_itemcategory-0",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[281d1cca-be1e-4c28-93ff-3c76f9f09cbf][]",
+        "id": "elements281d1cca-be1e-4c28-93ff-3c76f9f09cbf",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[8a220e32-6975-41ec-9c26-4f73f18d47d3]",
+        "id": "elements[8a220e32-6975-41ec-9c26-4f73f18d47d3]value",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "option",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "controller",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "app_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_ordering",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_permalink",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "redirect_if_one",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "columns",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "zoofilter[item_layout]",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "elayout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "ordering_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "module_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "Itemid",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "items_per_page",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "search_limit",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-suara-anda",
+    "idx": 0,
+    "action": "/my/sumber/arkib/arkib-suara-anda",
+    "method": "post",
+    "id": "zoo-filter-form-190",
+    "name": "zoo-filter-form-190",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[65930fe3-b0ff-435d-b95f-77189e6152cd][]",
+        "id": "elements65930fe3-b0ff-435d-b95f-77189e6152cd",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[9d6a48ee-65cc-4881-8c50-819653ec418f]",
+        "id": "elements[9d6a48ee-65cc-4881-8c50-819653ec418f]value",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[35155961-b9ae-48d4-b4aa-1a569ec7930c]",
+        "id": "2_35155961-b9ae-48d4-b4aa-1a569ec7930c",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "option",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "controller",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "app_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_ordering",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_permalink",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "redirect_if_one",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "columns",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "zoofilter[item_layout]",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "elayout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "ordering_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "module_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "Itemid",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "items_per_page",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "search_limit",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-suara-anda",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

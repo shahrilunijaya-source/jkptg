@@ -1,0 +1,221 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "idx": 0,
+    "action": "/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "method": "post",
+    "id": "zoo-filter-form-185",
+    "name": "zoo-filter-form-185",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[a96fdf4d-412d-4923-b9af-2f2df0187b1d]",
+        "id": "0_a96fdf4d-412d-4923-b9af-2f2df0187b1d",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[426674aa-41c7-48a3-b7b2-b10b293627f1]",
+        "id": "1_426674aa-41c7-48a3-b7b2-b10b293627f1",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[7b432993-53b1-4258-98a8-2d9c0570aac8]",
+        "id": "2_7b432993-53b1-4258-98a8-2d9c0570aac8",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[_itemcategory-0][]",
+        "id": "elements_itemcategory-0",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "option",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "controller",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "app_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_ordering",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_permalink",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "redirect_if_one",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "columns",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "zoofilter[item_layout]",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "elayout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "ordering_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "module_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "Itemid",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "items_per_page",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "search_limit",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

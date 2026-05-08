@@ -22,7 +22,7 @@
 <section class="py-12">
     <div class="container-page grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         @foreach($items as [$title, $key])
-            <article class="group bg-white border rounded-lg overflow-hidden hover:shadow-lg transition">
+            <article class="reveal-on-scroll group bg-white border rounded-lg overflow-hidden hover-lift" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                 <div class="h-48 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white">
                     <x-heroicon-o-sparkles class="w-16 h-16 opacity-60" />
                 </div>

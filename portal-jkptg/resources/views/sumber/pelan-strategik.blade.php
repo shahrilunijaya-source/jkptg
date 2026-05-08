@@ -22,7 +22,7 @@
 <section class="py-12">
     <div class="container-page grid grid-cols-1 md:grid-cols-3 gap-5">
         @foreach($plans as [$title, $year, $format, $size])
-            <article class="bg-white border rounded-lg p-5 hover:shadow transition">
+            <article class="reveal-on-scroll bg-white border rounded-lg p-5 hover-lift" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                 <div class="text-xs text-jata-red font-semibold uppercase tracking-wider mb-2">{{ $year }}</div>
                 <h2 class="font-display font-bold text-primary mb-3">{{ $title }}</h2>
                 <div class="flex items-center gap-2 text-xs text-gray-500 mb-4">

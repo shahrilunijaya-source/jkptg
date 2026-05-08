@@ -24,7 +24,7 @@
         <ul class="bg-white border rounded-lg divide-y">
             @foreach($acts as $slug => $act)
                 <li>
-                    <a href="{{ route('panduan.akta.show', $slug) }}" class="flex items-center gap-4 p-5 hover:bg-gray-50 transition group">
+                    <a href="{{ route('panduan.akta.show', $slug) }}" class="reveal-on-scroll flex items-center gap-4 p-5 hover:bg-gray-50 hover:-translate-y-0.5 hover:shadow-sm transition group" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                         <div class="w-12 h-12 rounded-lg bg-primary-pale text-primary flex items-center justify-center flex-shrink-0">
                             <x-heroicon-o-scale class="w-6 h-6" />
                         </div>

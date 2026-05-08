@@ -4,7 +4,7 @@
     'subtitle' => null,
     'icon' => null,
     'image' => null,
-    'imageFallback' => 'https://images.unsplash.com/photo-1591274029987-58ddb3935833?auto=format&fit=crop&w=2400&q=80',
+    'imageFallback' => 'https://images.unsplash.com/photo-1707898525717-52772505df19?auto=format&fit=crop&w=2400&q=80',
     'compact' => false,
     'variant' => 'pictorial',
 ])

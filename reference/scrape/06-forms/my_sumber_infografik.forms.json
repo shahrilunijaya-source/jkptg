@@ -1,0 +1,45 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "fileordering",
+        "id": "fileordering",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "73f51bf5c72399fc53560c6352b72ea7",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/infografik",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

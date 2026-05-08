@@ -1,0 +1,87 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 0,
+    "action": "/my/carian?f=3",
+    "method": "get",
+    "id": "mod-finder-searchform164",
+    "name": "",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "q",
+        "id": "mod-finder-searchword164",
+        "required": false,
+        "placeholder": "Cari..."
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "f",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 1,
+    "action": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "method": "post",
+    "id": "adminForm",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order_Dir",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "limitstart",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman",
+    "idx": 2,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

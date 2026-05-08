@@ -90,7 +90,7 @@
             @else
                 <div class="space-y-3">
                     @foreach($forms as $form)
-                        <a href="#" class="flex items-center justify-between p-4 border rounded bg-white hover:border-primary hover:shadow transition group">
+                        <a href="#" class="reveal-on-scroll flex items-center justify-between p-4 border rounded bg-white hover:border-primary group hover-lift" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded bg-primary-pale text-primary flex items-center justify-center flex-shrink-0">
                                     <x-heroicon-o-document-text class="w-5 h-5" />

@@ -62,8 +62,54 @@ class PageController extends Controller
     public function korporatShow(string $slug)
     {
         $page = Page::where('slug', $slug)->where('published', true)->firstOrFail();
-        $section = 'korporat';
-        return view('pages.show', compact('page', 'section'));
+        $bodyHtml = $page->getTranslation('body', app()->getLocale(), false) ?: '';
+
+        // Extract photo src from <figure> or bare <img>
+        preg_match('/<img[^>]+src="([^"]+)"/', $bodyHtml, $im);
+        $photo = $im[1] ?? null;
+
+        // Strip <figure> block and leading <h3> (duplicated in header)
+        $body = preg_replace('/<figure[^>]*>.*?<\/figure>/is', '', $bodyHtml);
+        $body = preg_replace('/<h3[^>]*>.*?<\/h3>/is', '', $body);
+
+        // Parse <h4> sections into title => plain-text-content map
+        $sections = [];
+        preg_match_all('/<h4[^>]*>(.*?)<\/h4>((?:(?!<h4).)*)/is', $body, $matches, PREG_SET_ORDER);
+        foreach ($matches as $match) {
+            $title   = trim(strip_tags(html_entity_decode($match[1])));
+            $content = trim(strip_tags(html_entity_decode($match[2])));
+            if ($title) $sections[$title] = $content;
+        }
+
+        // Parse qualifications: "YYYY : Qualification text"
+        $qualItems = [];
+        $qualRaw = $sections['Kelulusan Akademik'] ?? '';
+        foreach (preg_split('/(?=\d{4}\s*:)/', $qualRaw) as $part) {
+            if (preg_match('/^(\d{4})\s*:\s*(.+)/u', trim($part), $qm)) {
+                $qualItems[] = ['year' => $qm[1], 'text' => trim($qm[2])];
+            }
+        }
+
+        // Parse awards: split on lines starting with award/darjah keywords or year
+        $awardItems = [];
+        $awardRaw = $sections['Anugerah'] ?? '';
+        if ($awardRaw) {
+            foreach (preg_split('/(?=(?:Anugerah|Darjah|Pingat|Bintang)\s)/u', $awardRaw) as $part) {
+                $part = trim($part);
+                if (strlen($part) > 5) $awardItems[] = $part;
+            }
+        }
+
+        // Strip all h4 sections that are in the sidebar (qualifications, awards, etc.)
+        // and all other h4 sections — they are captured in $sections; body should only have <p> prose
+        $body = preg_replace('/<h4[^>]*>.*?<\/h4>\s*(?:<p[^>]*>.*?<\/p>)*/is', '', $body);
+        // Remove duplicate name paragraph (text-lg font-semibold)
+        $body = preg_replace('/<p[^>]*class="[^"]*font-semibold[^"]*"[^>]*>.*?<\/p>/is', '', $body);
+        // Remove tiny source-note paragraph (text-xs metadata)
+        $body = preg_replace('/<p[^>]*class="[^"]*text-xs[^"]*"[^>]*>.*?<\/p>/is', '', $body);
+        $body = trim($body);
+
+        return view('korporat.show', compact('page', 'photo', 'body', 'sections', 'qualItems', 'awardItems'));
     }
 
     public function pengurusanTertinggi()

@@ -1,0 +1,45 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "fileordering",
+        "id": "fileordering",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "2e6a7af5b62df76a2b53ef0992dca9c1",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

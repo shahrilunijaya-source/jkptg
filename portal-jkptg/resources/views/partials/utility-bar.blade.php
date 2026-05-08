@@ -37,7 +37,7 @@
                     <span>{{ __('messages.nav.log_masuk') }}</span>
                 </a>
             @else
-                <a href="{{ url('/admin/login') }}"
+                <a href="{{ route('log-masuk') }}"
                    class="inline-flex items-center gap-1.5 bg-jata-yellow text-primary font-semibold rounded-md px-3 py-1.5 hover:bg-yellow-300 transition">
                     <x-heroicon-o-arrow-right-on-rectangle class="w-4 h-4" />
                     <span>{{ __('messages.nav.log_masuk') }}</span>

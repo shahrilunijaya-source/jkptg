@@ -1,0 +1,29 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "idx": 0,
+    "action": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "method": "post",
+    "id": "",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "1dd90ced1fca09dd26e814a0bed6daa3",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

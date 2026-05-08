@@ -22,17 +22,33 @@
             @foreach($categories as $cat)
                 <div class="mb-8">
                     <h2 class="font-display text-xl font-bold text-primary mb-3 capitalize border-b pb-2">{{ str_replace('-', ' ', $cat) }}</h2>
-                    <div class="space-y-2">
-                        @foreach($faqs->where('category', $cat) as $faq)
-                            <details class="bg-white border rounded-lg group" name="faq-{{ $cat }}">
-                                <summary class="cursor-pointer p-4 font-semibold text-primary hover:bg-gray-50 flex items-start gap-3 list-none">
-                                    <x-heroicon-o-chevron-right class="w-5 h-5 mt-0.5 transition-transform group-open:rotate-90 flex-shrink-0" />
+                    <div class="space-y-2" x-data="{ active: null }">
+                        @foreach($faqs->where('category', $cat) as $i => $faq)
+                            <div class="bg-white border rounded-lg overflow-hidden reveal-on-scroll" style="--reveal-delay:{{ $loop->index * 40 }}ms">
+                                <button type="button"
+                                    class="w-full cursor-pointer px-4 py-4 font-semibold text-primary hover:bg-gray-50 flex items-start gap-3 text-left transition-colors duration-150"
+                                    @click="active = active === {{ $i }} ? null : {{ $i }}"
+                                    :aria-expanded="active === {{ $i }}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                        class="w-5 h-5 mt-0.5 flex-shrink-0 transition-transform duration-300"
+                                        :class="active === {{ $i }} ? 'rotate-90' : 'rotate-0'">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                    </svg>
                                     <span class="flex-1">{{ $faq->question }}</span>
-                                </summary>
-                                <div class="px-4 pb-4 pl-12 text-sm text-gray-700 leading-relaxed">
-                                    {!! nl2br(e($faq->answer)) !!}
+                                </button>
+                                <div x-show="active === {{ $i }}"
+                                    x-transition:enter="transition-all ease-[cubic-bezier(0.23,1,0.32,1)] duration-300"
+                                    x-transition:enter-start="opacity-0 max-h-0"
+                                    x-transition:enter-end="opacity-100 max-h-96"
+                                    x-transition:leave="transition-all ease-[cubic-bezier(0.23,1,0.32,1)] duration-200"
+                                    x-transition:leave-start="opacity-100 max-h-96"
+                                    x-transition:leave-end="opacity-0 max-h-0"
+                                    class="overflow-hidden">
+                                    <div class="px-4 pb-4 pl-12 text-sm text-gray-700 leading-relaxed border-t border-gray-100 pt-3">
+                                        {!! nl2br(e($faq->answer)) !!}
+                                    </div>
                                 </div>
-                            </details>
+                            </div>
                         @endforeach
                     </div>
                 </div>

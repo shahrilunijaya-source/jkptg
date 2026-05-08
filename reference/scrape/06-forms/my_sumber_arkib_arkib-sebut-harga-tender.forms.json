@@ -1,0 +1,213 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender",
+    "idx": 0,
+    "action": "/my/sumber/arkib/arkib-sebut-harga-tender",
+    "method": "post",
+    "id": "zoo-filter-form-186",
+    "name": "zoo-filter-form-186",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[_itemcategory-0][]",
+        "id": "elements_itemcategory-0",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "select",
+        "type": "",
+        "name": "elements[281d1cca-be1e-4c28-93ff-3c76f9f09cbf][]",
+        "id": "elements281d1cca-be1e-4c28-93ff-3c76f9f09cbf",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "elements[8a220e32-6975-41ec-9c26-4f73f18d47d3]",
+        "id": "elements[8a220e32-6975-41ec-9c26-4f73f18d47d3]value",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "option",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "controller",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "app_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_ordering",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "show_permalink",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "redirect_if_one",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "columns",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_title",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "zoofilter[item_layout]",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "page_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "elayout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "ordering_layout",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "type",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "module_id",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "Itemid",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "items_per_page",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "search_limit",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender",
+    "idx": 1,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

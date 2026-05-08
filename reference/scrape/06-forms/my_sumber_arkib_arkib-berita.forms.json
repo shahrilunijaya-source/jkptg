@@ -1,0 +1,87 @@
+[
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 0,
+    "action": "/my/carian?f=2",
+    "method": "get",
+    "id": "mod-finder-searchform161",
+    "name": "",
+    "fields": [
+      {
+        "tag": "input",
+        "type": "text",
+        "name": "q",
+        "id": "mod-finder-searchword161",
+        "required": false,
+        "placeholder": "Cari..."
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "f",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 1,
+    "action": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "method": "post",
+    "id": "adminForm",
+    "name": "adminForm",
+    "fields": [
+      {
+        "tag": "select",
+        "type": "",
+        "name": "limit",
+        "id": "limit",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "filter_order_Dir",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "limitstart",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      },
+      {
+        "tag": "input",
+        "type": "hidden",
+        "name": "task",
+        "id": "",
+        "required": false,
+        "placeholder": ""
+      }
+    ]
+  },
+  {
+    "page": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita",
+    "idx": 2,
+    "action": "",
+    "method": "get",
+    "id": "",
+    "name": "",
+    "fields": []
+  }
+]

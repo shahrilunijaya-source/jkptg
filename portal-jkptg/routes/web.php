@@ -83,6 +83,13 @@ Route::get('/log-masuk', [LoginController::class, 'show'])->name('log-masuk');
 Route::post('/log-masuk', [LoginController::class, 'store'])->name('log-masuk.store');
 Route::post('/log-keluar', [LoginController::class, 'destroy'])->name('log-keluar');
 
+Route::post('/admin-logout', function (\Illuminate\Http\Request $request) {
+    \Illuminate\Support\Facades\Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+    return redirect('/log-masuk');
+})->middleware('web')->name('admin.logout');
+
 // PPPA mandatory pages (rule 3.1)
 Route::get('/hak-cipta', fn () => app(PageController::class)->staticPage('hak-cipta'))->name('hak-cipta');
 Route::get('/dasar-web', fn () => app(PageController::class)->staticPage('dasar-web'))->name('dasar-web');

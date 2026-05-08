@@ -24,7 +24,7 @@
         @if($branches->count())
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 @foreach($branches as $b)
-                    <article class="bg-white border rounded-lg p-5 hover:shadow transition">
+                    <article class="reveal-on-scroll bg-white border rounded-lg p-5 hover-lift" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                         <div class="flex items-center gap-2 text-xs text-jata-red font-semibold uppercase tracking-wider mb-2">
                             <x-heroicon-o-map-pin class="w-3.5 h-3.5" />
                             <span>{{ $b->state }}</span>

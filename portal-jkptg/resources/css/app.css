@@ -20,20 +20,51 @@
     @apply bg-primary text-white rounded shadow-lg;
   }
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-mute transition;
+    @apply inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-mute;
+    transition: background-color 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 100ms cubic-bezier(0.23, 1, 0.32, 1);
   }
+  .btn-primary:active { transform: scale(0.97); }
   .btn-outline {
-    @apply inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded font-semibold hover:bg-primary-pale transition;
+    @apply inline-flex items-center gap-2 border border-primary text-primary px-4 py-2 rounded font-semibold hover:bg-primary-pale;
+    transition: background-color 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 100ms cubic-bezier(0.23, 1, 0.32, 1);
   }
+  .btn-outline:active { transform: scale(0.97); }
   .btn-secondary {
-    @apply inline-flex items-center gap-2 bg-primary-pale text-primary px-4 py-2 rounded font-semibold hover:bg-primary-200 transition;
+    @apply inline-flex items-center gap-2 bg-primary-pale text-primary px-4 py-2 rounded font-semibold hover:bg-primary-200;
+    transition: background-color 160ms cubic-bezier(0.23, 1, 0.32, 1), transform 100ms cubic-bezier(0.23, 1, 0.32, 1);
   }
+  .btn-secondary:active { transform: scale(0.97); }
   .container-page {
     @apply container mx-auto px-4;
   }
   .a11y-large-text { font-size: 1.125rem !important; line-height: 1.75rem !important; }
   .a11y-extra-large-text { font-size: 1.25rem !important; line-height: 2rem !important; }
   .a11y-high-contrast { filter: contrast(1.4); }
+  /* motion system — Emil Kowalski principles */
+  .hero-animate {
+    animation: jkptg-fade-up 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+    animation-delay: var(--anim-delay, 0ms);
+  }
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+    transition: opacity 260ms cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms),
+                transform 260ms cubic-bezier(0.23, 1, 0.32, 1) var(--reveal-delay, 0ms);
+  }
+  .reveal-on-scroll.revealed { opacity: 1; transform: translateY(0) scale(1); }
+  .hover-lift {
+    transition: transform 180ms cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgb(0 0 0 / 0.08); }
+  }
+  .hover-lift:active { transform: scale(0.97); transition-duration: 80ms; }
+}
+
+@keyframes jkptg-fade-up {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @media print {

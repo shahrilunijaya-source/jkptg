@@ -1,0 +1,485 @@
+                                                                 Lampiran 1
+                                                         JKPTG SH05/2026
+
+               JKPTG SH05/2026
+SKOP KERJA DAN KEPERLUAN UMUM
+
+1. ALAMAT PENGHANTARAN/ PERKHIDMATAN
+    Bahagian Digitalisasi dan Pentadbiran Tanah,
+    Jabatan Ketua Pengarah Tanah dan Galian Persekutuan
+    Aras 10, Menara PETRA
+    No. 25, Persiaran Perdana, Presint 4
+    62574 Putrajaya
+
+2. TEMPOH PELAKSANAAN KERJA
+
+Tempoh pelaksanaan kerja bagi Perkhidmatan Pembangunan Semula Portal Rasmi
+Jabatan Ketua Pengarah Tanah Dan Galian Persekutuan (JKPTG), Kementerian Sumber
+Asli Dan Kelestarian Alam (NRES) adalah selama tujuh belas (17) bulan iaitu tempoh
+pelaksanaan kerja (5 bulan) dan tempoh jaminan (12 bulan).
+
+3. SPESIFIKASI UMUM
+       i. Portal Rasmi Jabatan Ketua Pengarah Tanah dan Galian (JKPTG) berfungsi
+             sebagai platform utama penyampaian maklumat dan perkhidmatan berkaitan
+             pentadbiran tanah negara kepada orang awam dan pihak berkepentingan,
+             merangkumi hebahan dasar, program, pekeliling serta maklumat terkini. Portal
+             ini turut menjadi saluran komunikasi dua hala bagi aduan dan pertanyaan, serta
+             menyokong ketelusan dan kecekapan tadbir urus melalui penyediaan maklumat
+             yang sah, tepat dan mudah dicapai di samping memperkukuh imej dan peranan
+             JKPTG sebagai agensi peneraju dalam pengurusan tanah negara.
+
+ii. Penyebut harga hendaklah membangunkan semula Portal Rasmi JKPTG
+       dengan URL http://www.jkptg.gov.my. Penyebut harga perlu menyediakan reka
+       bentuk portal, kepebagaian fungsi dan struktur kandungan portal.
+
+iii. Penyebut harga hendaklah membangunkan semula portal rasmi jabatan yang
+       lebih moden, responsif dan mesra pengguna melalui platform portal digital yang
+       tersusun, sentiasa dikemas kini merangkumi Teknologi Artifical Intelligence bagi
+                                                                                                                             Lampiran 1
+                                                                                                                     JKPTG SH05/2026
+
+        meningkatkan kecekapan penyampaian akses maklumat dan perkhidmatan
+        jabatan kepada orang awam, pelanggan dan warga jabatan.
+
+ iv. Penyebut harga hendaklah memastikan pembangunan portal jabatan mematuhi
+        arahan dan garis panduan terkini yang ditetapkan oleh kerajaan antaranya
+        Pekeliling Kemajuan Pentadbiran Awam Bil. 2 Tahun 2015 Pengurusan Laman
+        Web Agensi Sektor Awam.
+
+  v. Penyebut harga hendaklah memastikan portal jabatan mematuhi piawaian
+        keselamatan ICT sektor awam seperti Rangka Kerja Keselamatan Siber Sektor
+        Awam (RAKKSSA), Polisi Keselamatan Siber JKPTG serta pematuhan standard
+        ISO/IEC 27001. Ini termasuk perlindungan terhadap ancaman siber dan
+        pengurusan keselamatan maklumat.
+
+ vi. Penyebut harga hendaklah menyediakan sistem pengurusan kandungan
+        (Content Management System - CMS) yang membolehkan pegawai jabatan
+        mengemas kini maklumat dengan mudah, cepat dan sistematik.
+
+vii. Penyebut harga bertanggungjawab sepenuhnya terhadap semua kos dan
+        perbelanjaan bagi menyediakan perkhidmatan ini.
+
+viii. Penyebut harga hendaklah menyediakan khidmat waranti dan penyelenggaraan
+        sekurang-kurangnya bagi tempoh 12 bulan bagi pelaksanaan perkara berikut:
+        a) Pembaikan ralat kecil
+        b) Penyelenggaraan pencegahan sekurang-kurangnya setiap enam (6) bulan
+
+ ix. Penyebutharga perlulah mematuhi Jadual SLA yang ditetapkan oleh Jabatan
+        yang meliputi perkara berikut:
+              i. Sokongan Teknikal
+             ii. Menyelesaikan log aduan sistem yang dikemukakan.
+            iii. Pembetulan ralat.
+
+  x. Penyebut harga hendaklah melindungi keselamatan maklumat dan
+        perkhidmatan laman web dari aspek kerahsiaan, integriti dan kebolehsediaan.
+                                                                                                                                   Lampiran 1
+                                                                                                                           JKPTG SH05/2026
+
+      xi. Penyebut harga hendaklah menyediakan Pelan Pelaksanaan Projek dengan
+             jelas bagi setiap proses yang akan dilaksanakan di dalam sebut harga ini
+             merangkumi dan mengambilkira:
+              a) Fasa Kajian/Analisa Keperluan Pengguna Dan Rekabentuk Portal;
+              b) Fasa Pembangunan Meliputi Keperluan Semua Fungsian Dan Yang
+                  Berkaitan;
+              c) Fasa Penyediaaan Fungsian AI Chatbot;
+              d) Fasa Migrasi Data;
+              e) Fasa Pengurusan Server Meliputi Keperluan Teknikal, Pemasangan Perisian
+                  Dan Konfigurasi Sistem Dan Lain-Lain Berkaitan;
+              f) Fasa Pengujian Meliputi UAT, PAT, Data Feed Bagi Kegunaan AI Chatbot
+                  Dan Ujian Pengukuhan/Simulasi;
+              g) Fasa Latihan;
+              h) Go Live; Pentauliahan Portal Rasmi Baharu; dan
+              i) Fasa Penyelenggaraan Dan Sokongan Teknikal.
+
+     xii. Penyebut harga hendaklah menyediakan keperluan dokumen teknikal mengikut
+             fasa dan manual pengguna bagi memastikan pelaksanaan projek dapat
+             diselesaikan dalam tempoh lima (5) bulan.
+
+    xiii. Penyebut harga perlu menyediakan perkhidmatan sokongan (Support Service)
+             tanpa had termasuk telefon / emel / web support and remote troubleshooting/
+             consultation (hari bekerja) semasa dalam tempoh jaminan.
+
+    xiv. Pegawai teknikal syarikat hendaklah bersedia hadir ke premis JKPTG Ibu
+             Pejabat bagi sokongan teknikal projek sepanjang tempoh projek.
+
+4. KEPERLUAN AM PROJEK
+    4.1. JADUAL PELAKSANAAN PROJEK
+
+    a. Penyebut harga hendaklah melaksanakan keseluruhan projek selama tempoh 1
+         tahun 5 bulan kontrak dengan 5 bulan pembangunan dan 12 bulan tempoh jaminan
+         meliputi penyelenggaraan dan khidmat sokongan.
+                                                                                                                              Lampiran 1
+                                                                                                                      JKPTG SH05/2026
+
+b. Pihak Kerajaan menganggarkan bahawa pembangunan keseluruhan portal
+     hendaklah dibangunkan dalam tempoh 5 bulan bermula dari tarikh mula kontrak
+     yang akan ditetapkan kelak.
+
+c. Penyebut harga hendaklah menyediakan jadual pelaksanaan keseluruhan projek
+     seperti di Lampiran 2 - Jadual Pelaksanaan yang merangkumi kerja-kerja:
+     i. Kajian keperluan portal dan pengguna serta rekabentuk;
+    ii. Pelaksanaan Projek:
+          Pembangunan Portal dan Keperluan Fungsian;
+          Pembangunan Dan Konfigurasi Chatbot AI;
+          Pembangunan Normal Chatbot;
+          Migrasi data/kandungan;
+          Pengurusan Server - Instalasi dan Konfigurasi Perisian dan Plugin;
+          Pengujian Portal;
+          Mentauliah dan go-live
+    iii. Pelaksanaan latihan dan ToT;
+    iv. Serahan Dokumentasi Projek;
+    v. Tempoh waranti projek adalah dua belas (12) bulan; dan
+    vi. Pelaksanaan Penyelenggaraan Pencegahan
+
+d. Oleh yang demikian, pihak Penyebut harga hendaklah mencadangkan secara
+     terperinci perancangan jadual pelaksanaan yang merangkumi semua aktiviti yang
+     berkaitan. Jadual perlaksanaan ini adalah WAJIB dan hendaklah diserahkan
+     sebagai sebahagian daripada cadangan tawaran ini.
+
+4.2. POLISI KESELAMATAN SIBER
+
+Penyebut harga hendaklah mematuhi semua dasar keselamatan termasuk Polisi
+Keselamatan Siber (PKS) yang digunapakai di pejabat ini sebagai garis panduan dan
+rujukan sepanjang perlaksanaan projek.
+
+4.3. NILAI PROJEK DAN PEMBAYARAN
+
+a. Harga yang ditawarkan hendaklah di dalam Ringgit Malaysia (RM); dan
+                                                                                                                              Lampiran 1
+                                                                                                                      JKPTG SH05/2026
+
+b. Harga Perjanjian yang dinyatakan di dalam Surat Setuju Terima (SST) adalah tetap
+     dan apa-apa permohonan bagi tujuan kenaikan harga oleh Syarikat tidak akan
+     dibenarkan.
+
+4.4. PENGALAMAN SYARIKAT
+
+a. Penyebut harga hendaklah menyediakan satu pasukan projek yang sekurang-
+     kurangnya terdiri dari empat (4) orang kakitangan bagi melaksanakan projek ini.
+     Kakitangan yang terlibat hendaklah terdiri daripada:
+      i. Seorang Pengurus projek: Diperlukan untuk menggerakkan pasukan projek,
+         menyediakan pelan kerja dan jadual, melaksanakan perancangan kerja dan
+         menjalankan kajian semula projek. Pengurus Projek hendaklah mempunyai
+         sekurang-kurangnya tiga (3) tahun pengalaman;
+     ii. Satu (1) pasukan pembangunan yang terdiri dari sekurang-kuranya tiga (3)
+         orang pembangun sistem yang terlatih untuk pembangunan Portal;
+
+b. Pasukan projek yang akan terlibat dalam projek ini hendaklah mempunyai
+     kelayakan dan pengalaman dalam bidang-bidang berkaitan skop projek seperti
+     berikut:
+      i. Pengurusan software backend Portal / Laman Web termasuk penkonfigurasian
+         Operating System berasaskan Linux dan sumber terbuka
+     ii. Pembangunan enjin atau CMS Portal / Laman Web
+     iii. Pembangunan rekabentuk web interface design
+
+c. Maklumat senarai kakitangan yang terlibat dan `curriculum vitae' (CV) hendaklah
+     disenaraikan di Lampiran 3 - Carta Organisasi Pasukan Projek dan sijil profesional
+     berkaitan hendaklah dimuat naik bagi tujuan bukti.
+
+d. Sijil profesional berkaitan atau setaraf berkaitan bidang seperti berikut adalah
+     diterima:
+
+      i. Sijil Profesional Project Management;
+     ii. PHP development/ Pembangunan Sistem/ System Analyst;
+     iii. Pangkalan Data (DBA);
+                                                               Lampiran 1
+                                                       JKPTG SH05/2026
+
+iv. Sijil atau anugerah berkaitan pembangunan sistem;
+v. Lain-Lain Sijil yang berkaitan komponen projek.
+
+4.5. LATIHAN DAN TOT
+
+Penyebut harga hendaklah menyediakan Pelan Latihan dan Pemindahan Teknologi
+(Transfer of Technology (TOT) Plan) kepada pegawai JKPTG bagi memastikan Pihak
+Kerajaan berkebolehan untuk mentadbir, menyelenggara dan membuat
+penambahbaikan terhadap Portal JKPTG mengikut keperluan pada masa hadapan.
+
+4.6. DOKUMENTASI DAN SERAHAN PROJEK
+Penyebut harga hendaklah menyedia dan menyerahkan dokumentasi dan serahan
+projek seperti berikut tetapi tidak terhad kepada:
+
+    i. Laporan Pembangunan Kemajuan Projek
+         Dokumen Keperluan Pengguna (URS)
+         Dokumen Spesifikasi Keperluan Reka Bentuk Sistem (SDS)
+         Dokumen Spesifikasi Keperluan Sistem (SRS)
+
+    ii. Laporan Pengujian
+         Laporan Pengujian Penerimaan Pengguna (UAT)
+         Laporan Pengujian Penerimaan Bersyarat Pengguna (PAT)
+         Laporan Pengujian Penerimaan Akhir (FAT)
+
+   iii. Laporan Pengurusan Data
+   iv. Laporan Migrasi Data
+   v. Laporan Pengurusan Server
+   vi. Laporan Latihan Teknikal
+  vii. Laporan Latihan Pengguna
+ viii. Manual Pentadbir
+   ix. Manual Pengguna
+   x. Manual Teknikal
+                                                                                                                              Lampiran 1
+                                                                                                                      JKPTG SH05/2026
+
+4.7. PENAMATAN KONTRAK
+a. Penyebut harga hendaklah bersetuju bahawa tempoh kontrak akan bermula
+
+     selepas dokumen kontrak ditandatangani oleh kedua-dua pihak dan akan kekal sah
+     sehingga berlaku perkara-perkara yang membawa kepada penamatan kontrak.
+     Walau bagaimanapun tempoh jaminan perkhidmatan adalah tidak kurang dari dua
+     belas (12) bulan dari tarikh Penerimaan Akhir (FAT).
+b. Kerajaan berhak untuk menamatkan kontrak selepas memberi notis empat belas
+     (14) hari kepada Penyebut harga yang berjaya, sekiranya Penyebut harga:
+      i. Gagal untuk melaksanakan atau meneruskan skop kerja yang telah ditetapkan
+
+         di dalam dokumen kontrak; atau
+     ii. Melakukan pindaan hak atau obligasi Penyebut harga, samada secara
+
+         keseluruhan atau sebahagian daripada kandungan kontrak tanpa mendapat
+         persetujuan daripada Kerajaan terlebih dahulu; atau
+     iii. Menghadapi proses penggulungan (liquidation) atau pengurus (receivership)
+         telah dilantik ke atas kontraktor; atau
+     iv. Gagal melaksanakan tanggungjawab atau gagal mematuhi sebarang ikatan,
+         syarat atau peruntukan yang terkandung di dalam kontrak; atau
+     v. Ingkar atau menolak untuk meneruskan kerja selepas diberi amaran terhadap
+         kesalahan yang telah dilakukan; atau
+     vi. Mengenakan had, syarat atau perjanjian tambahan (dan dalam hal yang
+         sedemikian adalah disifatkan enggan dan tidak melaksanakan perjanjian kontrak
+         yang normal).
+
+c. Kerajaan berhak membuat tuntutan gantirugi daripada Penyebut harga yang
+     berjaya atas sebarang kerugian atau kerosakan yang perlu ditanggung oleh
+     Kerajaan akibat daripada pembatalan dan penamatan kontrak tersebut.
+                                                                            Lampiran 1
+                                                                    JKPTG SH05/2026
+
+5. SERVICE LEVEL AGREEMENT (SLA)
+
+No  Severity  Definition                    Best        Maximum     Response
+    Level                                   Resolution  Resolution  Time
+                                            Time        Time
+
+              Isu kritikal yang melibatkan
+
+1   Level 1:  portal dan server tidak       1 - 4 jam   1 hari      Segera &
+    Highly    dapat dicapai atau                                    maksimum
+    Critical  berfungsi dengan sempurna                             adalah 30
+              oleh semua pengguna.                                  minit
+
+              a. Isu kritikal yang
+                 melibatkan portal atau
+                 server tidak dapat
+                 dicapai atau berfungsi
+                 dengan sempurna oleh
+                 sebahagian pengguna
+                 sahaja.
+
+2   Level 2: b. Isu yang dilaporkan         1 hari      3 hari      Segera &
+    Critical                                                        maksimum
+              secara terus oleh                                     adalah 30
+                                                                    minit
+              pengguna luar kepada
+                                                                    Segera &
+              Helpdesk Portal samada                                maksimum
+                                                                    adalah 30
+              melalui Aduan Pengguna                                minit
+
+              Sistem MyLAND/ emel
+
+              kepada
+
+              webadmin@jkptg.gov.my
+
+              / medium lain.
+
+              Isu yang memberi impak
+
+              yang rendah pada portal
+
+3   Level 3: atau server atau fungsi        1 - 7 hari 14 hari
+
+    Low       masih boleh diteruskan
+
+              seperti biasa tanpa
+
+              workaround.
+
+              Jadual 1: 5. Service Level Agreement
+
+1. Penyebut harga hendaklah bersetuju mematuhi SLA yang telah ditetapkan seperti
+    Jadual 1 di atas.
+
+2. Sekiranya berlaku kelewatan yang tidak melayakkan Penyebut harga diberikan
+    lanjutan masa atau tidak mengikut jadual yang ditetapkkan dalam perjanjian atau
+    kelewatan pembekal perkhidmatan ICT tidak mengikut spesifikasi / kualiti dalam
+    perjanjian, kadar ganti rugi maksimukm 10% daripada nilai kontrak akan dikenakan
+    ke atas Penyebut harga.
+                                                                                                                                   Lampiran 1
+                                                                                                                           JKPTG SH05/2026
+
+     3. Bagi kegagalan mematuhi tempoh resolution time kadar denda adalah RM100
+         sehari selepas tamat tempoh resolution time.
+
+6. PENYELENGGARAAN PORTAL SERTA KHIDMAT SOKONGAN TEKNIKAL DAN
+    OPERASI
+    6.1. TEMPOH JAMINAN SISTEM (WARANTI)
+
+    a. Penyebut harga hendaklah bersetuju memberikan khidmat sokongan selama 12
+         bulan (tempoh jaminan) tanpa sebarang kos tambahan bagi perkara-perkara
+         berkaitan Portal Rasmi JKPTG selepas go live iaitu bermula daripada tarikh akhir
+         FAT.
+
+    b. Penyebut harga hendaklah memberi maklumbalas dalam tempoh masa yang
+         ditetapkan di dalam SLA selepas menerima notis pemberitahuan yang diterima
+         melalui telefon, e-mel, whatsapp atau secara lisan.
+
+    c. Penyebut harga hendaklah melaksanakan on-site support apabila diperlukan oleh
+         JKPTG dalam masa tindak balas di atas.
+
+    d. Penyebut harga hendaklah menyediakan kakitangan yang berkelayakan serta
+         berpengalaman dalam bidang berkaitan perkhidmatan ini.
+
+    e. Penyebut harga hendaklah bertanggungjawab memastikan Portal yang ditauliahkan
+         terjamin dari segi keberkesanan penyampaian, prestasi dan keselamatannya dalam
+         tempoh jaminan.
+
+    f. Penyebut harga hendaklah bertanggungjawab ke atas sebarang masalah,
+         kerosakan dan ralat (bugs) pada Portal yang dibangunkan, perisian dan sistem
+         pengoperasian sepanjang tempoh jaminan.
+
+    g. Penyebut harga hendaklah melaksanakan aktiviti Sandaran Pemulihan (Backup
+         Restore) dalam tempoh jaminan, bagi memastikan sandaran dan pemulihan
+         (Backup and Restore) berjaya dan kesediaan data terkini.
+                                                                                                                              Lampiran 1
+                                                                                                                      JKPTG SH05/2026
+
+h. Penyebut harga hendaklah bersedia melakukan sebarang perubahan (change
+     request) kepada kod Portal atau reka bentuk antara muka pengguna sekiranya
+     terdapat permintaan daripada pihak Kerajaan sepanjang tempoh jaminan.
+
+i. Penyebut harga hendaklah menggunakan format borang change request yang
+     disediakan oleh JKPTG bagi tujuan tersebut. Semua change request dan tindakan
+     hendaklah direkodkan oleh Penyebut harga.
+
+j. Penyebut Harga hendaklah melaksanakan auto backup bagi tujuan memastikan
+     kesinambungan perkhidmatan ke atas Portal sepanjang tempoh jaminan.
+
+k. Sekiranya ralat ditemui selepas daripada tempoh jaminan dan didapati ia
+     disebabkan kesilapan semasa pembangunan Portal maka Kerajaan berhak untuk
+     memanggil semula Syarikat untuk membetulkan ralat berkenaan tanpa sebarang
+     kos.
+
+6.2. PENYELENGGARAAN PENCEGAHAN (PREVENTIVE MAINTENANCE)
+       PANGKALAN DATA DAN PORTAL
+
+a. Penyebut harga hendaklah menyediakan perkhidmatan penyelenggaraan
+     pencegahan (PM) terhadap pangkalan data dan laman web sekurang-kurangnya
+     dua (2) kali dalam tempoh khidmat sokongan.
+
+b. Penyebut harga hendaklah memastikan kerja-kerja penyelenggaraan pencegahan
+     merangkumi aktiviti di bawah:
+      i. Semakan system health check (vulnerability checking)
+     ii. Semakan database health check (current storage and memory sizing)
+     iii. Penyusunan semula data dan logs (housekeeping)
+     iv. Melaksanakan penyimpanan dan menganalisa log;
+     v. Membekalkan apa-apa software patches, update dan release serta melakukan
+          tugas-tugas tanpa kos bagi menyelesaikan sebarang masalah perisian software
+          bugs.
+     vi. Semua konfigurasi file setiap komponen boleh dibackup dan direstore untuk
+          kegunaan semasa apabila diperlukan dalam lokasi server yang akan
+          ditentukan.
+                                                                                                                              Lampiran 1
+                                                                                                                      JKPTG SH05/2026
+
+c. Penyebut harga hendaklah menyediakan dan mengemukakan Laporan
+     Penyelenggaraan Pencegahan setelah selesai membuat kerja-kerja
+     Penyelenggaraan Pencegahan.
+
+d. Penyebut harga hendaklah sentiasa memastikan Portal Rasmi JKPTG bebas dari
+     ancaman siber dan tiada downtime yang tidak berjadual.
+
+6.3. PENYELENGGARAAN PEMBAIKAN (CORRECTIVE MAINTENANCE)
+       PANGKALAN DATA DAN PORTAL
+
+a. Penyebut harga hendaklah melaksanakan kerja-kerja Penyelenggaraan Pemulihan
+     (CM) sepanjang tempoh projek.
+
+b. Penyebut harga hendaklah memberi maklum balas dan menyelesaikan kerja-kerja
+     penyelenggaraan pemulihan mengikut SLA yang telah dipersertujui dalam projek
+     ini.
+
+c. Penyebut harga hendaklah memastikan kerja-kerja penyelenggaraan pemulihan
+     merangkumi aktiviti di bawah:
+       i. Mengenalpasti punca/isu/masalah;
+      ii. Menyelesaikan masalah (fixing);
+      iii. Memastikan kestabilan sistem;
+     iv. Jika melibatkan perubahan pada peralatan atau hardware server dan infra,
+            Penyebut harga perlu membantu melakukan instalasi, konfigurasi baharu
+            serta pengujian semula bagi memastikan sistem berfungsi seperti biasa;
+      v. Jika melibatkan serangan pada peralatan atau hardware server dan infra,
+            Penyebut harga perlu mengenalpasti masalah serta menyelesaikan masalah
+            (fixing) bagi memastikan sistem berfungsi seperti biasa;
+     vi. Menyedia dan menyerahkan Laporan Penyelenggaraan Pemulihan setelah
+            selesai membuat kerja-kerja penyelenggaraan pemulihan.
+
+d. Penyebut harga hendaklah melaksanakan pengukuhan keselamatan sekiranya
+     terdapat penemuan vulnerabilities bagi mana-mana komponen portal.
+                                                                                                                                   Lampiran 1
+                                                                                                                           JKPTG SH05/2026
+
+    6.4. MEJA BANTUAN
+    Penyebut harga hendaklah menyediakan Sistem Meja Bantuan atau Pegawai Incharge
+    yang boleh dihubungi dan mewujudkan khidmat sokongan atas talian/meja bantuan
+    24x7 untuk menyelaraskan penyelesaian isu-isu yang dilaporkan. Maklumat Meja
+    Bantuan adalah seperti berikut:
+
+       i. Telefon
+      ii. E-mel
+
+7. PENALTI
+
+    a. Penyebut harga hendaklah bersetuju sekiranya Kerajaan berhak menolak tawaran
+         Penyebut harga dan menamatkan perkhidmatan dengan Penyebut harga yang
+         gagal mematuhi syarat-syarat perjanjian.
+
+    b. Penyebut harga hendaklah bersetuju dengan formula penalti yang akan digunakan
+         oleh Kerajaan. Penalti akan dikenakan sekiranya Penyebut harga:
+          i. Lewat melaksanakan penyelenggaraan pencegahan (PM) melepasi tempoh
+               jadual PM yang telah dipersetujui;
+          ii. Lewat melaksanakan penyelenggaraan pemulihan (CM) selepas 24 jam
+               laporan kerosakan dibuat ke atas sistem, perisian, konfigurasi dan lain-lain
+               berkaitan portal.
+
+    c. Bagi sistem dan perisian yang lewat diserahkan oleh Penyebut harga, Kerajaan
+         boleh sama ada menerima perisian dan menuntut pampasan daripada Penyebut
+         harga dengan formula denda yang ditetapkan Kerajaan seperti berikut:
+
+               Jumlah Penalti = V(T+D) x 5%
+                                         T
+
+               V : Nilai harga perkhidmatan yang lewat dibekalkan
+               T : Tempoh Penghantaran mengikut perjanjian (dalam hari)
+               D : Bilangan hari yang lewat
+
+    d. Bagi kelewatan pelaksanaan penyelenggaraan pemulihan dalam tempoh masa
+         tindak balas atau kelewatan menggantikan perkhidmatan/perisian yang tidak
+         berfungsi atau rosak selepas 24 jam, Kerajaan boleh menahan bayaran bagi aktiviti
+                                                                                                                       Lampiran 1
+                                                                                                               JKPTG SH05/2026
+
+tersebut berdasarkan formula yang ditetapkan oleh Kerajaan di bawah dan
+Kerajaan berhak untuk melantik pihak ketiga dan Penyebut harga hendaklah
+menanggung semua kos yang terlibat:
+
+     Jumlah Penalti = V(T+D) x 5%
+                                T
+
+     V : Nilai harga perkhidmatan yang lewat dipulihkan
+     T : Tempoh Pemulihan mengikut perjanjian dalam tempoh sebulan (30 hari)
+     D : Bilangan hari yang lewat
+
+Saya telah membaca dan memahami dengan jelas segala butiran perkara yang dinyatakan di
+atas dan bersetuju serta mematuhi dengan syarat-syarat yang ditetapkan.
+
+Tandatangan  : .....................................
+Tarikh       : .....................................
+

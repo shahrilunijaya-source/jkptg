@@ -1,0 +1,475 @@
+[
+  {
+    "label": "Utama",
+    "href": "https://www.jkptg.gov.my/my/",
+    "children": []
+  },
+  {
+    "label": "Korporat",
+    "href": null,
+    "children": [
+      {
+        "label": "Ketua Pengarah",
+        "href": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pengarah"
+      },
+      {
+        "label": "Timbalan Ketua Pengarah Sektor Kemajuan Pengurusan & Perundangan (SKPP)",
+        "href": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-kemajuan-pengurusan-perundangan-skpp"
+      },
+      {
+        "label": "Timbalan Ketua Pengarah Sektor Penyelarasan & Operasi (SPO)",
+        "href": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-penyelarasan-operasi-spo"
+      },
+      {
+        "label": "Ketua Pegawai Digital (CDO) / Ketua Pegawai Maklumat (CIO)",
+        "href": "https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pegawai-maklumat-cio"
+      },
+      {
+        "label": "Perutusan Ketua Pengarah",
+        "href": "https://www.jkptg.gov.my/my/korporat/perutusan-ketua-pengarah"
+      },
+      {
+        "label": "Latar Belakang",
+        "href": "https://www.jkptg.gov.my/my/korporat/latar-belakang"
+      },
+      {
+        "label": "Visi, Misi & Objektif",
+        "href": "https://www.jkptg.gov.my/my/korporat/visi-misi-objektif"
+      },
+      {
+        "label": "Piagam Pelanggan",
+        "href": "https://www.jkptg.gov.my/my/korporat/piagam-pelanggan"
+      },
+      {
+        "label": "Prestasi Piagam Pelanggan",
+        "href": "https://www.jkptg.gov.my/my/korporat/piagam-pelanggan/prestasi-piagam-pelanggan"
+      },
+      {
+        "label": "Fungsi Jabatan",
+        "href": "https://www.jkptg.gov.my/my/korporat/fungsi-jabatan"
+      },
+      {
+        "label": "Kementerian Sumber Asli dan Kelestarian Alam",
+        "href": "https://www.jkptg.gov.my/my/korporat/carta-organisasi/kementerian-tenaga-dan-sumber-asli"
+      },
+      {
+        "label": "Jabatan Ketua Pengarah Tanah & Galian (JKPTG)",
+        "href": "https://www.jkptg.gov.my/my/korporat/carta-organisasi/jabatan-ketua-pengarah-tanah-galian-jkptg"
+      },
+      {
+        "label": "Bahagian Khidmat Pengurusan (BKP)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-khidmat-pengurusan-bkp"
+      },
+      {
+        "label": "Bahagian Dasar dan Konsultasi (BD&K)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-dasar-dan-konsultasi-bd-k"
+      },
+      {
+        "label": "Bahagian Standard dan Inspektorat (BSI)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-standard-dan-inspektorat-bsi"
+      },
+      {
+        "label": "Bahagian Pengurusan dan Perundangan Tanah (BPPT)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-dan-perundangan-tanah-bppt"
+      },
+      {
+        "label": "Bahagian Pengurusan Tanah Persekutuan (BPTP)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-harta-tanah-persekutuan-bhtp"
+      },
+      {
+        "label": "Bahagian Pengambilan Tanah & Projek Khas (BPTPK)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengambilan-tanah-bpt"
+      },
+      {
+        "label": "Bahagian Pengurusan Pusaka (BPP)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pembahagian-pusaka-bpp"
+      },
+      {
+        "label": "Bahagian Hakmilik Strata dan Stratum (BHSS)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-hakmilik-strata-dan-stratum-bhss"
+      },
+      {
+        "label": "Bahagian Digitalisasi dan Pentadbiran Tanah (BDPT)",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-ict-pentadbiran-tanah-bpict-pt"
+      },
+      {
+        "label": "Unit Integriti",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-integriti"
+      },
+      {
+        "label": "Unit Undang-Undang",
+        "href": "https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-undang-undang"
+      },
+      {
+        "label": "JKPTG Kedah",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kedah"
+      },
+      {
+        "label": "JKPTG Wilayah Persekutuan Kuala Lumpur",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-wilayah-persekutuan-kuala-lumpur"
+      },
+      {
+        "label": "JKPTG Selangor",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-selangor"
+      },
+      {
+        "label": "JKPTG Pulau Pinang",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pulau-pinang"
+      },
+      {
+        "label": "JKPTG Perak",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perak"
+      },
+      {
+        "label": "JKPTG Negeri Sembilan",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-negeri-sembilan"
+      },
+      {
+        "label": "JKPTG Perlis",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perlis"
+      },
+      {
+        "label": "JKPTG Pahang",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pahang"
+      },
+      {
+        "label": "JKPTG Terengganu",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-terengganu"
+      },
+      {
+        "label": "JKPTG Kelantan",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kelantan"
+      },
+      {
+        "label": "JKPTG Melaka",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-melaka"
+      },
+      {
+        "label": "JKPTG Johor",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-johor"
+      },
+      {
+        "label": "JKPTG Sabah",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sabah"
+      },
+      {
+        "label": "JKPTG Sarawak",
+        "href": "https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sarawak"
+      }
+    ]
+  },
+  {
+    "label": "Panduan",
+    "href": null,
+    "children": [
+      {
+        "label": "Pembahagian Harta Pusaka",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/pembahagian-harta-pusaka"
+      },
+      {
+        "label": "Pengambilan Tanah",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah"
+      },
+      {
+        "label": "SOP",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/sop"
+      },
+      {
+        "label": "Carta Alir",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/carta-alir"
+      },
+      {
+        "label": "Penyerahan Balik & Pelepasan Tanah",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/penyerahan-balik-pelepasan-tanah"
+      },
+      {
+        "label": "Lesen Pasir",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/lesen-pasir"
+      },
+      {
+        "label": "Pajakan Tanah Persekutuan",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/pajakan-tanah-persekutuan"
+      },
+      {
+        "label": "Permohonan Penyewaan Tanah Persekutuan",
+        "href": "https://www.jkptg.gov.my/my/panduan/permohonan/permohonan-penyewaan-tanah-persekutuan"
+      },
+      {
+        "label": "Senarai Semak Permohonan Pengambilan Tanah",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-permohonan-pengambilan-tanah"
+      },
+      {
+        "label": "Senarai Semak Pajakan Kecil",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-pajakan-kecil"
+      },
+      {
+        "label": "Pekeliling Terbuka",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka"
+      },
+      {
+        "label": "Peperiksaan",
+        "href": "https://www.jkptg.gov.my/my/panduan/peperiksaan"
+      },
+      {
+        "label": "Tabung Khas Hakmilik Strata",
+        "href": "https://www.jkptg.gov.my/my/panduan/tabung-khas-hakmilik-strata"
+      },
+      {
+        "label": "Kanun Tanah Negara",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/kanun-tanah-negara"
+      },
+      {
+        "label": "Enakmen Rizab Melayu",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/enakmen-rizab-melayu"
+      },
+      {
+        "label": "Akta Pemuliharaan Tanah",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pemuliharaan-tanah"
+      },
+      {
+        "label": "Akta Harta Pusaka Kecil (Pembahagian) 1955",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-harta-pusaka-kecil-pembahagian-1955"
+      },
+      {
+        "label": "Akta Pelantar Benua",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pelantar-benua"
+      },
+      {
+        "label": "Akta Hakmilik Strata 1985",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-hakmilik-strata-1985"
+      },
+      {
+        "label": "Akta Tanah (Kawasan Penempatan Berkelompok), 1960",
+        "href": "https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-tanah-kawasan-penempatan-berkelompok-1960"
+      }
+    ]
+  },
+  {
+    "label": "Muat Turun",
+    "href": null,
+    "children": [
+      {
+        "label": "Bahagian Penguatkuasaan Dan Hasil Persekutuan",
+        "href": "https://www.jkptg.gov.my/my/bahagian-penguatkuasaan-dan-hasil-persekutuan"
+      },
+      {
+        "label": "Bahagian Pengambilan Tanah",
+        "href": "https://www.jkptg.gov.my/my/bahagian-pengambilan-tanah"
+      },
+      {
+        "label": "Pembahagian Pusaka Kecil",
+        "href": "https://www.jkptg.gov.my/my/pembahagian-pusaka-kecil"
+      },
+      {
+        "label": "Khidmat Pengurusan",
+        "href": "https://www.jkptg.gov.my/my/umum/category/15"
+      }
+    ]
+  },
+  {
+    "label": "Sumber",
+    "href": null,
+    "children": [
+      {
+        "label": "Video",
+        "href": "https://www.youtube.com/channel/UCiwKDDN4DHWQKoK8QnZr9Sg/featured"
+      },
+      {
+        "label": "Audio",
+        "href": "https://www.jkptg.gov.my/my/sumber/galeri/audio"
+      },
+      {
+        "label": "Gambar",
+        "href": "https://www.jkptg.gov.my/my/sumber/galeri/gambar"
+      },
+      {
+        "label": "Pelan Strategik Pendigitalan (PSP) JKPTG 2022-2026",
+        "href": "https://www.jkptg.gov.my/my/sumber/pelan-strategik-pendigitalan-psp-jkptg-2022-2026"
+      },
+      {
+        "label": "Pelan Strategik JKPTG 2026-2030",
+        "href": "https://www.jkptg.gov.my/my/sumber/pelan-strategik-jkptg-2022-2026"
+      },
+      {
+        "label": "Data Terbuka Kerajaan",
+        "href": "https://www.jkptg.gov.my/my/sumber/data-terbuka-kerajaan"
+      },
+      {
+        "label": "Pembentangan Kertas Kerja",
+        "href": "https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja"
+      },
+      {
+        "label": "Teach In JKPTG",
+        "href": "https://www.jkptg.gov.my/my/sumber/teach-in-jkptg"
+      },
+      {
+        "label": "Infografik",
+        "href": "https://www.jkptg.gov.my/my/sumber/infografik"
+      },
+      {
+        "label": "Keratan Akhbar",
+        "href": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-keratan-akhbar"
+      },
+      {
+        "label": "Pengumuman",
+        "href": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman"
+      },
+      {
+        "label": "Berita",
+        "href": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita"
+      },
+      {
+        "label": "Sebut Harga / Tender",
+        "href": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender"
+      },
+      {
+        "label": "Suara Anda",
+        "href": "https://www.jkptg.gov.my/my/sumber/arkib/arkib-suara-anda"
+      },
+      {
+        "label": "Hari Tanah Negara",
+        "href": "https://www.jkptg.gov.my/my/sumber/hari-tanah-negara"
+      },
+      {
+        "label": "Sistem e-Tanah",
+        "href": "https://www.jkptg.gov.my/my/sumber/sistem-e-tanah"
+      },
+      {
+        "label": "Statistik Perkhidmatan Dalam Talian",
+        "href": "https://www.jkptg.gov.my/my/sumber/statistik/statistik-perkhidmatan-dalam-talian"
+      },
+      {
+        "label": "Statistik Prestasi Pendaftaran Pindah Milik 1 Hari",
+        "href": "https://www.jkptg.gov.my/my/sumber/statistik/statistik-prestasi-pendaftaran-pindah-milik-1-hari"
+      },
+      {
+        "label": "Dokumentasi",
+        "href": "https://www.jkptg.gov.my/my/sumber/dokumentasi"
+      },
+      {
+        "label": "Keratan Akhbar",
+        "href": "https://www.jkptg.gov.my/my/sumber/keratan-akhbar"
+      },
+      {
+        "label": "Anugerah Perkhidmatan Cemerlang",
+        "href": "https://www.jkptg.gov.my/my/sumber/anugerah-perkhidmatan-cemerlang"
+      }
+    ]
+  },
+  {
+    "label": "Penerbitan",
+    "href": null,
+    "children": [
+      {
+        "label": "Jurnal LAND",
+        "href": "https://www.jkptg.gov.my/my/penerbitan/jurnalland"
+      },
+      {
+        "label": "Penyelidikan dan Pembangunan",
+        "href": "https://www.jkptg.gov.my/my/penerbitan/penyelidikan-dan-pembangunan"
+      },
+      {
+        "label": "Inovasi",
+        "href": "https://www.jkptg.gov.my/my/penerbitan/inovasi"
+      },
+      {
+        "label": "e-Tanah",
+        "href": "https://www.jkptg.gov.my/my/penerbitan/e-tanah"
+      },
+      {
+        "label": "Newsletter JKPTG",
+        "href": "https://www.jkptg.gov.my/my/penerbitan/newsletter-jkptg"
+      }
+    ]
+  },
+  {
+    "label": "Hubungi Kami",
+    "href": null,
+    "children": [
+      {
+        "label": "Ibu Pejabat",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/ibu-pejabat"
+      },
+      {
+        "label": "Direktori",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/direktori"
+      },
+      {
+        "label": "Senarai Whatsapp Pengarah Bahagian/Negeri Untuk Dihubungi",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/senarai-whatsapp-pengarah-negeri-untuk-dihubungi"
+      },
+      {
+        "label": "Senarai Maklumat dan Nombor Whatsapp Pejabat Pembahagian Pusaka, JKPTG",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/senarai-maklumat-pejabat-pembahagian-pusaka-jkptg"
+      },
+      {
+        "label": "e-Penyertaan",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/e-penyertaan"
+      },
+      {
+        "label": "Sistem Pengurusan Aduan Awam (SISPAA)",
+        "href": "https://jkptg.spab.gov.my/eApps/system/index.do"
+      },
+      {
+        "label": "Aduan Pengguna Sistem MyLAND",
+        "href": "https://myland.gov.my/myland-skg/PhdAduanPengaduForm.xhtml"
+      },
+      {
+        "label": "Johor",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/johor"
+      },
+      {
+        "label": "Kedah",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/kedah"
+      },
+      {
+        "label": "Kelantan",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/kelantan"
+      },
+      {
+        "label": "Melaka",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/melaka"
+      },
+      {
+        "label": "Negeri Sembilan",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/negeri-sembilan"
+      },
+      {
+        "label": "Pahang",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/pahang"
+      },
+      {
+        "label": "Perak",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/perak"
+      },
+      {
+        "label": "Perlis",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/perlis"
+      },
+      {
+        "label": "Pulau Pinang",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/pulau-pinang"
+      },
+      {
+        "label": "Sabah",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/sabah"
+      },
+      {
+        "label": "Sarawak",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/sarawak"
+      },
+      {
+        "label": "Selangor",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/selangor"
+      },
+      {
+        "label": "Terengganu",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/terengganu"
+      },
+      {
+        "label": "Wilayah Persekutuan Kuala Lumpur",
+        "href": "https://www.jkptg.gov.my/my/hubungi-kami/pejabat-negeri/wilayah-persekutuan-kuala-lumpur"
+      }
+    ]
+  }
+]

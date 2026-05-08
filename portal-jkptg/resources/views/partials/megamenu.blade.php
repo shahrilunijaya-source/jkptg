@@ -2,6 +2,15 @@
   $featured = \App\Models\Service::where('active', true)->orderBy('sort')->limit(3)->get();
   $allServices = \App\Models\Service::where('active', true)->orderBy('sort')->get();
   $categories = $allServices->pluck('category')->filter()->unique()->values();
+  $megaCardImages = [
+      'tanah'   => 'https://images.unsplash.com/photo-1531819318554-84abdf082937?auto=format&fit=crop&w=800&q=80',
+      'pajakan' => 'https://images.unsplash.com/photo-1680243032601-6b1ca903bc2a?auto=format&fit=crop&w=800&q=80',
+      'lesen'   => 'https://images.unsplash.com/photo-1695169152266-d9ac86fab9c5?auto=format&fit=crop&w=800&q=80',
+      'strata'  => 'https://images.unsplash.com/photo-1611924779080-d20389c1f56c?auto=format&fit=crop&w=800&q=80',
+  ];
+  $megaSlugImages = [
+      'pusaka-bukan-islam' => 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+  ];
 @endphp
 <div id="megamenu-panel"
      x-show="megaOpen"
@@ -26,8 +35,15 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             @foreach($featured as $service)
                 <a href="{{ route('service.show', $service->slug) }}" class="group rounded-lg border hover:border-primary hover:shadow-md transition overflow-hidden">
-                    <div class="h-32 bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white">
-                        <x-heroicon-o-document-text class="w-12 h-12" />
+                    @php $cardImg = $megaSlugImages[$service->slug] ?? $megaCardImages[$service->category] ?? null; @endphp
+                    <div class="h-32 relative overflow-hidden">
+                        @if($cardImg)
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                                 style="background-image: url('{{ $cardImg }}')"></div>
+                            <div class="absolute inset-0 bg-primary/60"></div>
+                        @else
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light"></div>
+                        @endif
                     </div>
                     <div class="p-4">
                         <div class="font-semibold text-primary group-hover:underline">{{ $service->name }}</div>

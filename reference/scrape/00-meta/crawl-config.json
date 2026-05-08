@@ -1,0 +1,11 @@
+{
+  "target": "https://www.jkptg.gov.my",
+  "seeds": [
+    "https://www.jkptg.gov.my/my/",
+    "https://www.jkptg.gov.my/en/"
+  ],
+  "maxDepth": 3,
+  "maxPages": 80,
+  "delayMs": 1100,
+  "startedAt": "2026-05-05T15:11:19.789Z"
+}

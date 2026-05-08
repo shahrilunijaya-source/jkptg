@@ -1,0 +1,96 @@
+[2026-05-05T15:11:19.791Z] GET d=0 https://www.jkptg.gov.my/my/
+[2026-05-05T15:11:21.333Z] GET d=0 https://www.jkptg.gov.my/en/
+[2026-05-05T15:11:22.781Z] GET d=1 https://www.jkptg.gov.my/my/soalan-lazim-3
+[2026-05-05T15:11:24.148Z] GET d=1 https://www.jkptg.gov.my/my/hubungi-kami/ibu-pejabat
+[2026-05-05T15:11:25.512Z] GET d=1 https://www.jkptg.gov.my/my/borang-3
+[2026-05-05T15:11:26.872Z] GET d=1 https://www.jkptg.gov.my/my/peta-laman
+[2026-05-05T15:11:28.281Z] GET d=1 https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pengarah
+[2026-05-05T15:11:29.641Z] GET d=1 https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-kemajuan-pengurusan-perundangan-skpp
+[2026-05-05T15:11:31.012Z] GET d=1 https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/timbalan-ketua-pengarah-sektor-penyelarasan-operasi-spo
+[2026-05-05T15:11:32.416Z] GET d=1 https://www.jkptg.gov.my/my/korporat/pengurusan-tertinggi/ketua-pegawai-maklumat-cio
+[2026-05-05T15:11:33.849Z] GET d=1 https://www.jkptg.gov.my/my/korporat/perutusan-ketua-pengarah
+[2026-05-05T15:11:35.216Z] GET d=1 https://www.jkptg.gov.my/my/korporat/latar-belakang
+[2026-05-05T15:11:36.582Z] GET d=1 https://www.jkptg.gov.my/my/korporat/visi-misi-objektif
+[2026-05-05T15:11:37.947Z] GET d=1 https://www.jkptg.gov.my/my/korporat/piagam-pelanggan
+[2026-05-05T15:11:39.325Z] GET d=1 https://www.jkptg.gov.my/my/korporat/piagam-pelanggan/prestasi-piagam-pelanggan
+[2026-05-05T15:11:40.714Z] GET d=1 https://www.jkptg.gov.my/my/korporat/fungsi-jabatan
+[2026-05-05T15:11:42.083Z] GET d=1 https://www.jkptg.gov.my/my/korporat/carta-organisasi/kementerian-tenaga-dan-sumber-asli
+[2026-05-05T15:11:43.450Z] GET d=1 https://www.jkptg.gov.my/my/korporat/carta-organisasi/jabatan-ketua-pengarah-tanah-galian-jkptg
+[2026-05-05T15:11:44.796Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-khidmat-pengurusan-bkp
+[2026-05-05T15:11:46.177Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-dasar-dan-konsultasi-bd-k
+[2026-05-05T15:11:47.527Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-standard-dan-inspektorat-bsi
+[2026-05-05T15:11:48.898Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-dan-perundangan-tanah-bppt
+[2026-05-05T15:11:50.259Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-harta-tanah-persekutuan-bhtp
+[2026-05-05T15:11:51.612Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengambilan-tanah-bpt
+[2026-05-05T15:11:52.963Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pembahagian-pusaka-bpp
+[2026-05-05T15:11:54.382Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-hakmilik-strata-dan-stratum-bhss
+[2026-05-05T15:11:55.728Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/bahagian-pengurusan-ict-pentadbiran-tanah-bpict-pt
+[2026-05-05T15:11:57.092Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-integriti
+[2026-05-05T15:11:58.431Z] GET d=1 https://www.jkptg.gov.my/my/korporat/profil-bahagian/unit-undang-undang
+[2026-05-05T15:11:59.780Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kedah
+[2026-05-05T15:12:01.146Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-wilayah-persekutuan-kuala-lumpur
+[2026-05-05T15:12:02.513Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-selangor
+[2026-05-05T15:12:03.863Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pulau-pinang
+[2026-05-05T15:12:05.220Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perak
+[2026-05-05T15:12:06.575Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-negeri-sembilan
+[2026-05-05T15:12:07.930Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-perlis
+[2026-05-05T15:12:10.315Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-pahang
+[2026-05-05T15:12:11.677Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-terengganu
+[2026-05-05T15:12:13.125Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-kelantan
+[2026-05-05T15:12:15.478Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-melaka
+[2026-05-05T15:12:16.831Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-johor
+[2026-05-05T15:12:18.186Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sabah
+[2026-05-05T15:12:19.591Z] GET d=1 https://www.jkptg.gov.my/my/korporat/cawangan-negeri/jkptg-sarawak
+[2026-05-05T15:12:22.317Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/pembahagian-harta-pusaka
+[2026-05-05T15:12:23.693Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah
+[2026-05-05T15:12:25.063Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/sop
+[2026-05-05T15:12:26.430Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/pengambilan-tanah/carta-alir
+[2026-05-05T15:12:27.782Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/penyerahan-balik-pelepasan-tanah
+[2026-05-05T15:12:29.149Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/lesen-pasir
+[2026-05-05T15:12:30.497Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/pajakan-tanah-persekutuan
+[2026-05-05T15:12:31.857Z] GET d=1 https://www.jkptg.gov.my/my/panduan/permohonan/permohonan-penyewaan-tanah-persekutuan
+[2026-05-05T15:12:33.225Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-permohonan-pengambilan-tanah
+[2026-05-05T15:12:34.581Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-semak/senarai-semak-pajakan-kecil
+[2026-05-05T15:12:35.950Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-pekeliling/pekeliling-terbuka
+[2026-05-05T15:12:37.400Z] GET d=1 https://www.jkptg.gov.my/my/panduan/peperiksaan
+[2026-05-05T15:12:38.760Z] GET d=1 https://www.jkptg.gov.my/my/panduan/tabung-khas-hakmilik-strata
+[2026-05-05T15:12:40.143Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/kanun-tanah-negara
+[2026-05-05T15:12:41.498Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/enakmen-rizab-melayu
+[2026-05-05T15:12:42.842Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pemuliharaan-tanah
+[2026-05-05T15:12:44.232Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-harta-pusaka-kecil-pembahagian-1955
+[2026-05-05T15:12:45.598Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-pelantar-benua
+[2026-05-05T15:12:47.046Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-enakmen/akta-hakmilik-strata-1985
+[2026-05-05T15:12:48.398Z] GET d=1 https://www.jkptg.gov.my/my/panduan/senarai-undang-undang/akta-tanah-kawasan-penempatan-berkelompok-1960
+[2026-05-05T15:12:49.745Z] GET d=1 https://www.jkptg.gov.my/my/bahagian-penguatkuasaan-dan-hasil-persekutuan
+[2026-05-05T15:12:51.107Z] GET d=1 https://www.jkptg.gov.my/my/bahagian-pengambilan-tanah
+[2026-05-05T15:12:52.463Z] GET d=1 https://www.jkptg.gov.my/my/pembahagian-pusaka-kecil
+[2026-05-05T15:12:53.849Z] GET d=1 https://www.jkptg.gov.my/my/umum/category/15
+[2026-05-05T15:12:56.198Z] GET d=1 https://www.jkptg.gov.my/my/sumber/galeri/audio
+[2026-05-05T15:12:57.559Z] GET d=1 https://www.jkptg.gov.my/my/sumber/galeri/gambar
+[2026-05-05T15:13:00.398Z] GET d=1 https://www.jkptg.gov.my/my/sumber/pelan-strategik-pendigitalan-psp-jkptg-2022-2026
+[2026-05-05T15:13:01.766Z] GET d=1 https://www.jkptg.gov.my/my/sumber/pelan-strategik-jkptg-2022-2026
+[2026-05-05T15:13:03.131Z] GET d=1 https://www.jkptg.gov.my/my/sumber/data-terbuka-kerajaan
+[2026-05-05T15:13:04.512Z] GET d=1 https://www.jkptg.gov.my/my/sumber/pembentangan-kertas-kerja
+[2026-05-05T15:13:05.884Z] GET d=1 https://www.jkptg.gov.my/my/sumber/teach-in-jkptg
+[2026-05-05T15:13:07.254Z] GET d=1 https://www.jkptg.gov.my/my/sumber/infografik
+[2026-05-05T15:13:08.632Z] GET d=1 https://www.jkptg.gov.my/my/sumber/arkib/arkib-keratan-akhbar
+[2026-05-05T15:13:10.049Z] GET d=1 https://www.jkptg.gov.my/my/sumber/arkib/arkib-pengumuman
+[2026-05-05T15:13:11.470Z] GET d=1 https://www.jkptg.gov.my/my/sumber/arkib/arkib-berita
+[2026-05-05T15:13:14.195Z] GET d=1 https://www.jkptg.gov.my/my/sumber/arkib/arkib-sebut-harga-tender
+[2026-05-05T15:13:15.615Z] GET d=1 https://www.jkptg.gov.my/my/sumber/arkib/arkib-suara-anda
+[2026-05-05T15:13:16.996Z] PAGES_DONE count=80, pdfs=14, imgs=93
+[2026-05-05T15:13:16.998Z] PDF https://www.jkptg.gov.my/images/pdf/carta-organisasi/kats/02092025-Carta_Organisasi_NRES.pdf
+[2026-05-05T15:13:18.437Z] PDF https://www.jkptg.gov.my/images/pdf/carta-organisasi/jkptg/Carta_Organisasi_JKPTG_19022026.pdf
+[2026-05-05T15:13:19.618Z] PDF https://www.jkptg.gov.my/images/pdf/SOPPengambilanTanah/SOP_A.pdf
+[2026-05-05T15:13:21.211Z] PDF https://www.jkptg.gov.my/images/pdf/SOPPengambilanTanah/SOP_B_DAN_C.pdf
+[2026-05-05T15:13:22.894Z] PDF https://www.jkptg.gov.my/images/pdf/BPT/INFOGRAFIK_CARTA_ALIR_PROSES_PERMOHONAN_PENGAMBILAN_TANAH_OLEH_KEMENTERIAN_JABATAN_PENGGUNA_KJP_DI_BAWAH_SEKSYEN_31a_AKTA_PENGAMBILAN_TANAH_1960_BAGI_SEKSYEN_4.pdf
+[2026-05-05T15:13:24.078Z] PDF https://www.jkptg.gov.my/images/pdf/BPT/INFOGRAFIK_CARTA_ALIR_PROSES_PERMOHONAN_PENGAMBILAN_TANAH_OLEH_KEMENTERIAN_JABATAN_PENGGUNA_KJP_DI_BAWAH_SEKSYEN_31a_AKTA_PENGAMBILAN_TANAH_1960_BAGI_SEKSYEN_8.pdf
+[2026-05-05T15:13:25.247Z] PDF https://www.jkptg.gov.my/images/pdf/pajakan_tanah_persekutuan/BORANG_PERMOHONAN_PAJAKAN_1.pdf
+[2026-05-05T15:13:26.427Z] PDF https://www.jkptg.gov.my/images/pdf/pajakan_tanah_persekutuan/Checklist.pdf
+[2026-05-05T15:13:27.577Z] PDF https://www.jkptg.gov.my/images/pdf/peperiksaan/Borang_Permohonan_Peperiksaan_Subjek_Jabatan_Pegawai_Tadbir_dan_Penolong_Pegawai_Tanah_JKPTG.pdf
+[2026-05-05T15:13:28.762Z] PDF https://www.jkptg.gov.my/images/pdf/peperiksaan/2022/SUKATAN_PEPERIKSAAN_PENOLONG_PEGAWAI_TANAH_GRED_NT29.pdf
+[2026-05-05T15:13:29.961Z] PDF https://www.jkptg.gov.my/images/pdf/BROSUR_TKHS.pdf
+[2026-05-05T15:13:31.163Z] PDF https://www.jkptg.gov.my/images/PelanStrategikJKPTG/Ringkasan%20Eksekutif%20PSP%20JKPTG%202022-2026_compress.pdf
+[2026-05-05T15:13:33.328Z] PDF https://www.jkptg.gov.my/images/PelanStrategikJKPTG/Pelan%20Strategik%20JKPTG%202026%20-%202030_BDPT_compressed.pdf
+[2026-05-05T15:13:39.796Z] PDF https://www.jkptg.gov.my/images/pdf/data-terbuka/TermaPenggunaanDataTerbuka.pdf
+[2026-05-05T15:14:14.392Z] DONE pages=80 pdfs=14 imgs=93 errors=0

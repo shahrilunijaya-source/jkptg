@@ -9,7 +9,7 @@
     $beritas = \App\Models\News::whereNotNull('published_at')->where('type', 'berita')->orderByDesc('published_at')->limit(3)->get();
     $pengumumans = \App\Models\News::whereNotNull('published_at')->where('type', 'pengumuman')->orderByDesc('published_at')->limit(3)->get();
     $tenders = \App\Models\Tender::where('status', 'open')->orderBy('closes_at')->limit(3)->get();
-    $heroImage = 'https://images.unsplash.com/photo-1571867424488-4565932edb41?auto=format&fit=crop&w=1920&q=70';
+    $heroImage = 'https://images.unsplash.com/photo-1592723905426-1181bf431d3a?auto=format&fit=crop&w=1920&q=80';
 @endphp
 
 @section('content')
@@ -21,14 +21,14 @@
          aria-hidden="true"></div>
 
     <div class="relative container-page pt-16 md:pt-24 max-w-4xl">
-        <p class="font-display uppercase tracking-wider text-jata-yellow text-sm mb-3">{{ __('messages.site_name') }}</p>
-        <h1 class="font-display font-bold text-4xl md:text-6xl leading-tight mb-4">{{ $tagline }}</h1>
-        <p class="text-base md:text-lg text-white/90 max-w-2xl">
+        <p class="hero-animate font-display uppercase tracking-wider text-jata-yellow text-sm mb-3" style="--anim-delay:0ms">{{ __('messages.site_name') }}</p>
+        <h1 class="hero-animate font-display font-bold text-4xl md:text-6xl leading-tight mb-4" style="--anim-delay:100ms">{{ $tagline }}</h1>
+        <p class="hero-animate text-base md:text-lg text-white/90 max-w-2xl" style="--anim-delay:230ms">
             {{ app()->getLocale() === 'ms'
                 ? 'Kami merekodkan, melindungi dan menguruskan harta tanah negara untuk manfaat rakyat Malaysia.'
                 : 'We record, protect, and manage national land assets for the benefit of the Malaysian people.' }}
         </p>
-        <div class="mt-6 flex flex-wrap gap-3">
+        <div class="hero-animate mt-6 flex flex-wrap gap-3" style="--anim-delay:350ms">
             <a href="#berita" class="bg-white text-primary font-semibold px-5 py-2.5 rounded hover:bg-primary-pale transition">
                 {{ app()->getLocale() === 'ms' ? 'Pengumuman Terkini' : 'Latest Announcements' }}
             </a>
@@ -47,7 +47,8 @@
                 ['warga-jkptg', 'identification', __('messages.persona.warga_jkptg.title'), __('messages.persona.warga_jkptg.summary'), __('messages.persona.cta_login')],
             ] as [$slug, $icon, $title, $summary, $cta])
                 <a href="{{ route('persona.show', $slug) }}"
-                   class="group bg-white/10 backdrop-blur-md hover:bg-white/20 border border-white/30 rounded-lg p-6 transition focus:outline-none focus:ring-2 focus:ring-jata-yellow">
+                   class="group hero-animate bg-white/10 backdrop-blur-md hover:bg-white/20 hover:-translate-y-1 border border-white/30 rounded-lg p-6 transition focus:outline-none focus:ring-2 focus:ring-jata-yellow"
+                   style="--anim-delay:{{ 460 + $loop->index * 100 }}ms">
                     <x-dynamic-component :component="'heroicon-o-' . $icon" class="w-10 h-10 text-jata-yellow mb-3" />
                     <h2 class="font-display font-bold text-xl mb-1">{{ $title }}</h2>
                     <p class="text-sm text-white/85">{{ $summary }}</p>
@@ -61,16 +62,16 @@
 </section>
 
 {{-- 6 SERVICE TILES STRIP --}}
-<section class="bg-gray-50 py-12">
+<section class="bg-gray-50 py-10">
     <div class="container-page">
-        <h2 class="font-display text-2xl font-bold text-primary mb-2">{{ __('messages.home.services_title') }}</h2>
+        <h2 class="reveal-on-scroll font-display text-2xl font-bold text-primary mb-2">{{ __('messages.home.services_title') }}</h2>
         <p class="text-gray-600 mb-6">{{ __('messages.home.services_subtitle') }}</p>
         @if($services->isEmpty())
             <x-state.empty icon="heroicon-o-archive-box-x-mark" :title="__('messages.states.empty.title')" :message="__('messages.states.empty.message')" tone="warning" />
         @else
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
                 @foreach($services as $service)
-                    <a href="{{ route('service.show', $service->slug) }}" class="bg-white rounded-md p-4 border hover:border-primary hover:shadow text-center group transition">
+                    <a href="{{ route('service.show', $service->slug) }}" class="reveal-on-scroll bg-white rounded-md p-4 border hover:border-primary text-center group hover-lift" style="--reveal-delay:{{ $loop->index * 40 }}ms">
                         <x-heroicon-o-document-text class="w-8 h-8 mx-auto text-primary mb-2" />
                         <div class="font-semibold text-sm group-hover:text-primary leading-snug">{{ $service->name }}</div>
                     </a>
@@ -81,10 +82,10 @@
 </section>
 
 {{-- BERITA & PENGUMUMAN 3-TAB --}}
-<section id="berita" class="py-12 bg-white" x-data="{ tab: 'berita' }">
+<section id="berita" class="py-10 bg-white" x-data="{ tab: 'berita' }">
     <div class="container-page">
         <div class="flex items-end justify-between mb-6">
-            <h2 class="font-display text-2xl font-bold text-primary">{{ __('messages.home.news_title') }}</h2>
+            <h2 class="reveal-on-scroll font-display text-2xl font-bold text-primary">{{ __('messages.home.news_title') }}</h2>
             <a href="#" class="text-sm text-primary hover:underline">{{ __('messages.home.view_all') }} &rarr;</a>
         </div>
         <div role="tablist" class="border-b flex gap-1 mb-6">
@@ -112,8 +113,8 @@
             @else
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     @foreach($beritas as $b)
-                        <article class="rounded-lg overflow-hidden border hover:shadow transition group">
-                            <div class="h-40 bg-gradient-to-br from-primary-pale to-primary-light"></div>
+                        <article class="reveal-on-scroll rounded-lg overflow-hidden border group hover-lift" style="--reveal-delay:{{ $loop->index * 50 }}ms">
+                            <div class="h-32 bg-gradient-to-br from-primary-pale to-primary-light"></div>
                             <div class="p-4">
                                 <div class="text-xs text-gray-500 mb-1">{{ $b->published_at?->isoFormat('D MMM Y') }}</div>
                                 <h3 class="font-semibold text-primary mb-2 group-hover:underline">{{ $b->title }}</h3>
@@ -168,7 +169,7 @@
 </section>
 
 {{-- PAUTAN AGENSI strip --}}
-<section class="bg-primary-pale py-10">
+<section class="reveal-on-scroll bg-primary-pale py-8">
     <div class="container-page">
         <h2 class="font-display text-lg font-semibold text-primary mb-4">{{ __('messages.home.agencies_title') }}</h2>
         <div class="flex flex-wrap items-center gap-4">
