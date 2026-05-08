@@ -106,7 +106,7 @@ class JkptgLeadersSeeder extends Seeder
         $para = [];
         $flush = function () use (&$para, &$html) {
             if (! empty($para)) {
-                $html .= '<p>' . e(implode(' ', $para)) . '</p>';
+                $html .= '<p>' . implode(' ', $para) . '</p>';
                 $para = [];
             }
         };
